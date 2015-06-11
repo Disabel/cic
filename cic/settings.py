@@ -48,9 +48,6 @@ DATABASES = {
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-LOCALE_PATHS = (
-    os.path.join(PROJECT_DIR, 'locale'),
-)
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
 
@@ -63,6 +60,10 @@ LANGUAGE_CODE = 'es'
 LANGUAGES = (
     ('es', 'Spanish'),
     ('en', 'English'),
+)
+
+LOCALE_PATHS = (
+    os.path.normpath(os.path.join(os.path.dirname(__file__), 'locale')),
 )
 
 SITE_ID = 1
@@ -127,7 +128,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',    
+    'django.contrib.messages.middleware.MessageMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -153,15 +154,15 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.humanize',
-    #'django.contrib.comments',
-    'django_comments',    
-   # 'zinnia',
+    'django.contrib.comments',
+    #'django_comments',
+    # 'zinnia',
     'tagging',
     'mptt',
     'zinnia',
     'akismet',
     'django_bitly',
-    'tinymce',    
+    'tinymce',
     # Uncomment the next line to enable the admin:
     'django.contrib.admin',
     'cic.apps.homepage',
@@ -208,6 +209,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.static',
     'zinnia.context_processors.version',
 )
+
 #Configuraciones para enviar mensajes usando gmail
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

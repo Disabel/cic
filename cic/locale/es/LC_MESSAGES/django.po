@@ -8,15 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 12:39-0430\n"
+"POT-Creation-Date: 2015-06-11 17:22-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\cic\templates\homepage\index.html:32
+#: .\templates\base.html:42
+msgid "Idioma:"
+msgstr ""
+
+#: .\templates\homepage\index.html:32
 msgid "Banking and financial issues"
-msgstr "banco y financiero problemas"
+msgstr ""
