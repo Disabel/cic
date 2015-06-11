@@ -1,0 +1,81 @@
+{% extends 'homepage/index.html' %}
+{% block title %}
+Contacto - Duranjo
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/contacto.css">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{{ STATIC_URL }}js/propios/selectable.js"></script>
+{% endblock %}
+{% block contenido %}
+	<section class="fondoContacto">
+		<div class="wrapper">
+		<div class="tituloStyle">
+			<h2>Contacto</h2>
+			<div class="lineatitulo"></div>
+		</div>		
+		{% if success %}
+		<div class="mensajeenviado">
+			<div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
+			<img class="sobre" src="{{ STATIC_URL }}img/sobre.png" alt="formulario de contacto">	
+		</div>
+		{% else %}
+		{% if form.errors %}
+        <p>
+            Por favor corregir los errores debajo.
+        </p>
+   		{% endif %}
+		<form action="#" method="POST">
+			{% csrf_token %}
+			<div class="campo">
+				{{ field.errors }}
+				<label for="nombre">Nombre:</label>
+				{{ form.nombre }}
+				{{ form.nombre.errors }}
+			</div>
+			<div class="campo">				
+				{{ field.errors }}
+				<label for="email">Correo Electrónico:</label>
+				{{ form.email }}
+				{{ form.email.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<label for="telefono">Teléfono:</label>
+				{{ form.telefono }}
+				{{ form.telefono.errors }}
+			</div>
+			<div class="textareaDescripcion">
+				{{ field.errors }}
+				<label for="texto">Breve descripción de su proyecto: </label>
+				{{ form.texto }}
+				{{ form.texto.errors }}
+			</div>
+			<div class="botonEnviar">
+				<input type="submit">
+			</div>
+		</form>
+		{% endif %}
+		<div class="tituloStyle">
+			<h2>Información de contacto</h2>
+			<div class="lineatitulo"></div>
+		</div>	
+		<section class="infoContacto">
+		</section>
+	</div>
+	</section>
+	<!-- FACEBOOK SCRIPT -->
+			<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+	<!-- TWITTER SCRIPT -->
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+{% endblock%}

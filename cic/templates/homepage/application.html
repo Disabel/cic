@@ -1,0 +1,265 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block title %}
+ABOUT HISPANIC AMERICAN BANKERS ASSOCIATION
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/homepage/application.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/jquery-ui.theme.min.css">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/underscore-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/propios/application.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/jquery-ui.min.js' %}"></script>
+  
+{% endblock %}
+{% block contenido %}
+<section class="quienessomos">
+	<div class="fondogris">
+		<div class="wrapper">
+			<h2>Membership Application</h2>
+			<h3>Hispanic American Bankers Association</h3>
+			<div class="direccion">P.O BOX 348084, Coral Gables, FL 33234</div>
+		</div>
+	</div>
+	{% if exito %}
+		<div class="wrapper">
+			<div class="gracias"> Thank you for applying. We will contact you shortly. </div>
+		</div>
+	{% else %}
+	<div class="wrapper">
+		<form class="form-horizontal form-inline" method="post" >
+		  {% csrf_token %}
+			<div class="generalinformation">
+				<div class="titulo">
+					<div class="img"></div>
+					<h3>General Information</h3>
+				</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label for="names"><span>*</span> Names:</label>
+						{{ form.names }}
+						{{ form.names.errors }}
+					</div>
+						<div class="campo">
+						{{ field.errors }}
+						<label for="last_name"><span>*</span> Last name:</label>
+						{{ form.last_name }}
+						{{ form.last_name.errors }}
+					</div>
+					<div class="campo">				
+						{{ field.errors }}
+						<label for="state"><span>*</span> State:</label>
+						{{ form.state }}
+						{{ form.state.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label for="city"><span>*</span> City:</label>
+						{{ form.city }}
+						{{ form.city.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label for="street_address"><span>*</span> Street address:</label>
+						{{ form.street_address }}
+						{{ form.street_address.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label for="zip_code"><span>*</span> ZIP Code:</label>
+						{{ form.zip_code }}
+						{{ form.zip_code.errors }}
+					</div>
+					<div class="campo">
+						{{ field.errors }}
+						<label for="personal_telephone"><span>*</span> Personal Phone:</label>
+						{{ form.personal_telephone }}
+						{{ form.personal_telephone.errors }}
+					</div>	
+					<div class="campo">
+						{{ field.errors }}
+						<label for="bussines_telephone">Business Phone:</label>
+						{{ form.bussines_telephone }}
+						{{ form.bussines_telephone.errors }}
+					</div>	
+					<div class="campo">
+						{{ field.errors }}
+						<label for="celular">Celular:</label>
+						{{ form.celular }}
+						{{ form.celular.errors }}
+					</div>	
+					<div class="campo">
+						{{ field.errors }}
+						<label for="fax">Fax:</label>
+						{{ form.fax }}
+						{{ form.fax.errors }}
+					</div>	
+					<div class="campo">
+						{{ field.errors }}
+						<label for="email_address"><span>*</span> Email Address:</label>
+						{{ form.email_address }}
+						{{ form.email_address.errors }}
+					</div>																	<div class="obligatorio">Please observe that all fields with an (<span>*</span>) are mandatory fields that must be filled out.</div>											
+			</div>
+			<div class="bankinghistory">
+				<div class="titulo">
+					<div class="img"></div>
+					<h3>Banking History</h3>
+				</div>
+		 		{{ formset.management_form }}
+				  <div class="banking">
+					  {% for banking_history in formset %}
+						    <div id="banking-{{ forloop.counter0 }}">
+				    		  	<div class="campo">
+									{{ field.errors }}
+									<label for="financial_institution"><span>*</span> Financial Institution:</label>
+									{{ banking_history.financial_institution }}
+									{{ banking_history.financial_institution.errors }}
+								</div>
+				    		  	<div class="campo">
+									{{ field.errors }}
+									<label for="position_or_title"><span>*</span> Position/Title:</label>
+									{{ banking_history.position_or_title }}
+									{{ banking_history.position_or_title.errors }}
+								</div>	
+				    		  	<div class="campo">
+									{{ field.errors }}
+									<label for="from_date"><span>*</span> From:</label>
+									{{ banking_history.from_date }}
+									{{ banking_history.from_date.errors }}
+								</div>	
+				    		  	<div class="campo">
+									{{ field.errors }}
+									<label for="to_date"><span>*</span>  To:</label>
+									{{ banking_history.to_date }}
+									{{ banking_history.to_date.errors }}
+								</div>																								
+				    		</div>
+				    		<div class="separador"></div>
+				  		{% endfor %}
+				 </div>
+				 <div class="addboton">
+					<a href="#" class="btn btn-info add-banking">Add</a>
+					<a href="#" class="add-banking"><img src="{% static 'img/botonicon.png' %}" alt="icono suma mas"></a>
+				</div>
+			</div>
+			<div class="educationpart">
+				<div class="titulo">
+					<div class="img"></div>
+					<h3>Education</h3>
+				</div>
+		 		{{ formset_education.management_form }}
+					  <div class="education">
+					 	 {% for education in formset_education %}
+					 		   <div id="education-{{ forloop.counter0 }}">
+					    	  	<div class="campo">
+									{{ field.errors }}
+									<label for="collage_or_university"><span>*</span>  College or University:</label>
+									{{ education.collage_or_university }}
+									{{ education.collage_or_university.errors }}
+								</div>
+					    	  	<div class="campo">
+									{{ field.errors }}
+									<label for="type_of_degree"><span>*</span>  Type of Degree:</label>
+									{{ education.type_of_degree }}
+									{{ education.type_of_degree.errors }}
+								</div>	
+					    	  	<div class="campo">
+									{{ field.errors }}
+									<label for="dates_attended"><span>*</span>  Dates Attended:</label>
+									{{ education.dates_attended }}
+									{{ education.dates_attended.errors }}
+								</div>
+					    	  	<div class="campo">
+									{{ field.errors }}
+									<label for="did_you_graduate"><span>*</span>  Did you Graduate?:</label>
+									{{ education.did_you_graduate }}
+									{{ education.did_you_graduate.errors }}
+								</div>
+					    	  	<div class="campo">
+									{{ field.errors }}
+									<label for="course_of_study"><span>*</span>  Course of Study:</label>
+									{{ education.course_of_study }}
+									{{ education.course_of_study.errors }}
+								</div>						
+					    		</div>
+					 	 {% endfor %}
+					 	 <div class="separador"></div>
+				 </div>
+				 <div class="addboton">
+				 	<a href="#" class="btn btn-info add-education">Add</a>
+				 	<a href="#" class="add-education"><img src="{% static 'img/botonicon.png' %}" alt="icono suma mas"></a>
+				 </div>
+			</div>
+
+		<div class="centrarboton"><button type="submit" class="btn btn-primary">SUBMIT</button></div>
+		</form>		
+		<script type="text/html" id="banking-template">
+			<div id="banking-<%= id %>">
+			  	<div class="campo">
+					<label for="financial_institution"><span>*</span> Financial Institution:</label>
+					<input class="masgrande" id="id_banking-<%= id %>-financial_institution" maxlength="100" name="banking-<%= id %>-financial_institution" type="text">
+				</div>
+			  	<div class="campo">
+					<label for="position_or_title"><span>*</span> Position/Title:</label>
+					<input class="masgrande" id="id_banking-<%= id %>-position_or_title" maxlength="100" name="banking-<%= id %>-position_or_title" type="text">
+				</div>	
+			  	<div class="campo">
+					<label for="from_date"><span>*</span> From:</label>
+					<input class="bankingdate" id="id_banking-<%= id %>-from_date" name="banking-<%= id %>-from_date" type="text">
+				</div>	
+			  	<div class="campo">
+					<label for="to_date"><span>*</span> To:</label>
+					<input class="bankingdate" id="id_banking-<%= id %>-to_date" name="banking-<%= id %>-to_date" type="text">
+				</div>
+				<button class="botonremove" onclick='removeParent(this)'>Remove</div>														
+			</div>
+		</script>
+		<script type="text/html" id="education-template">
+			<div id="education-<%= id %>">
+			  	<div class="campo">
+					<label for="collage_or_university"><span>*</span> College or University:</label>
+					<input class="collage" id="id_education-<%= id %>-collage_or_university" maxlength="100" name="education-<%= id %>-collage_or_university" type="text">
+				</div>
+			  	<div class="campo">
+					<label for="type_of_degree"><span>*</span> Type of Degree:</label>
+					<input class="degree" id="id_education-<%= id %>-type_of_degree" maxlength="100" name="education-<%= id %>-type_of_degree" type="text">
+				</div>	
+			  	<div class="campo">
+					<label for="dates_attended"><span>*</span> Dates Attended:</label>
+					<input id="id_education-<%= id %>-dates_attended" maxlength="100" name="education-<%= id %>-dates_attended" type="text">
+				</div>
+			  	<div class="campo">
+					<label for="did_you_graduate"><span>*</span> Did you Graduate?:</label>
+					<select id="id_education-<%= id %>-did_you_graduate" name="education-<%= id %>-did_you_graduate">
+			<option value="" selected="selected">---------</option>
+			<option value="yes">Yes</option>
+			<option value="no">No</option>
+			</select>
+				</div>
+			  	<div class="campo">
+					<label for="course_of_study"><span>*</span> Course of Study:</label>
+					<input class="course" id="id_education-<%= id %>-course_of_study" maxlength="100" name="education-<%= id %>-course_of_study" type="text">
+				</div>
+				<button class="botonremove" onclick='removeParent(this)'>Remove</div>						
+				</div>
+		</script>
+<script>
+$( "#id_banking-0-from_date" ).datepicker({
+  changeYear: true
+});
+</script>
+<script>
+$( "#id_banking-0-to_date" ).datepicker({
+  changeYear: true
+});
+</script>
+	</div>
+		{% endif %}	
+</section>
+{% endblock%}
+

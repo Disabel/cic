@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block title %}
+ABOUT HISPANIC AMERICAN BANKERS ASSOCIATION
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/homepage/aboutus.css">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+{% endblock %}
+{% block contenido %}
+<section class="quienessomos">
+	<div class="wrapper">
+		<h2>Hispanic American Bankers Association</h2>
+		<div class="entry-image"><img src="{% static 'img/about.jpg' %}" oncontextmenu="return false;" alt="About Hispanic American Bankers Association" class="left" /></div>
+		<div class="txtabout">	
+			<p>The Hispanic American Bankers Association, formerly Cuban American Bankers Association; was formed in the decade of the eighties, following a spontaneous meeting of several local bankers  to satisfy a need to exchange information and ideas, in addition to the opportunity for networking and social gathering.</p>  
+			<p>Our Mission Statement is to bring a local forum to bankers in which to address in an informal, personal and friendly ambiance; current banking and financial issues, provide information, Regulatory compliance, guidance, and resolution of common areas of concern regardless of the size of the institution.</p>  
+			<p>Some of the original founders are still active in the Association, although some are now retired.  We greatly missed those that have now departed to join our good Lord.  Its current membership consists of financial institutions of all sizes, individual bankers, service related businesses, certified public accountants and attorneys.</p>
+			<p>In addition to the general membership of bankers, the Association is proud to  ount as members many active and retired high executives whose position included: Chairman of the Board of Directors, President and Chief Executive Officer, Chief Financial Officer, Chief Operations Officer, Bank Director, etc.</p> 
+			<p>This group also includes the immediate past Executive of the  Federal Reserve Bank, Miami Office; as well as,  a six year member of the Board of the Federal Reserve Bank, Miami, Office.<p>
+			<p>Today the Association accomplishes the need to address serious current banking issues, while continues to provide the atmosphere of social camaraderie and networking. This past year in addition to presenting the regular quarterly luncheons with  featured speakers, the Association was  part of the sponsors of a Economic Conference in Coral Gables.  Some of the prestigious speakers that were in the forum included:  Ken Thomas, Economist; Bowman Brown, Banking Attorney, Shutts & Bowen; Frank Gonzalez, CPA; Banking Partner, Morrison, Brown, Argiz; Ron Lindhart, Asst. Deputy Director, Office of the Comptroller of the Currency.</p>    
+			<p>Keynote speaker of our Gala Dinner last November, was Alex Sanchez, President & Chief Executive Officer of the Florida Bankers Association.</p>
+		</div>
+	</div>
+</section>
+{% endblock%}
+

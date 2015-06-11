@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% load url from future %}
+{% load staticfiles %}
+{% block title %}
+ABOUT HISPANIC AMERICAN BANKERS ASSOCIATION
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/index.css">
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/homepage/directors.css">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+{% endblock %}
+{% block contenido %}
+<section class="quienessomos">
+	<div class="fondogris1">
+		<div class="wrapper">
+			<h2>Hispanic American Bankers Association</h2>
+			<h3>Board of directors</h3>
+			<div class="chairman">
+				<div class="img"></div>
+				<h4>Chairman of the Board</h4>
+			</div>
+			<div class="president">
+				<div class="img"></div>
+				<h4>President</h4>
+			</div>
+			<div class="vicepresident">
+				<div class="img"></div>
+				<h4>Vice President</h4>
+			</div>			
+		</div>
+	</div>
+	<div class="fondoblanco">
+		<div class="wrapper">
+			<div class="chairmanname">
+				<img src="{% static 'img/flechita.png' %}"/>
+				<ul>
+					{% for chair in chairman %}
+						<li>{{ chair.nombre }}</li>
+					{% endfor %}	
+				</ul>
+			</div>
+			<div class="presidentname">
+				<img src="{% static 'img/flechita.png' %}"/>
+				<ul>
+					{% for presi in president %}
+						<li>{{ presi.nombre }}</li>
+					{% endfor %}	
+				</ul>
+			</div>
+			<div class="vicepresidentname">
+				<img src="{% static 'img/flechita.png' %}"/>
+				<ul>
+					{% for vice in vicepresident %}
+						<li>{{ vice.nombre }}</li>
+					{% endfor %}	
+				</ul>
+			</div>			
+		</div>
+	</div>	
+	<div class="fondogris2">
+		<div class="wrapper">
+			<div class="secretary">
+				<div class="img"></div>
+				<h4>Secretary</h4>
+			</div>
+			<div class="treasurer">
+				<div class="img"></div>
+				<h4>Treasurer</h4>
+			</div>
+		</div>
+	</div>
+	<div class="fondoblanco">
+		<div class="wrapper">
+			<div class="secretaryname">
+				<img src="{% static 'img/flechita.png' %}"/>
+				<ul>
+					{% for s in secretary %}
+						<li>{{ s.nombre }}</li>
+					{% endfor %}	
+				</ul>
+			</div>
+			<div class="treasurername">
+				<img src="{% static 'img/flechita.png' %}"/>
+				<ul>
+					{% for t in treasurer %}
+						<li>{{ t.nombre }}</li>
+					{% endfor %}	
+				</ul>
+			</div>	
+		</div>
+	</div>	
+	<div class="fondogris3">
+		<div class="wrapper">
+			<div class="directors">
+				<div class="img"></div>
+				<h4>Directors</h4>
+			</div>	
+		</div>
+	</div>	
+	<div class="fondoblanco">
+		<div class="wrapper">
+			{% for d in otros %}
+				<div class="directorname">
+					<img src="{% static 'img/flechita.png' %}"/>
+					<p>{{ d.nombre }}</p>
+				</div>
+			{% endfor %}		
+		</div>
+	</div>			
+</section>
+{% endblock%}
+
