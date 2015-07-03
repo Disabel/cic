@@ -1,6 +1,12 @@
 {% extends "zinnia/skeleton.html" %}
 {% load zinnia_tags i18n %}
-{% load url from future %}
+
+{% block meta-keywords %}{% get_tags as entry_tags %}{{ entry_tags|join:", "}}{% endblock meta-keywords %}
+
+{% block meta %}
+    <meta name="generator" content="Zinnia {{ ZINNIA_VERSION }}" />
+{% endblock meta %}
+
 {% block link %}
     <link rel="index" href="{% url 'zinnia:entry_archive_index' %}" />
     <link rel="author" type="text/plain" href="{% url 'zinnia:humans' %}" />
@@ -12,26 +18,24 @@
     {% get_archives_entries "zinnia/tags/archives_entries_link.html" %}
 {% endblock %}
 
+{% block breadcrumbs %}
+  {% zinnia_breadcrumbs %}
+{% endblock breadcrumbs %}
+
 {% block sidebar %}
-<div id="widget-search" class="widget">
-  <h3>{% trans "Search" %}</h3>
-  {% include "zinnia/tags/search_form.html" %}
-</div>
-<div id="widget-categories" class="widget">
-  <h3>{% trans "Categories" %}</h3>
-  {% get_categories %}
-</div>
-<div id="widget-tags" class="widget">
-  <h3>{% trans "Etiquetas" %}</h3>
-  {% get_tag_cloud %}
-</div>
-<div id="widget-populars" class="widget">
-  <h3>{% trans "Popular entries" %}</h3>
-  {% get_popular_entries %}
-</div>
-<div id="widget-archives" class="widget">
-  <h3>{% trans "Archives" %}</h3>
-  {% get_archives_entries_tree %}
+<div class="sidebar">
+  <div id="widget-categories" class="widget azul">
+    <h3>{% trans "Categories" %}</h3>
+    {% get_categories %}
+  </div>
+  <div id="widget-recents" class="widget verde">
+    <h3>{% trans "Recent entries" %}</h3>
+    {% get_recent_entries %}
+  </div>
+  <div id="widget-archives" class="widget azul">
+    <h3>{% trans "Archives" %}</h3>
+    {% get_archives_entries_tree %}
+  </div>
 </div>
 {% if user.is_authenticated %}
 <div id="widget-tools" class="widget">
@@ -51,8 +55,8 @@
       </a>
     </li>
     {% endif %}
-    {% block admin_tools %}
-    {% endblock %}
+    {% block admin-tools %}
+    {% endblock admin-tools %}
     <li>
       <a href="{% url 'admin:logout' %}" title="{% trans "Log out" %}">
         {% trans "Log out" %}
@@ -61,4 +65,4 @@
   </ul>
 </div>
 {% endif %}
-{% endblock %}
+{% endblock sidebar %}
