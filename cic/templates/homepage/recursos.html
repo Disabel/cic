@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Recursos Informativos - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/recursos.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagenrecursos">
+			<img src="{% static 'img/bannerrecursos.jpg' %}" alt="Certificaciones CIC">
+		</div>
+	<section class="entradas">
+		<div class="wrapper">	
+			<a class="recursoinfo" href="/blog/categories/noticias/">
+					<p>{% trans 'Noticias' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/noticias.png' %}" alt="flecha naranja">
+				</a>
+				<a class="recursoinfo" href="/blog/categories/herramientas-y-otros-recursos/">
+					<p>{% trans 'Herramientas y Otros Artículos' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/herramientas.png' %}" alt="flecha naranja">
+				</a>
+				<a class="recursoinfo" href="/blog/categories/articulos/">
+					<p>{% trans 'Artículos' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/articulos.png' %}" alt="flecha naranja">
+				</a>				
+				<a class="recursoinfo" href="/blog/categories/libros/">
+					<p>{% trans 'Libros' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/libros.png' %}" alt="flecha naranja">
+				</a>									
+		</div>
+	</section>
+{% endblock%}

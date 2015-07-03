@@ -1,0 +1,160 @@
+@charset 'utf-8';
+
+header{
+	width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+html, body{
+	margin: 0;
+	background: white;
+	color: #5b5b5b;
+	font-family: 'Oxygen', sans-serif;
+}
+
+.wrapper{
+	width: 1000px;
+	height: 100%;
+	margin: 0 auto 0 auto;
+	padding: 5px 0;
+}
+.derecha{
+	display: inline-block;
+	width: 78%;
+	vertical-align: top;
+	text-align: right;
+}
+.barraNavegacion{
+background-color: #eaebec;
+  margin-top: 15px;
+  padding-right: 29px;
+}
+.arribadelmenu{
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+}
+.redesSociales, .redesSociales a{
+	display: inline-block;
+}
+
+.redesSociales div{
+	height: 17px;
+}
+.youtube{
+	background: url(../img/redessociales.png) -100px 0;
+	width: 18px;
+}
+.twitterlogo{
+	background: url(../img/redessociales.png) -21px 0;
+	width: 14px;
+}
+.facebook{
+	background: url(../img/redessociales.png);
+	width: 10px;
+}
+.instagram{
+	background: url(../img/redessociales.png) -44px 0px;
+	width: 16px;	
+}
+.googleplus{
+	background: url(../img/redessociales.png) -124px 0;
+	width: 17px;
+}
+
+.registrateboton{
+	display: inline-block;
+}
+.logomenu{
+	display: inline-block;
+}
+.logomenu img{
+	  width: 212px;
+}
+.registrateboton{
+  color: #eb4923;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.change_language{
+	text-transform: capitalize;
+	color: #eb4923;
+}
+.arribadelmenu{
+	text-align: right;
+}
+nav{
+	display: inline-block;	
+	vertical-align: top;
+}
+nav select {
+  display: none;
+}
+nav li, .navFooter li{
+	display: inline-block;
+	margin: 0 2px;
+}
+nav li a{
+	text-decoration: none;
+	color: #5b5b5b;
+}
+nav li a:hover{
+	color: #eb4923;
+}
+
+nav span{
+	color: #eb4923;
+}
+
+
+/* FOOTER ´*/
+footer{
+	background-color: #eaebec;
+}
+.infofooter{
+  display: inline-block;
+   width: 75%;
+}
+.infofooter ul{
+	padding: 0;
+}
+
+.logofooter{
+	display: inline-block;
+  width: 23%;
+  margin-top: 13px;
+}
+.logofooter img{
+	width: 100%;
+}
+.infofooter .menu  {
+	display: inline-block;	
+	vertical-align: top;
+}
+.infofooter .menu li{
+	display: inline-block;
+	margin: 0 2px;
+}
+.infofooter .menu a{
+	text-decoration: none;
+	color: #5b5b5b;
+}
+.infofooter .menu span{
+	color: #eb4923;
+}
+.correofooter, .correofooter p{
+	display: inline-block;
+}
+.correofooter .sobre{
+  background: url(../img/redessociales.png) -67px 0;
+  width: 24px;
+  height: 17px;
+  display: inline-block;
+}
+.esloganfooter{
+	text-transform: uppercase;
+	color: #858686;
+	display: inline-block;
+	margin-right: 15px;
+}

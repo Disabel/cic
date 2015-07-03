@@ -1,0 +1,35 @@
+nav .recursos a{
+  color: #eb4923;
+}
+h2{
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+h2 span{
+	display: block;
+	font-size: 2em;
+}
+
+.imagenrecursos img{
+	width: 100%;
+}
+
+.recursoinfo{
+	text-decoration: none;
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 4%;
+  	margin-bottom: 20px;
+}
+.recursoinfo .recursoimg{
+	width: 100%;
+}
+.recursoinfo p{
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color: #4fb77f;
+	font-weight: bold;
+	display: inline-block;
+
+}

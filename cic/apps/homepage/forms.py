@@ -1,41 +1,35 @@
 #!/usr/local/bin/python
 # -*- encoding: utf-8 -*-
 from django import forms
+from .models import miembrosRegistro, invitadoRegistro
+
 from django.forms.models import inlineformset_factory
-'''
-class contactForm(forms.Form):
-	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre'}))
-	email = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}))
-	telefono = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono'}))
-	texto = forms.CharField(widget=forms.Textarea)
-
-	def clean_asunto(self):
-		cd = self.cleaned_data
-		asunto = cd.get('asunto')
-		if len(asunto) < 3:
-			raise forms.ValidationError("El asunto debe tener mas de 2 letras")
-		return asunto
-
-	def clean_texto(self):
-		cd = self.cleaned_data
-		texto = cd.get('texto')
-		if len(texto) < 4:
-			raise forms.ValidationError("*")
-		return texto
 
 class MemberForm(forms.ModelForm):
     class Meta:
-        model = MembersApplication
+        model = miembrosRegistro
 
-class BankingHistoryForm(forms.ModelForm):
+class MiembroInvitadoForm(forms.ModelForm):
     class Meta:
-        model = BankingHistory
+        model = invitadoRegistro
 
-class EducationForm(forms.ModelForm):
-    class Meta:
-        model = Education        
 
-MemberFormSet = inlineformset_factory(MembersApplication, BankingHistory, extra=1)
-MemberFormSet2 = inlineformset_factory(MembersApplication, Education, extra=1)
+class solicitudForm(forms.Form):
+	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre y apellido'}))
+	pais_origen = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Pais de Origen'}))
+	codigo_area = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Código de área'}))
+	telefono_movil = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Móvil'}))
+	telefono_fijo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Fijo'}))
+	correo_principal = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}),required=False)
+	correo_alterno = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}),required=False)
+	nombre_empresa = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Si la solicitud es institucional'}),required=False)
+	mensaje = forms.CharField(widget=forms.Textarea)
 
-'''
+class contactForm(forms.Form):
+	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre y apellido'}))
+	telefono_fijo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Fijo'}))
+	telefono_movil = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Móvil'}))
+	correo_principal = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}),required=False)
+	correo_alterno = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}),required=False)
+	nombre_empresa = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Si la solicitud es institucional'}),required=False)
+	mensaje = forms.CharField(widget=forms.Textarea)

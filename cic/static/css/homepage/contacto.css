@@ -1,0 +1,39 @@
+.imagencontacto img{
+	width: 100%;
+}
+h2{
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+h2 span{
+  display: block;
+  font-size: 2em;
+}
+
+  .campo li, .textareaDescripcion li{
+     list-style-image: url(../../img/iconlist.png);
+      margin: 5px 0;
+  }
+
+  .derechacontacto, .izquierdacontacto{
+  	display: inline-block;
+  	width: 48%;
+  }
+  .campo input{
+   	width: 85%;
+  	margin-bottom: 10px;
+  }
+  .textareaDescripcion textarea{
+  	 width: 89%;
+  }
+
+  .botonEnviar input
+{
+  padding: 16px 10px;
+  background-color: #4fb77f;
+  color: #FFF;
+  border-radius: 10px;
+  margin-top: 10px;
+
+}
+ 

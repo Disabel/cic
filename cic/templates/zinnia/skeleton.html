@@ -1,0 +1,57 @@
+{% extends 'homepage/index.html' %}
+{% load zinnia_tags i18n %}
+{% load url from future %}
+{% get_tags as entry_tags %}
+{% block head %}
+	<link rel="pingback" href="/xmlrpc/" />
+	<meta name="description" content="Blog oficial de la empresa Duranjo Web C.A.">
+	{% block link %}{% endblock %}
+{% endblock %}
+{% block script %}{% endblock %}
+{% block css%}
+		<link rel="stylesheet" type="text/css" media="screen, projection" href="{{ STATIC_URL }}css/screen.css" />
+		<link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
+		<link rel="stylesheet" href=" {{ STATIC_URL }}css/index.css">
+{% endblock %}
+{% block contenido %}
+<section class="zinnia {% block body-class %}{% endblock %}">
+		<div class="container">
+			{% block slider %}{% endblock %}
+			<a href="/blog" >
+					<div class="tituloStyle"><h2>{% trans "Nuestro Blog" %}<div class="lineatitulo"></div></h2>
+					</div>
+				</a>	
+			<div id="content" class="hfeed">							
+				{% block content %}
+				<div class="links">
+					<h3>{% trans "Useful links" %}</h3>
+					<ul>
+						<li>
+							<a href="{% url 'zinnia_entry_archive_index' %}" title="{% trans "Blog index" %}">
+								{% trans "Blog index" %}
+							</a>
+						</li>
+						<li>
+							<a href="{% url 'zinnia_sitemap' %}" title="{% trans "Sitemap" %}">
+								{% trans "Sitemap" %}
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="recents">
+					<h3>{% trans "Recent entries" %}</h3>
+					{% get_recent_entries %}
+				</div>
+				<div class="search">
+					<h3>{% trans "Search" %}</h3>
+					{% include "zinnia/tags/search_form.html" %}
+				</div>
+				{% endblock %}
+			</div>
+			<div id="sidebar">
+				{% block sidebar %}
+				{% endblock %}
+			</div>
+		</div>
+</section>
+{% endblock %}

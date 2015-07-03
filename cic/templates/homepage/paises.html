@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Paises - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/about.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+	<div class="imagenabout">
+		<img src="{% static 'img/bannerquienes.jpg' %}" alt="Quienes Somos">
+	</div>
+	<div class="wrapper">
+		<ul class="submenu">
+			<li><a  href="{% url 'homepageaboutus' %}">{% trans 'Sobre la CIC' %}</a></li>
+			<li><a href="{% url 'aboutdirectorio' %}">{% trans 'Directorio' %}</a></li>
+			<li><a href="{% url 'aboutpaises' %}">{% trans 'Paises de la CIC' %}</a></li>
+			<li><a href="{% url 'aboutcodigo' %}">{% trans 'Código de ética' %}</a></li>
+		</ul>
+
+		<div class="introPaises">
+			{{ quienesSomos.paisesIntroduccion|safe }}
+		</div>
+		<h2><span>{% trans 'Países' %}</span>{% trans 'donde actúa la CIC' %}</h2>
+		{% for pais in paisescic %}
+			<div class="paiscic">
+				<img src="{{ MEDIA_URL }}{{pais.imagen_bandera}}" alt="{{ pais.nombre }}">
+				<p>{{ pais.nombre }}</p>
+			</div>
+		{% endfor %}
+	</div>
+	
+{% endblock%}

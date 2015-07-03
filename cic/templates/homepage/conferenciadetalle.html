@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Cursos - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/servicios.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagenservicios">
+			<img src="{% static 'img/Bannerservicios.jpg' %}" alt="Servicios CIC">
+		</div>
+	<div class="contenidocurso">
+		<div class="wrapper">
+		<ul class="submenu">
+			<li><a  href="{% url 'homepageservicios' %}">{% trans 'Cursos' %}</a></li>
+			<li><a href="{% url 'serviciosconferencias' %}">{% trans 'Conferencias' %}</a></li>
+			<li><a href="{% url 'serviciosasesorias' %}">{% trans 'Asesorías' %}</a></li>
+		</ul>
+		<a class="back-link" href="{% url 'serviciosconferencias' %}">«Volver</a>
+			<div class="info">
+				<h2><span>{{ conferencia.titulo|safe }}</span></h2>
+				{{ conferencia.cuerpo_general|safe }}
+				
+			</div>	
+			<h3>{% trans 'FORMULARIO DE SOLICITUD DE INFORMACIÓN' %}</h3>
+		<form class="infoform" action="#" method="POST">
+			{% csrf_token %}
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="nombre_apellido">{% trans 'Nombre y Apellido:' %} </label></li>
+				{{ form.nombre_apellido }}
+				{{ form.nombre_apellido.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="pais_origen">{% trans 'Pais:' %} </label></li>
+				{{ form.pais_origen }}
+				{{ form.pais_origen.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="codigo_area">{% trans 'Código de área:' %} </label></li>
+				{{ form.codigo_area }}
+				{{ form.codigo_area.errors }}
+			</div>						
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="telefono_movil">{% trans 'Teléfono Móvil' %}</label></li>
+				{{ form.telefono_movil }}
+				{{ form.telefono_movil.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="telefono_fijo">{% trans 'Teléfono Fijo' %}</label></li>
+				{{ form.telefono_fijo }}
+				{{ form.telefono_fijo.errors }}
+			</div>	
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="correo_principal">{% trans 'Correo Electrónico Principal' %}</label></li>
+				{{ form.correo_principal }}
+				{{ form.correo_principal.errors }}
+			</div>	
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="correo_alterno">{% trans 'Correo Electrónico Alterno' %}</label></li>
+				{{ form.correo_alterno }}
+				{{ form.correo_alterno.errors }}
+			</div>	
+			<div class="campo">
+				{{ field.errors }}
+				<li><label for="nombre_empresa">{% trans 'Nombre de la Empresa' %}</label></li>
+				{{ form.nombre_empresa }}
+				{{ form.nombre_empresa.errors }}
+			</div>													
+			<div class="textareaDescripcion">
+				{{ field.errors }}
+				<li><label for="mensaje">{% trans 'Mensaje: ' %}</label></li>
+				{{ form.mensaje }}
+				{{ form.mensaje.errors }}
+			</div>
+			<div class="botonEnviar">
+				<input id="botonsend" type="submit">
+			</div>
+		</form>
+		<div class="imagencurso">
+			<img src="{{ MEDIA_URL }}{{conferencia.imagen}}" alt="{{ conferencia.titulo }}">
+		</div>	
+		</div>
+	</div>
+{% endblock%}

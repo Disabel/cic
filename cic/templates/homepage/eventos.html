@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/index.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagenhome">
+			<img src="{% static 'img/homeimage.jpg' %}" alt="Grupo coaches felices">
+		</div>
+		<div class="cuadroblanco">
+		<p>{% trans 'Banking and financial issues' %}</p>
+		<p>{{ textoshome.eres_coach }}</p>
+		<p>{{ textoshome.certificaciones }}</p>	
+
+	</div>	
+	<div class="grisentradas">
+		<div class="wrapper">
+			{% for titulo in titulos %}
+				<div class="titulo">{{ titulo }}</div>
+			{% endfor %}
+		</div>
+	</div>
+	<section class="entradas">
+		<div class="wrapper">	
+			<div class="noticias">
+				{% for entrada in entradas %}
+				<a href="{{ entrada.get_absolute_url }}" >
+				<article>
+				<div class="tituloent">{{ entrada.title }}</div>
+				<div class="imgdiv">
+					{% if entrada.image %}
+						<img src="{{ MEDIA_URL }}{{entrada.image}}" alt="{{ entrada.title }}">
+					{% else %}
+						<img src="{% static 'img/about.jpg' %}" alt="HISPANIC AMERICAN BANKERS"/>
+					{% endif %}	
+				</div>				
+					<div class="texto">{{ entrada.content }}...</div>
+					<div class="readmore">
+						<a href="#" class="btn">Read</a>
+						<a href="{{ entrada.get_absolute_url }}"> <img src="{% static 'img/botonicon.png' %}" alt="icono 	suma mas"></a>
+					</div>
+				</article>
+			</a>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+	<!-- Google+ SCRIPT --> 
+		<!-- Place this tag after the last badge tag. -->
+		<script  async type="text/javascript">
+		 window.___gcfg = {lang: 'es-419'};
+		 (function() {
+		    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+		   po.src = 'https://apis.google.com/js/plusone.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+		  })();
+		</script>
+
+		<!-- SLIDER INIT -->
+	<script>
+			$(document).ready(function() {
+			  $('.flexslider').flexslider({
+				//animation: "slide" si las imagenes son diferente tamaño poner sin slide
+			  });
+			});
+	</script>	
+
+{% endblock%}

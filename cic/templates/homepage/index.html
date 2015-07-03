@@ -1,52 +1,83 @@
 {% extends "base.html" %}
 {% load i18n %}
 {% load url from future %}
+{% load custom_filters %}
 {% load staticfiles %}
 {% block head %} 
 <meta name="description" content="">
 {% endblock%}
 {% block title %}
-Hispanic American Bankers Association
+Comunidad Integrativa de Coaches
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/index.css">
 <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
 {% endblock %}
 {% block js %}
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
 <script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancybox/source/jquery.fancybox.pack.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancybox/source/helpers/jquery.fancybox-media.js' %}"></script>
 {% endblock %}
 
 {% block clear %}{% endblock%}
 {% block contenido %}
-	<section class="bannerPrincipal">
-	<div class="sliderPosition">
-		<div class="flexslider">
-			<ul class="slides">
-				<li>
-					<img src="{% static 'img/banner.png' %}" alt="imagen1">		
-					<div class="wrapper">			
-						<div class="flex-caption">
-							<div class="cuadroblanco">
-								<p>{% trans 'Banking and financial issues' %}</p>
-								<p>Exchange information</p>
-								<p>networking and social gathering</p>	
-							</div>				
-						</div>
-					</div>	
-				</li>
-			</ul>
-		</div>		
-	</div>
-	</section>
-	<div class="grisentradas">
-		<div class="wrapper">
-			{% for titulo in titulos %}
-				<div class="titulo">{{ titulo }}</div>
-			{% endfor %}
+		<div class="imagenhome">
+			<img src="{% static 'img/homeimage.jpg' %}" alt="Grupo coaches felices">
 		</div>
-	</div>
+		<div class="wrapper">	
+			<div class="trescuadros">
+				<div class="cuadroblanco maspabajo">
+					<div class="cuadro coach">
+						<h2>{% trans '¿Eres un coach certificado?' %}</h2>
+						<p>{{ textoshome.eres_coach }}</p>
+						<div class="icono1"></div>
+						<a class="cuadroboton" href="#">{% trans 'Beneficios de Registrarme' %}</a>
+					</div>
+				</div>
+				<div class="cuadroblanco">
+					<div class="cuadro certificaciones">
+						<h2>{% trans 'Certificaciones' %}</h2>
+						<p>{{ textoshome.certificaciones }}</p>
+						<div class="icono2"></div>
+						<a class="cuadroboton" href="#">{% trans 'Conocer Más' %}</a>
+					</div>
+				</div>
+				<div class="cuadroblanco maspabajo">
+					<div class="cuadro recursos">
+						<h2>{% trans 'Recursos Informativos' %}</h2>
+						<p>{{ textoshome.recursos_informativos }}</p>
+						<div class="icono3"></div>
+						<a class="cuadroboton" href="#">{% trans 'Ver Recursos' %}</a>				
+					</div>
+				</div>
+			</div>
+			<div class="sliderindex">
+				<div class="flexslider">
+					<ul class="slides">
+					{% for image in imgslider %}
+						<li>		
+							<div class="flex-caption">
+								<h2>{{ image.titulo }}</h2>
+								<p>{{ image.texto_contenido }}	</p>
+							</div>						
+							<img src="{{ MEDIA_URL }}{{image.imagen}}" alt="image.tutulo">		
+						</li>
+					{% endfor %}
+					</ul>
+				</div>			
+			</div>
+			{% for video in videosinicio %}
+			<div class="video">
+				<h2 class="tituloh1">{{video.video_titulo}}</h2>
+				<a class="fancybox-media" href="{{video.video_link}}">
+					<div class="playIcon"></div>
+					<img src="{{video.video_link|youthumbnail:'l'}}" alt="{{video.video_titulo}}">
+				</a>	
+			</div>	
+			{% endfor %}		
+		</div>
 	<section class="entradas">
 		<div class="wrapper">	
 			<div class="noticias">
@@ -87,9 +118,20 @@ Hispanic American Bankers Association
 	<script>
 			$(document).ready(function() {
 			  $('.flexslider').flexslider({
-				//animation: "slide" si las imagenes son diferente tamaño poner sin slide
+				animation: "slide" //si las imagenes son diferente tamaño poner sin slide
 			  });
 			});
 	</script>	
-
+	<!-- YOUTUBE FANCYBOX -->
+	<script>
+	$(document).ready(function() {
+		$('.fancybox-media').fancybox({
+			openEffect  : 'none',
+			closeEffect : 'none',
+			helpers : {
+				media : {}
+			}
+		});
+	});
+	</script>
 {% endblock%}

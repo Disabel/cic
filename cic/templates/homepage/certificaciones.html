@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Certificaciones - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/certificaciones.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagencertificaciones">
+			<img src="{% static 'img/bannercertificaciones.jpg' %}" alt="Certificaciones CIC">
+		</div>
+		<div class="wrapper">
+			<div class="contenidocertificaciones">
+			<div class="info">
+				<h2><span>{% trans 'Certificaciones CIC' %}</span></h2>
+				{{ certificaciones.introduccion|safe }}
+			</div>
+			<div class="info">
+				<h2><span>{% trans '¿Por qué' %}</span>{% trans 'certificarte con los entrenadoresde la CIC?' %}</h2>
+				{{ certificaciones.por_que_certificarte|safe }}
+			</div>
+			<div class="info">
+				<h2><span>{% trans '¿Por qué' %}</span>{% trans 'los trainers de la CIC?' %}</h2>
+				<div class="numero">
+					<div class="num numerouno"></div>
+					<div class="txtnum">{{ certificaciones.porque_uno|safe }}</div>
+				</div>
+				<div class="numero">
+					<div class="num numerodos"></div>
+					<div class="txtnum">{{ certificaciones.porque_dos|safe }}</div>
+				</div>
+				<div class="numero">
+					<div class="num numerotres"></div>
+					<div class="txtnum">{{ certificaciones.porque_tres|safe }}</div>
+				</div>
+				<div class="numero">
+					<div class="num numerocuatro"></div>
+					<div class="txtnum">{{ certificaciones.porque_cuatro|safe }}</div>
+				</div>												
+			</div>
+			<div class="info">
+				<h2><span>{% trans '¿Quienes' %}</span>{% trans 'certifican en la CIC?' %}</h2>
+				{{ certificaciones.quienes_certifican|safe }}
+			</div>	
+
+		</div>
+				<div class="sidebar">
+			<div class="unete">
+				<p class="tituloside"><span>{% trans 'Certificación' %}</span>{% trans 'Se un Coach certificado por la CIC en:' %}</p>
+				{% for certificacionlist in certificaciones_lista %}	
+					<a class="mainlink" href="{{certificacionlist.get_absolute_url}}"><li>{{ certificacionlist.titulo }}</li></a>
+				{% endfor %}
+			</div>
+			<div class="unete">
+				<p class="tituloside"><span>{% trans 'Especializaciones' %}</span></p>
+				{% for espe in especializaciones_lista %}	
+					<a class="mainlink" href="{{espe.get_absolute_url}}"><li>{{ espe.titulo }}</li></a>
+				{% endfor %}
+			</div>			
+			<div class="recursosinformativos">
+				<p class="tituloside"><span>{% trans 'Visita nuestros ' %}</span>{% trans ' Recursos Informativos' %}</p>
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Noticias' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/noticias.png' %}" alt="flecha naranja">
+				</a>
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Herramientas y Otros Artículos' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/herramientas.png' %}" alt="flecha naranja">
+				</a>
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Artículos' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/articulos.png' %}" alt="flecha naranja">
+				</a>				
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Libros' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/libros.png' %}" alt="flecha naranja">
+				</a>												
+			</div>			
+		</div>
+	</div>
+{% endblock%}

@@ -1,0 +1,82 @@
+nav .servicios a{
+  color: #eb4923;
+}
+  .imagenservicios img{
+    width: 100%;
+  }
+.submenu li{
+  display: inline-block;
+  margin: 0 70px;
+}
+.submenu{
+  padding: 17px 0;
+  width: 64%;
+  margin: 0 auto;
+  list-style: none;
+  border: solid 1px rgb(209, 204, 204);
+
+}
+.submenu li a{
+	text-decoration: none;
+	color: #5b5b5b;
+	}
+h2{
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+h2 span{
+  display: block;
+  font-size: 2em;
+}
+.info p{
+  text-align: justify;
+}
+.cursoslista a{
+  text-decoration: none;
+  color: #4fb77f;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.cursoslista li{
+ list-style-image: url(../../img/iconlist.png);
+}
+
+.contenidocurso li{
+ list-style-image: url(../../img/iconlist.png);
+ margin: 5px 0;
+}
+.back-link{
+  color: rgb(154, 154, 154);
+}
+.botonEnviar input
+{
+  padding: 16px 10px;
+  background-color: #4fb77f;
+  color: #FFF;
+  border-radius: 10px;
+  margin-top: 10px;
+
+}
+
+.infoform{
+  width: 50%;
+  display: inline-block;
+}
+.infoform .campo input{
+  width: 80%;
+  height: 25px;
+  margin: 2px 0px;
+}
+.imagencurso{
+  display: inline-block;
+  width: 38%;
+  vertical-align: top;
+  }
+  .infoform textarea{
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  .campo li, .textareaDescripcion li{
+     list-style-image: url(../../img/iconlist.png);
+      margin: 5px 0;
+  }

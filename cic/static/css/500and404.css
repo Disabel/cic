@@ -1,0 +1,36 @@
+@charset "utf-8";
+body{
+	background: white;
+}
+.cabecera {
+	margin: 0;
+}
+.error500 {
+	margin: 0 auto 0 auto;
+	height: 600px;
+	background: url('../img/error500.png') no-repeat;
+	background-position: center top;
+	text-align: center;
+	font-size: 2em;
+	line-height: 950px;
+}
+.error404, .error403{
+	margin: 0 auto 0 auto;
+	height: 600px;
+	text-align: center;
+	line-height: 950px;
+	font-size: 1.3em;
+}
+.error404 {
+	background: url('../img/error404.png') no-repeat;
+	background-position: center;
+}
+
+.error403 {
+	background: url('../img/error403.png') no-repeat;
+	background-position: center;
+}
+
+.contactoInfo p {
+	color: black
+}

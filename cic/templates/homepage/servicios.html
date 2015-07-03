@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/servicios.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagenservicios">
+			<img src="{% static 'img/Bannerservicios.jpg' %}" alt="Servicios CIC">
+		</div>
+	<div class="wrapper">
+		<ul class="submenu">
+			<li><a  href="{% url 'homepageservicios' %}">{% trans 'Cursos' %}</a></li>
+			<li><a href="{% url 'serviciosconferencias' %}">{% trans 'Conferencias' %}</a></li>
+			<li><a href="{% url 'serviciosasesorias' %}">{% trans 'Asesorías' %}</a></li>
+		</ul>
+		<div class="contenidocursos">
+			<div class="info">
+				<h2><span>{% trans 'Cursos' %}</span></h2>
+				{{ servicios_textos.cursos_texto|safe }}
+				<h2><span>{% trans 'Listado ' %}</span>{% trans 'de nuestros Cursos' %}</h2>
+				<ul class="cursoslista">
+					{% for curso in cursoscursos %}
+						<li><a class="mainlink" href="{{curso.get_absolute_url}}">{{ curso.titulo|safe }}</a></li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock%}

@@ -1,0 +1,103 @@
+nav .index a{
+  color: #eb4923;
+}
+
+.imagenhome{
+	width: 100%;
+}
+
+.imagenhome img{
+	width: 100%;
+}
+h2{
+	text-transform: uppercase;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 1.3em;
+}
+
+.trescuadros .cuadroblanco{
+  display: inline-block;
+  width: 33%;
+  vertical-align: top;
+  background-color: #FFF;
+  text-align: center;
+    margin-right: -4px;
+}
+.trescuadros{
+    margin-top: -139px;
+}
+.trescuadros .cuadro{
+  background-color: #eaebec;
+  width: 90%;
+  border: solid 1px #C2BDBD;
+  margin: 14px auto;
+  height: 341px;
+}
+.trescuadros .certificaciones{
+	  height: 391px !important;
+}
+.trescuadros .certificaciones p{
+  margin-bottom: 61px;
+}
+.trescuadros .recursos p{
+  margin-bottom: 43px;
+}
+.maspabajo{
+	  margin-top: 49px;
+}
+.icono1{
+	width: 94px;
+	height: 112px;
+	background: url(../../img/iconoshome.png) 0 -20px;
+	margin: 0 auto;
+}
+.icono2{
+	width: 180px;
+	height: 139px;
+	background: url(../../img/iconoshome.png) -94px;
+	margin: 0 auto;
+}
+.icono3{
+	width: 81px;
+	height: 108px;	
+	background: url(../../img/iconoshome.png) -291px -33px;
+	margin: 0 auto;
+}
+
+.trescuadros .cuadro .cuadroboton{
+  display: block;
+  padding: 16px 10px;
+  background-color: #4fb77f;
+  width: 67%;
+  margin: 0 auto;
+  color: #FFF;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.trescuadros .cuadro p
+{  padding: 0 18px;
+  height: 57px;
+  overflow: hidden;
+  }
+
+/* videos inicio */
+.video{
+  position: relative;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+.video img{
+  width: 100%;
+}
+.playIcon{
+  position: absolute;
+  top: 45%;
+  left: 44%;
+  background: url(../../img/play.png) no-repeat;
+  width: 48px;
+  height: 48px;
+}

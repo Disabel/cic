@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Registro - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/registro.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagenregistro">
+			<img src="{% static 'img/bannercertificaciones.jpg' %}" alt="Certificaciones CIC">
+		</div>
+	<div class="contenidocertificaciones">
+		<div class="wrapper">
+			<div class="info">
+				<h2><span>{% trans 'Regístrate ' %}</span> como coach de la CIC</h2>
+				<a href="{% url 'registrocic' %}">{% trans 'Registro para coaches certificados CIC' %}</a>
+				<a href="#">{% trans 'Registro para coaches Invitados o No certificados por CIC' %}</a>
+			</div>			
+		</div>
+	</div>
+{% endblock%}

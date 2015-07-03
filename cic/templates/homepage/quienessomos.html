@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Quienes Somos - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/about.css">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+	<div class="imagenabout">
+		<img src="{% static 'img/bannerquienes.jpg' %}" alt="Quienes Somos">
+	</div>
+	<div class="wrapper">
+		<ul class="submenu">
+			<li><a  href="{% url 'homepageaboutus' %}">{% trans 'Sobre la CIC' %}</a></li>
+			<li><a href="{% url 'aboutdirectorio' %}">{% trans 'Directorio' %}</a></li>
+			<li><a href="{% url 'aboutpaises' %}">{% trans 'Paises de la CIC' %}</a></li>
+			<li><a href="{% url 'aboutcodigo' %}">{% trans 'Código de ética' %}</a></li>
+		</ul>
+		<div class="contenidosobrecic">
+			<div class="info">
+				<h2><span>{% trans '¿Qué es' %}</span>{% trans 'la comunidad Integrativa de Coaches CIC?' %}</h2>
+				{{ quienesSomos.que_es_cic|safe }}
+			</div>
+			<div class="info">
+				<h2><span>¿Quienes</span> forman la CIC?</h2>
+				{{ quienesSomos.quienes_forman|safe }}
+			</div>	
+			<div class="info">
+				<h2><span>¿Por qué</span> nace esta comunidad</h2>
+				{{ quienesSomos.por_que_nace|safe }}
+			</div>	
+			<div class="info equipo">
+				<h2><span>{% trans 'Nuestro' %}</span> {% trans 'equipo directivo' %}</h2>
+				<p>{% trans 'Son directores fundadores de la comunidad Integrativa de Coaches, los Coaches Internacionales y Trainers en NLP:' %}</p>
+				<ul>
+				    {% for director in directores %}  
+				    	<li>{{ director.nombre_completo }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="info">
+				<h2><span>{% trans 'Representantes' %}</span>{% trans 'Internacionales de la CIC' %}</h2>
+				<ul class="representantes">
+				    {% for representante in representantes_internacionales %}  
+				    	<li><span>{{ representante.paises }}</span>{{ representante.nombre }}</li>
+					{% endfor %}
+				</ul>
+			</div>			
+			<div class="info">
+				<h2><span>Lo que usted</span> gana al pertenecer a la CIC</h2>
+				<ul>  
+				    	<li>Trabajo en red con coaches profesionales de todo los países donde tiene operaciones la CIC.</li>
+				    	<li>Acceso a una red social para coaches profesionales a través del Campus de la CIC que le permite el intercambio profesional, cultural y social.</li>
+				    	<li>Acceso a la red de referencias de la CIC para que particulares y organizaciones puedan contactarse con usted.</li>
+				    	<li>Oportunidades de formación, capacitación y actualización.</li>
+				    	<li>Respaldo institucional a nivel internacional en las labores de Certificación, presentación de trabajos de investigación, publicación de textos especializados, participación en conferencias.</li>
+				    	<li>Oportunidades de replicar nuestros programas de certificación en distintos países del mundo.</li>
+				    	<li>Intercambio internacional de talentos o expertos.</li>
+				    	<li>Acceso a los Newsletter de coaching con información, reseñas, artículos y recursos.</li>
+				    	<li>Acceso total a los Webinars para una constante educación en coaching.</li>
+				    	<li>Descuentos para Eventos especiales, Congresos, Seminarios, Cursos y Talleres.</li>
+				</ul>
+			</div>					
+			<div class="info">
+					<h2><span>{% trans 'Misión' %}</span>{% trans 'de la CIC' %}</h2>
+					{{ otrostextos.mision|safe }}
+			</div>
+			<div class="info">
+					<h2><span>{% trans 'Visión' %}</span>{% trans 'de la CIC' %}</h2>
+					{{ otrostextos.vision|safe }}
+			</div>	
+		
+			<div class="info">
+				<h2><span>{% trans 'Valores' %}</span>{% trans 'de la CIC' %}</h2>
+				{{ otrostextos.valores|safe }}
+			</div>				
+		</div>
+		<div class="sidebar">
+			<div class="unete">
+				<p class="tituloside"><span>{% trans 'Únete a la' %}</span>{% trans 'Comunidad Integrativa de Coaches' %}</p>
+				<a class="boton" href="{% url 'homepageregistro' %}">{% trans 'Regístrate Aquí' %}</a>
+			</div>
+			<div class="recursosinformativos">
+				<p class="tituloside"><span>{% trans 'Visita nuestros ' %}</span>{% trans ' Recursos Informativos' %}</p>
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Noticias' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/noticias.png' %}" alt="flecha naranja">
+				</a>
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Herramientas y Otros Artículos' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/herramientas.png' %}" alt="flecha naranja">
+				</a>
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Artículos' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/articulos.png' %}" alt="flecha naranja">
+				</a>				
+				<a class="recursoinfo" href="#">
+					<p>{% trans 'Libros' %}</p>
+					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
+					<img class="recursoimg" src="{% static 'img/libros.png' %}" alt="flecha naranja">
+				</a>												
+			</div>			
+		</div>
+	</div>
+{% endblock%}

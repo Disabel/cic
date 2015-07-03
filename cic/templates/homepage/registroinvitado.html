@@ -1,0 +1,375 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block head %} 
+<meta name="description" content="">
+{% endblock%}
+{% block title %}
+Registro - Comunidad Integrativa de Coaches
+{% endblock%}
+{% block css%}
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/registro.css">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock %}
+{% block js %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/registro.js' %}"></script>
+<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+
+{% block clear %}{% endblock%}
+{% block contenido %}
+		<div class="imagenregistro">
+			<img src="{% static 'img/bannercertificaciones.jpg' %}" alt="Certificaciones CIC">
+		</div>
+	<div class="contenidocertificaciones">
+		<div class="wrapper">
+			<div class="info">
+				<h2><span> {% trans 'Regístrate como coach de la CIC' %}</span></h2>
+				{% trans 'Registro para coaches certificados CIC' %}
+			<form action="#" method="POST" id="registroform">
+				{% csrf_token %}
+				<div class="tituloform">
+					<div class="flecha"></div>
+					<p>{% trans 'Datos Personales' %}</p>
+				</div>
+				<div class="campo">
+					{{ field.errors }}
+					<label for="nombre_completo">{% trans 'Nombre y apellidos completos' %}: </label>
+					{{ form.nombre_completo }}
+					{{ form.nombre_completo.errors }}
+				</div>
+				<div class="campo">
+					{{ field.errors }}
+					<label for="identificacion">{% trans 'Número de identificación o pasaporte' %}:</label>
+					{{ form.identificacion }}
+					{{ form.identificacion.errors }}
+				</div>
+				<div class="campocorto">
+					{{ field.errors }}
+					<label for="fecha_nacimiento">{% trans 'Fecha de nacimiento' %}:</label>
+					{{ form.fecha_nacimiento }}
+					{{ form.fecha_nacimiento.errors }}
+				</div>
+				<div class="campocorto2">
+					{{ field.errors }}
+					<label for="nacionalidad">{% trans 'Nacionalidad' %}:</label>
+					{{ form.nacionalidad }}
+					{{ form.nacionalidad.errors }}
+				</div>
+				<div class="campo">
+					{{ field.errors }}
+					<label for="pais_recidencia">{% trans 'País de residencia' %}:</label>
+					{{ form.pais_recidencia }}
+					{{ form.pais_recidencia.errors }}
+				</div>
+				<div class="campo">
+					{{ field.errors }}
+					<label for="direccion">{% trans 'Dirección exacta' %}:</label>
+					{{ form.direccion }}
+					{{ form.direccion.errors }}
+				</div>
+				<div class="campocorto">
+					{{ field.errors }}
+					<label for="apartado_postal">{% trans 'Apartado postal' %}:</label>
+					{{ form.apartado_postal }}
+					{{ form.apartado_postal.errors }}
+				</div>
+				<div class="campocorto2">
+					{{ field.errors }}
+					<label for="codigo_area">{% trans 'Código de área' %}:</label>
+					{{ form.codigo_area }}
+					{{ form.codigo_area.errors }}
+				</div>
+				<div class="campocorto">
+					{{ field.errors }}
+					<label for="telefono_habitacion">{% trans 'Teléfono habitación' %}:</label>
+					{{ form.telefono_habitacion }}
+					{{ form.telefono_habitacion.errors }}
+				</div>
+				<div class="campocorto2">
+					{{ field.errors }}
+					<label for="telefono_movil">{% trans 'Teléfono móvil' %}:</label>
+					{{ form.telefono_movil }}
+					{{ form.telefono_movil.errors }}
+				</div>
+				<div class="campocorto">
+					{{ field.errors }}
+					<label for="otro_numero">{% trans 'Otro número telefónico' %}:</label>
+					{{ form.otro_numero }}
+					{{ form.otro_numero.errors }}
+				</div>	
+				<div class="campocorto2">
+					{{ field.errors }}
+					<label for="correo">{% trans 'Correo electrónico' %}:</label>
+					{{ form.correo }}
+					{{ form.correo.errors }}
+				</div>	
+				<div class="campocorto">
+					{{ field.errors }}
+					<label for="profesion">{% trans 'Profesión' %}:</label>
+					{{ form.profesion }}
+					{{ form.profesion.errors }}
+				</div>	
+				<div class="campocorto2">
+					{{ field.errors }}
+					<label for="experiencia">{% trans 'Años de experiencia' %}:</label>
+					{{ form.experiencia }}
+					{{ form.experiencia.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="codigo_inscripcion">{% trans 'Código de inscripción' %}:</label>
+					{{ form.codigo_inscripcion }}
+					{{ form.codigo_inscripcion.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="razon_de_registro">{% trans 'Razón que lo motiva a registrarse en CIC' %}:</label>
+					{{ form.razon_de_registro }}
+					{{ form.razon_de_registro.errors }}
+				</div>									
+				<div class="tituloform">
+					<div class="flecha"></div>
+					<p>{% trans 'Datos de Certificación' %}</p>
+				</div>
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="nombre_certificacion">{% trans 'Nombre de la certificación' %}:</label>
+					{{ form.nombre_certificacion }}
+					{{ form.nombre_certificacion.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="codigo_certificacion">{% trans 'Código de certificación' %}:</label>
+					{{ form.codigo_certificacion }}
+					{{ form.codigo_certificacion.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="fecha_certificacion">{% trans 'Fecha de certificación' %}:</label>
+					{{ form.fecha_certificacion }}
+					{{ form.fecha_certificacion.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="quienes_certifican">{% trans 'Quien lo certifica' %}:</label>
+					{{ form.quienes_certifican }}
+					{{ form.quienes_certifican.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="pais_certificacion">{% trans 'País donde se certificó' %}:</label>
+					{{ form.pais_certificacion }}
+					{{ form.pais_certificacion.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="entidad_certificacion">{% trans 'Entidad responsable de la certificación' %}:</label>
+					{{ form.entidad_certificacion }}
+					{{ form.entidad_certificacion.errors }}
+				</div>																	
+				<div class="tituloform">
+					<div class="flecha"></div>
+					<p>{% trans 'Si posee otras certificaciones adicionales en Coaching, por favor descríbalas' %}</p>
+				</div>
+				<p class="subti">{% trans 'Certificación (2):' %}</p>
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="certificacion_dos">{% trans 'Nombre de la certificación' %}:</label>
+					{{ form.certificacion_dos }}
+					{{ form.certificacion_dos.errors }}
+				</div>		
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="avalada_por">{% trans 'Avalada por' %}:</label>
+					{{ form.avalada_por }}
+					{{ form.avalada_por.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="ano_dos">{% trans 'Año de Certificación' %}:</label>
+					{{ form.ano_dos }}
+					{{ form.ano_dos.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="pais_dos">{% trans 'País donde se certificó' %}:</label>
+					{{ form.pais_dos }}
+					{{ form.pais_dos.errors }}
+				</div>
+				<p class="subti">{% trans 'Certificación (3):' %}</p>
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="certificacion_tres">{% trans 'Nombre de la certificación' %}:</label>
+					{{ form.certificacion_tres }}
+					{{ form.certificacion_tres.errors }}
+				</div>		
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="avalada_por">{% trans 'Avalada por' %}:</label>
+					{{ form.avalada_por_tres }}
+					{{ form.avalada_por_tres.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="ano_dos">{% trans 'Año de Certificación' %}:</label>
+					{{ form.ano_tres }}
+					{{ form.ano_tres.errors }}
+				</div>	
+				<div class="campo largo">
+					{{ field.errors }}
+					<label for="pais_dos">{% trans 'País donde se certificó' %}:</label>
+					{{ form.pais_tres }}
+					{{ form.pais_tres.errors }}
+				</div>																							
+				<div class="tituloform">
+					<div class="flecha"></div>
+					<p>{% trans 'De su Desempeño como Coach' %}</p>
+				</div>
+				<p class="subti">{% trans 'Seleccione la Frecuencia con que ejerce el Coaching:' %}</p>
+				<div class="ejercecoaching">
+				    <li><input class="ejercecoach" name="Actualmente ejerce el Coaching como profesión principal" type="checkbox"> {% trans 'Actualmente ejerce el Coaching como profesión principal' %}</input></li>
+				    <li><input class="ejercecoach" name="Ejerce la profesión del coaching ocasionalmente" type="checkbox"> {% trans 'Ejerce la profesión del coaching ocasionalmente' %}</input></li>
+				    <li><input class="ejercecoach" name="Nunca ha ejercido la profesión del coaching" type="checkbox"> {% trans 'Nunca ha ejercido la profesión del coaching' %}</input></li>
+				</div>
+				<div class="campoanos">
+					{{ field.errors }}
+					<label for="experiencia_ejerciendo_coaching">{% trans 'Indique los años de experiencia ejerciendo la profesión del coaching' %}:</label>
+					{{ form.experiencia_ejerciendo_coaching }}
+					{{ form.experiencia_ejerciendo_coaching.errors }}
+					años
+				</div>
+				<p class="subti">{% trans 'Ejerce el Coahing Como:' %}</p>
+				<div class="ejercecoachingcomo">
+				    <li><input class="ejercecoachingcomo" name="Coach externo" type="checkbox"> {% trans 'Coach externo' %}</input></li>
+				    <li><input class="ejercecoachingcomo" name="Coach interno" type="checkbox"> {% trans 'Coach interno' %}</input></li>
+				    <li><input class="ejercecoachingcomo" name="Coach y Mentoría" type="checkbox"> {% trans 'Coach y Mentoría' %}</input></li>
+				    <li><input class="ejercecoachingcomo" name="Lider Coach " type="checkbox"> {% trans 'Líder Coach ' %}</input></li>
+				   <li> <input class="ejercecoachingcomo" name="Entrenador de Coaching" type="checkbox"> {% trans 'Entrenador de Coaching ' %}</input></li>
+				   <li> <input class="ejercecoachingcomo" name="Coach speaker o conferenciante" type="checkbox"> {% trans 'Coach speaker o conferenciante' %}</input></li>
+				   <li> <input class="ejercecoachingcomo" name="Coach Investigator " type="checkbox"> {% trans 'Coach Investigator ' %}</input></li>
+				   <li> <input class="ejercecoachingcomo" name="Coach escritor " type="checkbox"> {% trans 'Coach escritor ' %}</input></li>
+				   <li> <input class="ejercecoachingcomo" id="otroopcion" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>		
+				   	<p class="especifique notShow">Especifíque:</p>
+				   	<input id="otrotexto1" class="ejercecoachingcomo notShow" type="text">		    	    				    
+				</div>
+				<p class="subti">{% trans 'SU DESEMPEÑO COMO COACH HA SIDO O ES A NIVEL DE:' %}</p>
+				<div class="coachnivelde">
+					<li><input class="cnivelde" name="Vida o personal " type="checkbox"> {% trans 'Vida o personal ' %}</input></li>
+					<li><input class="cnivelde" name="Transpersonal" type="checkbox"> {% trans 'Transpersonal' %}</input></li>
+					<li><input class="cnivelde" name="Organizacional o empresarial " type="checkbox"> {% trans 'Organizacional o empresarial ' %}</input></li>
+					<li><input class="cnivelde" name="De negocios " type="checkbox"> {% trans 'De negocios ' %}</input></li>
+					<li><input class="cnivelde" name="Ejecutivo" type="checkbox"> {% trans 'Ejecutivo' %}</input></li>
+					<li><input class="cnivelde" name="De Equipos " type="checkbox"> {% trans 'De Equipos ' %}</input></li>
+					<li><input id="otro2" class="cnivelde" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
+					<p class="especifique2 notShow">Especifíque:</p>
+				   	<input id="otrotexto2" class="notShow" type="text">
+				</div>
+				<p class="subti">{% trans '¿DESEMPEÑA EL COACHING EN UN CAMPO ESPECÍFICO?:' %}</p>
+				<div class="coachencampo">
+					<li><input class="coachcampo" name="Vida " type="checkbox"> {% trans 'Vida ' %}</input></li>
+					<li><input class="coachcampo" name="Salud " type="checkbox"> {% trans 'Salud ' %}</input></li>
+					<li><input class="coachcampo" name="Educación " type="checkbox"> {% trans 'Educación ' %}</input></li>
+					<li><input class="coachcampo" name="Deportivo " type="checkbox"> {% trans 'Deportivo ' %}</input></li>
+					<li><input class="coachcampo" name="Teratológico " type="checkbox"> {% trans 'Teratológico ' %}</input></li>
+					<li><input class="coachcampo" name="Liderazgo " type="checkbox"> {% trans 'Liderazgo ' %}</input></li>
+					<li><input class="coachcampo" name="Emprendimiento " type="checkbox"> {% trans 'Emprendimiento ' %}</input></li>
+					<li><input class="coachcampo" name="Empresarial " type="checkbox"> {% trans 'Empresarial ' %}</input></li>
+					<li><input class="coachcampo" name="Religioso " type="checkbox"> {% trans 'Religioso ' %}</input></li>
+					<li><input class="coachcampo" name="Innovación " type="checkbox"> {% trans 'Innovación ' %}</input></li>
+					<li><input id="otro3" class="coachcampo" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
+					<p class="especifique3 notShow">Especifíque:</p>
+				   	<input id="otrotexto3" class="notShow" type="text">	
+				</div>
+				<p class="subti">{% trans 'EJERCE EL COACHING DE MANERA:' %}</p>
+				<div class="coachingdemanera">
+					<li><input class="coachmanera" name="Individual" type="checkbox"> {% trans 'Individual' %}</input></li>
+					<li><input class="coachmanera" name="En equipo permanentemente " type="checkbox"> {% trans 'En equipo permanentemente ' %}</input></li>
+					<li><input class="coachmanera" name="En equipo ocasionalmente " type="checkbox"> {% trans 'En equipo ocasionalmente ' %}</input></li>
+					<li><input class="coachmanera" name="Contratado por una empresa " type="checkbox"> {% trans 'Contratado por una empresa ' %}</input></li>
+					<li><input class="coachmanera" name="Sub contratado como outsoursing " type="checkbox"> {% trans 'Sub contratado como outsoursing ' %}</input></li>
+					<li><input id="otro4" class="coachmanera" name="Otro" type="checkbox"> {% trans 'Otro' %}</input></li>
+					<p class="especifique4 notShow">Especifíque:</p>
+				   	<input id="otrotexto4" class="notShow" type="text">
+				</div>
+				<p class="subti">{% trans 'CUENTA USTED CON PUBLICACIONES RELACIONADAS CON EL COACHING:' %}</p>
+				<div class="sino">
+					<input type="radio" name="grupo2" id="sipublicacion" value="Si">Si</input>
+					<input type="radio" name="grupo2"  id="nopublicacion" value="No" checked="checked">No</input>
+				</div>
+				<div class="coachingpublicaciones notShow">	
+					<li><input class="publicaciones" name="Libros" type="checkbox"> {% trans 'Libros' %}</input></li>
+					<li><input class="publicaciones" name="Revistas" type="checkbox"> {% trans 'Revistas' %}</input></li>
+					<li><input class="publicaciones" name="Artículos de prensa " type="checkbox"> {% trans 'Artículos de prensa ' %}</input></li>
+					<li><input class="publicaciones" name="Artículos por internet " type="checkbox"> {% trans 'Artículos por internet ' %}</input></li>
+					<li><input class="publicaciones" name="No cuento con publicaciones relacionadas con el Coaching" type="checkbox"> {% trans 'No cuento con publicaciones relacionadas con el Coaching' %}</input></li>
+					<li><input id="otro5" class="publicaciones" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
+					<p class="especifique5 notShow">Especifíque:</p>
+				   	<input id="otrotexto5" class="notShow" type="text">	
+					<div class="campotxt">
+						{{ field.errors }}
+						<label for="descripcion_publicaciones">{% trans 'DESCRIBA BREVEMENTE SUS PUBLICACIONES: ' %}</label>
+						{{ form.descripcion_publicaciones }}
+						{{ form.descripcion_publicaciones.errors }}
+					</div>				
+				</div>	
+
+				<p class="subti">{% trans '¿HA PARTICIPADO EN EVENTOS INTERNACIONALES DE COACHING?:' %}</p> 
+				<div class="sino">
+					<input type="radio" name="grupo3" id="sievento" value="Si">Si</input>
+					<input type="radio" name="grupo3"  id="noevento" value="No" checked="checked">No</input>
+				</div>
+				<div class="campotxt eventodescripcion notShow">
+					{{ field.errors }}
+					<label for="eventos_internacionales">{% trans 'Describa a continuación nombre y año de cada evento: ' %}</label>
+					{{ form.eventos_internacionales }}
+					{{ form.eventos_internacionales.errors }}
+				</div>
+				<p class="subti">{% trans 'IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:' %}</p>	
+				<div class="comomiembro">
+					<li><input class="comomiembrocic" name="Oportunidades de empleo " type="checkbox"> {% trans 'Oportunidades de empleo ' %}</input></li>
+					<li><input class="comomiembrocic" name="Oportunidades para la investigación " type="checkbox"> {% trans 'Oportunidades para la investigación ' %}</input></li>
+					<li><input class="comomiembrocic" name="Apoyo para publicaciones " type="checkbox"> {% trans 'Apoyo para publicaciones ' %}</input></li>
+					<li><input class="comomiembrocic" name="Respaldo institucional " type="checkbox"> {% trans 'Respaldo institucional ' %}</input></li>
+					<li><input class="comomiembrocic" name="Imagen y prestigio internacional " type="checkbox"> {% trans 'Imagen y prestigio internacional ' %}</input></li>
+					<li><input class="comomiembrocic" name="Información bibliográﬁca actualizada " type="checkbox"> {% trans 'Información bibliográﬁca actualizada ' %}</input></li>
+					<li><input class="comomiembrocic" name="Temas de actualidad sobre coaching y áreas aﬁnes o relacionadas " type="checkbox"> {% trans 'Temas de actualidad sobre coaching y áreas aﬁnes o relacionadas ' %}</input></li>
+					<li><input class="comomiembrocic" name="Aportes e innovaciones " type="checkbox"> {% trans 'Aportes e innovaciones ' %}</input></li>
+					<li><input class="comomiembrocic" name="Noticias y sucesos relacionados con el coaching " type="checkbox"> {% trans 'Noticias y sucesos relacionados con el coaching ' %}</input></li>
+					<li><input class="comomiembrocic" name="Intercambio social con otros miembros " type="checkbox"> {% trans 'Intercambio social con otros miembros ' %}</input></li>
+					<li><input class="comomiembrocic" name="Intercambio profesional y de experiencias con otros miembros " type="checkbox"> {% trans 'Intercambio profesional y de experiencias con otros miembros ' %}</input></li>
+					<li><input class="comomiembrocic" name="Congresos, eventos especiales, conferencias" type="checkbox"> {% trans 'Congresos, eventos especiales, conferencias' %}</input></li>
+					<li><input class="comomiembrocic" name="Certiﬁcaciones" type="checkbox"> {% trans 'Certiﬁcaciones' %}</input></li>
+					<li><input class="comomiembrocic" name="Talleres, cursos y seminarios " type="checkbox"> {% trans 'Talleres, cursos y seminarios ' %}</input></li>
+					<li><input class="comomiembrocic" name="Intercambios sociales, deportivos y recreacionales " type="checkbox"> {% trans 'Intercambios sociales, deportivos y recreacionales ' %}</input></li>
+					<li><input id="otro7" class="comomiembrocic" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
+					<p class="especifique7 notShow">Especifíque:</p>
+				   	<input id="otrotexto7" class="notShow" type="text">						
+				</div>
+				<div class="notShow">
+					{{ form.coaching_profesion_principal }}
+					{{ form.coaching_profesion_principal.errors }}
+					{{ form.ejerce_coaching_como }}
+					{{ form.ejerce_coaching_como.errors }}
+					{{ form.coach_a_nivel_de }}
+					{{ form.coach_a_nivel_de.errors }}
+					{{ form.campo_especifico }}
+					{{ form.campo_especifico.errors }}
+					{{ form.coaching_de_manera }}
+					{{ form.coaching_de_manera.errors }}
+					{{ form.publicaciones_relacionadas }}
+					{{ form.publicaciones_relacionadas.errors }}
+					{{ form.que_desea_delacic }}
+					{{ form.que_desea_delacic.errors }}
+				</div>
+
+				<div class="botonEnviar">
+					<input id='enviar' type="submit">
+				</div>
+				</form>	
+			</div>			
+		</div>
+	</div>
+{% endblock%}

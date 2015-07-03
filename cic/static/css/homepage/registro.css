@@ -1,0 +1,65 @@
+  .imagenregistro img{
+    width: 100%;
+  }
+h2{
+  text-transform: uppercase;
+  font-size: 1.6em;
+}
+h2 span{
+  display: block;
+  font-size: 2em;
+}
+
+/*Formulario*/
+.tituloform p{
+	font-size: 1.5em;
+	color: #4fb77f;
+	text-transform: uppercase;
+}
+#registroform li{
+	list-style: none;
+}
+
+.notShow{
+	display: none;
+}
+.campo label, .campocorto label{
+	width: 276px;
+  display: inline-block;
+}
+.campocorto2 label{
+	width: 149px;
+  display: inline-block;	
+}
+.largo label{
+	width: 334px !important;
+}
+.campo input{
+  width: 57%;
+  height: 25px;
+}
+.campo, .campocorto, .campocorto2{
+	  height: 50px;
+}
+
+.campocorto input, .campocorto2 input{
+  width: 41%;
+  height: 25px;
+  display: inline-block;
+}
+.campocorto, .campocorto2{
+  display: inline-block;
+  width: 49%;
+}
+.campoanos input{
+  width: 20%;
+  height: 25px;
+}
+.campoanos label{
+	width: 498px;
+  display: inline-block;
+}
+.subti{
+	text-transform: uppercase;
+	font-weight: bold;
+}

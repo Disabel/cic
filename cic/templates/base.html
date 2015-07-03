@@ -1,24 +1,23 @@
-{% load url from future %}
-{% load i18n %}
 {% load staticfiles %}
+{% load i18n %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{LANGUAGE_CODE}}">
 <head>
 <!--[if lt IE 8]><script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/ie6-not-supported.js" ></script><![endif]-->
 <!--[if lt IE 9]>
 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/PIE.js"></script>
 <![endif]-->
-<meta name="keywords" content="hispanic, american, bankers, association, haba, florida, american, hugo, castro, banks">
-<meta name="author" content="José Ordoñez, Diana Chavez y Elibeth Quiñones">
+<meta name="keywords" content="comunidad, integrativa, coaches, coach de vida, coach transformacional">
+<meta name="author" content="Duranjo Web, José Ordoñez, Diana Chavez y Elibeth Quiñones">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 {% block head %} {% endblock%}
 <link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
-<title>{% block title %} HISPANIC AMERICAN BANKERS ASSOCIATION{% endblock%}</title>
+<title>{% block title %} COMUNIDAD INTEGRATIVA DE COACHES {% endblock%}</title>
 <link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
 <link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
-<link href='http://fonts.googleapis.com/css?family=Orienta' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 {% block css %}
 {% endblock %}
 {% block js %}
@@ -37,59 +36,111 @@
 	</script> -->
 	<header id="home" class="cabecera">
 		<div class="wrapper">
-						<!-- Formulario para cambiar idioma -->
-				<div class="idioma">
-				{% trans 'Idioma:' %}
-				<form action="/i18n/setlang/" method="post" style="display: inline;">{% csrf_token %}
-				    <div style="display: inline;">
-				        <select name="language" onchange="javascript:form.submit()">
-				            {% for lang in LANGUAGES %}
-				                <option value="{{ lang.0 }}"{% ifequal LANGUAGE_CODE lang.0 %} selected="selected"{% endifequal %}>{{ lang.1 }}</option>
-				            {% endfor %}
-				        </select>
-				    </div>
-				</form>
-				</div>
-				<!-- ================================================================================ -->
-				<!-- FIN Formulario para cambiar idioma -->
-				<!-- ================================================================================ -->			
 			<div class="logomenu">
-				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Hispanic American Bankers">
-			</div>	
-			<nav class="barraNavegacion">
-				{% block navi %} 
-					<ul>
-						<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">Home</a></li><span>|</span>
-						<li class="aboutus"><a href="{% url 'homepageaboutus' %}">About us</a></li><span>|</span>
-						<li class="blog"><a href="/blog">Blog</a></li>
-					</ul>	
-			<!--		<select> 
-						<option value="" selected="selected">Menú</option> 
-						<option value="{% url 'homepageindex' %}">Home</option>
-						<option value="{% url 'homepageaboutus' %}">About us</option>
-						<option value="/blog">Blog</option>
-					</select>	--> 	
-				{% endblock%}
-				<h1>Hispanic American Bankers Association</h1>
-			</nav>
+				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Comunidad Integrativa de Coaches">
+			</div>	 
+			<div class="derecha">
+				<div class="arribadelmenu">
+					<div class="redesSociales">
+							<a href="https://www.facebook.com" rel="nofollow"><div class="facebook"></div></a>		
+							<a href="https://twitter.com/*" rel="nofollow"><div class="twitterlogo"></div></a>
+							<a href="http://instagram.com" rel="nofollow"><div class="instagram"></div></a>
+							<a href="youtube.com" rel="nofollow"><div class="youtube"></div></a>
+							<a href="https://plus.google.com" rel="nofollow"><div class="googleplus"></div></a>
+					</div>
+					<a class="registrateboton" href="{% url 'homepageregistro' %}">Regístrate como coach</a>
+					<!-- Formulario para cambiar idioma -->
+					<form action="/i18n/setlang/" method="post" style="display: none" id="change_language_form">
+					{% csrf_token %}
+					<input type="hidden" value="" name="language" id="language" />
+					</form>
 
+					{% get_language_info_list for LANGUAGES as languages %}
+					{% for language in languages %}
+						<a href="#" lang_code="{{ language.code }}" class="change_language">{{ language.name_local }} ({{ language.code }})</a> 
+						{% if language.code = 'es' %}
+						<span class="tap">|</span>
+						{% endif %}
+					{% endfor %}
+
+					<script>
+					$(document).ready(function() {
+						$('.change_language').click(function(e){
+							e.preventDefault();
+							$('#language').val($(this).attr('lang_code'));
+							$('#change_language_form').submit();
+						});
+					});
+					</script>
+					<!-- ================================================================================ -->
+					<!-- FIN Formulario para cambiar idioma -->
+					<!-- ================================================================================ -->
+			</div>
+				<nav class="barraNavegacion">
+					{% block navi %} 
+						<ul>
+							<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">{% trans 'Inicio' %}</a></li><span>|</span>
+							<li class="aboutus"><a href="{% url 'homepageaboutus' %}">{% trans 'Quienes Somos' %}</a></li><span>|</span>
+							<li class="certificaciones"><a href="{% url 'homepagecertificaciones' %}">{% trans 'Certificaciones' %}</a></li><span>|</span>
+							<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'servicios' %}</a></li><span>|</span>
+							<li class="eventos"><a href="#">{% trans 'Eventos' %}</a></li><span>|</span>
+							<li class="recursos"><a href="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</a></li><span>|</span>
+							<li class="contacto"><a href="{% url 'homepagecontact' %}">{% trans 'Contacto' %}</a></li>
+						</ul>	
+				<!--		<select> 
+							<option value="" selected="selected">Menú</option> 
+							<option value="{% url 'homepageindex' %}">Home</option>
+							<option value="{% url 'homepageaboutus' %}">About us</option>
+							<option value="/blog">Blog</option>
+						</select>	--> 	
+					{% endblock%}
+				</nav>
+			</div>
 		</div>
 	</header>
-	<div class="separadorgris"></div>	
 	<section class="contenido">
 		{% block contenido %} {% endblock%}
 	</section>
 	{% block clear %} {% endblock %}
 	<footer>
+
 		{% block footer %}{% endblock%}
 		<div class="footerline"></div>
 		<div class="wrapper">
-			<div class="linea1">
-				<p>P.O Box 348084, Coral Gables, Fl. 33234 <span></span> © Copyright 2015 All rights reserved.</p>
+			<div class="infofooter">
+				<ul class="menu">
+					<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">{% trans 'Inicio' %}</a></li><span>|</span>
+					<li class="aboutus"><a href="{% url 'homepageaboutus' %}">{% trans 'Quienes Somos' %}</a></li><span>|</span>
+					<li class="certificaciones"><a href="{% url 'homepagecertificaciones' %}">{% trans 'Certificaciones' %}</a></li><span>|</span>
+					<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'servicios' %}</a></li><span>|</span>
+					<li class="eventos"><a href="#">{% trans 'Eventos' %}</a></li><span>|</span>
+					<li class="recursos"><a href="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</a></li><span>|</span>
+					<li class="contacto"><a href="#">{% trans 'Contacto' %}</a></li>
+				</ul>	
+				<div class="abajofooter">
+					<div class="esloganfooter">{% trans 'Un espacio para el acercamiento y la Integración' %}</div>	
+					<div class="correofooter">
+						<div class="sobre"></div>
+						<p>correo@correo.com</p>
+					</div>
+				</div>							
 			</div>
-			<div class="linea2">
-				<p>Phone: 305-505-7430 <span></span> e-mail: info@hababanquers.com</p>
-			</div>		  
+			<div class="logofooter">
+				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Comunidad Integrativa de Coaches">
+			</div>
+			<div class="naranjasfooter">
+				<div class="redesSociales">
+					<a href="https://www.facebook.com" rel="nofollow"><div class="facebook"></div></a>		
+					<a href="https://twitter.com/*" rel="nofollow"><div class="twitterlogo"></div></a>
+					<a href="http://instagram.com" rel="nofollow"><div class="instagram"></div></a>
+					<a href="youtube.com" rel="nofollow"><div class="youtube"></div></a>
+					<a href="https://plus.google.com" rel="nofollow"><div class="googleplus"></div></a>
+				</div>
+				<div class="suscribetefooter">
+					<p>{% trans 'Suscríbete a Nuestro Boletín' %}</p>
+				</div>
+			</div>
+			<div class="copyright">{% trans 'Comunidad Integrativa de Coaches © Copyright 2015 Todos los Derechos Reservados' %}</div>
 		</div>
 	</footer>
 	<script>

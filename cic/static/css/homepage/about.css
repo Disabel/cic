@@ -1,0 +1,115 @@
+nav .aboutus a{
+	color: #eb4923;
+}
+.contenidosobrecic{
+  display: inline-block;
+  width: 70%;
+  vertical-align: top;	
+}
+h2{
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+h2 span{
+	display: block;
+	font-size: 2em;
+}
+.info{
+	 text-align: justify;
+  padding-right: 50px;
+	} 
+
+
+.submenu li{
+  display: inline-block;
+  margin: 0 48px;
+}
+.submenu{
+  padding: 17px 0;
+  width: 79%;
+  margin: 0 auto;
+  list-style: none;
+  border: solid 1px rgb(209, 204, 204);
+
+}
+.submenu li a{
+	text-decoration: none;
+	color: #5b5b5b;
+	}
+
+.imagenabout img{
+	width: 100%;
+}
+
+.equipo li{
+	color: #eb4923;
+}
+.representantes li span{
+	text-transform: uppercase;
+	font-size: 1.3em;
+	color: #4fb77f;
+	font-weight: bold;
+	display: block;
+
+}
+
+/* SIDEBAR */
+.sidebar{
+  display: inline-block;
+  width: 29%;
+  vertical-align: top;	
+}
+.sidebar .unete{
+  border-left: solid 6px #eb4923;
+  padding-left: 9px;
+}
+.sidebar .unete .boton{
+	display: block;
+	padding: 16px 10px;
+	background-color: #4fb77f;
+	width: 67%;
+	margin: 0 auto;
+	color: #FFF;
+	text-decoration: none;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.sidebar .recursoinfo{
+	text-decoration: none;
+}
+.sidebar .recursoinfo p{
+	text-transform: uppercase;
+	font-size: 1.8em;
+	color: #4fb77f;
+	font-weight: bold;
+	display: inline-block;
+}
+.tituloside{
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 1.4em;
+}
+.tituloside span{
+	display: block;
+	font-size: 1.7em;	
+}
+.sidebar .recursoimg{
+	width: 100%;
+}
+/* FIN SIDEBAR */
+
+/*PAISES*/
+.paiscic{
+display: inline-block;
+  width: 24%;
+  text-align: center;
+  margin-right: 7px;
+  margin-bottom: 10px;
+}
+.paiscic img{
+	width: 80%;
+}
+.introPaises{
+text-align: justify;
+  margin-top: 20px;
+}
