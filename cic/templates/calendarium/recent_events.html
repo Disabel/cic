@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load thumbnail %}
+{% load i18n calendarium_tags %}
+{% load staticfiles %}
+{% block head %} 
+
+{% endblock%}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/calendarium/recentevents.css' %}">
+<link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+{% endblock css%}
+{% block js %}
+<script type="text/javascript" src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+{% endblock %}
+{% block contenido %}
+<div class="bannertop">
+	<img src="{% static 'img/bannereventos.jpg' %}" alt="banner evento cic">
+</div>
+<div class="wrapper">
+	{% include 'calendarium/menuagenda.html' %}
+	<div class="content">
+		<h1>Próximos eventos</h1>
+		<h3>¡Registrate ya!</h3>
+		{% render_upcoming_events 5 current_category %}
+		<div class="botonCalendario"><a href="{% url 'calendar_current_month' %}">Ir al calendario</a></div>
+	</div>
+	<aside>
+		<!-- LLAMADOS AQUI -->
+		{% include 'homepage/blogshort.html' %}
+	</aside>
+</div>
+{% endblock %}
+{% block jsBottom %}
+<script>
+$(document).ready(function() {
+	$('.flexslider').flexslider({
+		  	slideshowSpeed: 7000,
+		  	// start: function(slider) {
+			//       slider.flexAnimate(slider.getTarget("next"));
+			//    }
+		  });
+});	
+</script>
+{% endblock %}
+{% block footerLlamados %}
+	<div class="footerLinks">
+		<a href="{{footer.enlace_uno}}">{{footer.titulo_uno}}</a> > 
+		<a href="{{footer.enlace_dos}}">{{footer.titulo_dos}}</a> > 
+		<a href="{{footer.enlace_tres}}">{{footer.titulo_tres}}</a>
+	</div>
+{% endblock %}

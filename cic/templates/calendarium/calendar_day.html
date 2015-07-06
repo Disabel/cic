@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block title %}
+Información del día en el cronograma - Comunidad Integrativa de Coaches
+{% endblock %}
+{% block head %}
+<meta name="description" content="Información del día en el cual se puede observar las actividades y eventos que dispone comunidad integrativa de coaches">
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/calendarium/pordia.css' %}">
+{% endblock css%}
+{% block contenido %}
+<div class="wrapper">
+    <h1>Eventos del día</h1>
+    {% include "calendarium/partials/category_list.html" %}
+    <form action="." method="post">
+        {% csrf_token %}
+        <input type="submit" name="previous" value="Anterior" />
+        <input type="submit" name="next" value="Siguiente" />
+        <input type="submit" name="today" value="hoy" />
+    </form>
+    <a href="{% url 'calendar_current_month' %}">Volver al calendario</a>
+    <table class="table">
+        <tr>
+            <th>{{ date|date:'D m/d' }}</th>
+        </tr>
+        <tr>
+            {% if occurrences %}
+                {% for occurrence in occurrences %}
+                    <td>
+                        <a href="{{ occurrence.get_absolute_url}}"><p>{{ occurrence }}</p></a>
+                    </td>
+                {% endfor %}
+            {% else %}
+                <td><p>¡No hay eventos para este día!</p></td>
+            {% endif %}
+        </tr>
+    </table>
+</div>
+{% endblock %}
+{% block footerLlamados %}
+    <div class="footerLinks">
+        <a href="{{footer.enlace_uno}}">{{footer.titulo_uno}}</a> > 
+        <a href="{{footer.enlace_dos}}">{{footer.titulo_dos}}</a> > 
+        <a href="{{footer.enlace_tres}}">{{footer.titulo_tres}}</a>
+    </div>
+{% endblock %}

@@ -9,17 +9,18 @@
 <script type="text/javascript" src="{{ STATIC_URL }}js/adquiridos/PIE.js"></script>
 <![endif]-->
 <meta name="keywords" content="comunidad, integrativa, coaches, coach de vida, coach transformacional">
-<meta name="author" content="Duranjo Web, José Ordoñez, Diana Chavez y Elibeth Quiñones">
+<meta name="author" content="Comunidad integrativa de coaches">
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 {% block head %} {% endblock%}
-<link rel="shortcut icon" type="image/x-icon" href="{{ STATIC_URL }}img/favicon.ico">
+<link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}">
 <title>{% block title %} COMUNIDAD INTEGRATIVA DE COACHES {% endblock%}</title>
-<link rel="stylesheet" href="{{ STATIC_URL }}css/normalize.css">
-<link rel="stylesheet" href="{{ STATIC_URL }}css/base.css">
+<link rel="stylesheet" href="{% static 'css/normalize.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
 <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 {% block css %}
 {% endblock %}
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 {% block js %}
 {% endblock %}
 </head>
@@ -82,8 +83,8 @@
 							<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">{% trans 'Inicio' %}</a></li><span>|</span>
 							<li class="aboutus"><a href="{% url 'homepageaboutus' %}">{% trans 'Quienes Somos' %}</a></li><span>|</span>
 							<li class="certificaciones"><a href="{% url 'homepagecertificaciones' %}">{% trans 'Certificaciones' %}</a></li><span>|</span>
-							<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'servicios' %}</a></li><span>|</span>
-							<li class="eventos"><a href="#">{% trans 'Eventos' %}</a></li><span>|</span>
+							<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'Servicios' %}</a></li><span>|</span>
+							<li class="eventos"><a href="{% url 'nextevents' %}">{% trans 'Eventos' %}</a></li><span>|</span>
 							<li class="recursos"><a href="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</a></li><span>|</span>
 							<li class="contacto"><a href="{% url 'homepagecontact' %}">{% trans 'Contacto' %}</a></li>
 						</ul>	
@@ -112,8 +113,8 @@
 					<span>|</span><li class="index"><a href="{% url 'homepageindex' %}">{% trans 'Inicio' %}</a></li><span>|</span>
 					<li class="aboutus"><a href="{% url 'homepageaboutus' %}">{% trans 'Quienes Somos' %}</a></li><span>|</span>
 					<li class="certificaciones"><a href="{% url 'homepagecertificaciones' %}">{% trans 'Certificaciones' %}</a></li><span>|</span>
-					<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'servicios' %}</a></li><span>|</span>
-					<li class="eventos"><a href="#">{% trans 'Eventos' %}</a></li><span>|</span>
+					<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'Servicios' %}</a></li><span>|</span>
+					<li class="eventos"><a href="{% url 'nextevents' %}">{% trans 'Eventos' %}</a></li><span>|</span>
 					<li class="recursos"><a href="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</a></li><span>|</span>
 					<li class="contacto"><a href="#">{% trans 'Contacto' %}</a></li>
 				</ul>	

@@ -1,0 +1,55 @@
+{% load i18n calendarium_tags %}
+{% load staticfiles %}
+{% load thumbnail %}
+{% for occurrence in occurrences %}
+    <div class="evento">
+		<div class="descripcion">
+			<div class="titulo">{{occurrence.event.title}}</div>
+			<div class="subtitulo">{{occurrence.event.subtitle}}</div>
+			<div class="imagen">
+				{% if occurrence.event.imageindex %}
+					{% thumbnail occurrence.event.imageindex "650x350" crop="center" as im %}
+						<img src="{{ im.url }}" alt="{{occurrence.event.image_alt}}">
+					{% endthumbnail %}
+				{% else %}
+					<img class="imagenLogo" src="{% static 'img/planninglogo.png' %}" alt="evento sin imagen">
+				{% endif %}
+				<div class="fecha">
+					<div class="dia">{{occurrence.event.start.day}}</div>
+					<div class="mes">{{occurrence.event.start.month|month_name}}</div>
+					<div class="precio">{{occurrence.event.price}}</div>
+				</div>	
+			</div>
+			<div class="textoDescripcion">
+				<p>
+					{% autoescape off %}
+					{{occurrence.event.description|striptags|truncatewords:40}}
+					{% endautoescape %}
+				</p>
+			</div>
+			<div class="centrarDiv">
+				<a href="{{ occurrence.event.get_absolute_url }}">
+					<div class="botonMas">Conocer más</div>
+				</a>
+			</div>
+		</div>
+		<div class="horario">
+			{% if occurrence.event.place %}
+			<div class="lugar">
+				<span class="red">Lugar:</span> {{occurrence.event.place}}
+			</div>
+			{% endif %}			
+			<div class="tiempo">
+				<div class="red horas">
+					<span>
+						{{occurrence.event.start|time:"H:i" }}
+						a 
+						{{occurrence.event.end|time:"H:i" }}
+					</span>
+				</div>
+				<div class="notaHorario red">Hora de madrid</div>
+			</div>
+			
+		</div>	
+	</div>
+{% endfor %}

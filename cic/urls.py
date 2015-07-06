@@ -17,12 +17,12 @@ urlpatterns = patterns(
 	# Examples:
 	# url(r'^$', 'basicoDuranjo.views.home', name='home'),
 	url(r'^', include('cic.apps.homepage.urls')),
-
+	url(r'^agenda/', include('cic.apps.calendarium.urls')),
 	# Uncomment the admin/doc line below to enable admin documentation:
 	# url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 	#url(r'^sitemap\.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
 	#Google Web master Tool
-	#(r'^googlec34fe789f50fc843\.html$', lambda r: HttpResponse("google-site-verification: googlec34fe789f50fc843.html", mimetype="text/plain")),
+	(r'^googlec34fe789f50fc843\.html$', lambda r: HttpResponse("google-site-verification: googlec34fe789f50fc843.html", mimetype="text/plain")),
 	# Uncomment the next line to enable the admin:
 	url(r'^admin/', include(admin.site.urls)),
 	url(r'^admin/password_reset/$', 'django.contrib.auth.views.password_reset', name='admin_password_reset'),
@@ -45,8 +45,9 @@ urlpatterns = patterns(
 	url(r'^blog/', include('zinnia.urls.archives')),
 	url(r'^blog/', include('zinnia.urls.shortlink')),
 	url(r'^blog/', include('zinnia.urls.quick_entry')),
-	url(r'^blog/comments/', include('zinnia.urls.comments')),	
+	url(r'^blog/comments/', include('zinnia.urls.comments')),
 	(r'^i18n/', include('django.conf.urls.i18n')),
+	(r'^tinymce/', include('tinymce.urls')),
 )
 
 if settings.DEBUG:

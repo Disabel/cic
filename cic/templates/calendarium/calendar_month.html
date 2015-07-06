@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+{% load i18n calendarium_tags %}
+{% load staticfiles %}
+{% load tz %}
+{% block title %}
+Agenda | Comunidad Integrativa de Coaches
+{% endblock %}
+{% block head %}
+<meta name="description" content="Calendarío en el cual se puede observar las actividades y eventos que dispone la comunidad integrativa de coaches">
+<meta name="keywords" content="Planning Manufacturing, scheduling, Optimización, Producción, Control, Eficiencia, Planeación, Planificación, de  la produccion, Production planning, software Production, Planificacion industrial, Programacion industrial, Planificación industrial, Programación industrial, Planificador, Software, de planificación de producción">
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/calendarium/pormes.css' %}">
+{% endblock %}
+{% block contenido %}
+<div class="bannertop">
+    <img src="{% static 'img/bannereventos.jpg' %}" alt="banner evento cic">
+</div>
+<div class="wrapper">
+    {% include 'calendarium/menuagenda.html' %}
+    <span>Filtrar por categorias:</span>{% include "calendarium/partials/category_list.html" %}
+    <h1>{{ date|date:"F Y" }}</h1>
+    <form action="." method="post">{% csrf_token %}
+        <input type="submit" name="previous" value="<< Mes anterior" />        
+        <input type="submit" name="next" value="Mes siguiente >>" />
+        <input type="submit" name="today" value="Hoy" />
+        <!-- {# {% if request.user.is_staff %}
+            <a href="{% url "calendar_event_create" %}">Crear nuevo evento</a>
+        {% endif %} #} -->
+    </form>
+    <p class="centrartxt">Puede hacer clic en alguno de los eventos para ver más detalles e inscribirse.</p>
+    <table>
+        <tr>
+            <th class="semanaCounter"></th>
+            <th data-title="Lun">Lunes</td>
+            <th data-title="Mar">Martes</td>
+            <th data-title="Mie">Miércoles</td>
+            <th data-title="Jue">Jueves</td>
+            <th data-title="Vie">Viernes</td>
+            <th data-title="Sab">Sábado</td>
+            <th data-title="Dom">Domingo</td>
+        </tr>
+        {% for week in month %}
+            {% if week %}
+                <tr>
+                    <td class="semanaCounter"><a href="{{ date|get_week_URL:week.0.0 }}">Semana {{date|get_week:week.0.0}}</a></td>
+                    {% for day, occurrences, current in week %}
+                        <td>
+                            {% if day != 0 %}
+                                {% if current %}<strong>{% endif %}
+                                {% if occurrences %}
+                                    <a class="hayeventos" href="{% url "calendar_day" year=date|date:'Y' month=date|date:'m' day=day %}">{{ day }}</a>
+                                {% else %}
+                                    <a href="{% url "calendar_day" year=date|date:'Y' month=date|date:'m' day=day %}">{{ day }}</a>
+                                {% endif %}                                
+                                {% if current %}</strong>{% endif %}
+                                {% for occurrence in occurrences %}
+                                    <p>
+                                        <a href="{{ occurrence.event.get_absolute_url }}">
+                                            {{ occurrence }}
+                                            <span>{{occurrence.start}} - {{occurrence.end}}</span>
+                                        </a>
+                                    </p>
+                                {% endfor %}
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endif %}
+        {% endfor %}
+    </table>
+   <!--  ¡Siguientes Eventos!
+    {# {% render_upcoming_events 5 current_category %} #}
+    -->
+</div>
+{% endblock %}
+{% block footerLlamados %}
+    <div class="footerLinks">
+        <a href="{{footer.enlace_uno}}">{{footer.titulo_uno}}</a> > 
+        <a href="{{footer.enlace_dos}}">{{footer.titulo_dos}}</a> > 
+        <a href="{{footer.enlace_tres}}">{{footer.titulo_tres}}</a>
+    </div>
+{% endblock %}

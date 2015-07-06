@@ -54,11 +54,13 @@ DATABASES = {
 TIME_ZONE = 'America/Caracas'
 
 USE_I18N = True
-LANGUAGE_CODE = 'es'
+
 LANGUAGES = (
     ('es', 'Spanish'),
     ('en', 'English'),
 )
+
+LANGUAGE_CODE = 'es'
 
 LOCALE_PATHS = (
     os.path.normpath(os.path.join(os.path.dirname(__file__), 'locale')),
@@ -90,7 +92,7 @@ MEDIA_URL = '/media/'
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-#STATIC_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), 'static/'))
+STATIC_ROOT = '/static/'
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
@@ -109,7 +111,7 @@ STATICFILES_DIRS = (
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-#    'django.contrib.staticfiles.finders.DefaultStorageFinder',
+    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 # Application definition
@@ -118,7 +120,7 @@ STATICFILES_FINDERS = (
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.Loader',
     'django.template.loaders.app_directories.Loader',
-#     'django.template.loaders.eggs.Loader',
+    #'django.template.loaders.eggs.Loader',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -153,8 +155,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.sitemaps',
     'django.contrib.humanize',
-  #  'django.contrib.comments',
-    'django_comments',
+    'django.contrib.comments',
+    #'django_comments',
     'modeltranslation',
     'tagging',
     'mptt',
@@ -162,9 +164,12 @@ INSTALLED_APPS = (
     'akismet',
     'django_bitly',
     'tinymce',
+    'filer',
     # Uncomment the next line to enable the admin:
-    'django.contrib.admin',
     'cic.apps.homepage',
+    'cic.apps.calendarium',
+    'sorl.thumbnail',
+    'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )

@@ -106,7 +106,9 @@ nav li a:hover{
 nav span{
 	color: #eb4923;
 }
-
+.bannertop img {
+  width: 100%;
+}
 
 /* FOOTER ´*/
 footer{

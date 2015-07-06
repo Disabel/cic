@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+{% load staticfiles %}
+{% block title %}
+Detalles del evento - Comunidad integrativa de coaches
+{% endblock %}
+{% block head %}
+<meta name="description" content="Detalles del evento de {{object.start}} - {{object.title|striptags}}">
+{% endblock %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/calendarium/detalleevento.css' %}">
+<link rel="stylesheet" href="{% static 'intl-tel-input/css/intlTelInput.css' %}">
+{% endblock css%}
+{% block js %}
+<script src="{% static 'intl-tel-input/js/intlTelInput.min.js' %}"></script>
+{% endblock %}
+{% block contenido %}
+	{% if object.image %}
+	<div class="bannertop">
+		<img src="{{ object.image.url }}" alt="banner cabecera evento">
+	</div>
+	{% endif %}
+<div class="wrapper">
+	<h1>{{ object }}</h1>
+	<table>
+		<tr>
+			<th>Inicio:</th>
+			<td>{{ object.start }}</td>
+		</tr>
+		<tr>
+			<th>Final:</th>
+			<td>{{ object.end }}</td>
+		</tr>
+		<tr>
+			<th>Categoría:</th>
+			<td>{{ object.category }}</td>
+		</tr>
+		<tr>
+			<th>Descripción:</th>
+			<td>
+				{% autoescape off %}
+				 {{ object.description }}
+				{% endautoescape %}
+			</td>
+		</tr>
+		<tr>
+			<th>Lugar:</th>
+			<td>
+				{% if object.place %}
+					{{ object.place }}
+				{% else %}
+					Internet
+				{% endif %}
+			</td>
+		</tr>
+		<tr>
+			<th>Precio:</th>
+			<td>{{ object.price }}</td>
+		</tr>
+	</table>
+	<a href="{% url 'calendar_current_month' %}" class="enlaceAgenda">Volver al calendario</a>
+	<h2>Llene el formulario para solicitar entrar al evento</h2>
+	{% if success %}
+	<div class="mensajeenviado">
+		<div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
+		<img class="sobre" src="{% static 'img/sobre.png' %}" alt="formulario de contacto">    
+	</div>
+	{% else %}
+	{% if form.errors %}
+	<p>
+		Por favor corregir los errores debajo.
+	</p>
+	{% endif %}
+	<form id="id_formulario"  action="#" method="POST">
+		<div class="lineagris"></div>
+		{% csrf_token %}
+		<div class="campos">
+			<div class="campo">
+				{{ field.errors }}
+				<label for="nombre">Nombre y apellidos:</label>
+				{{ form.nombre }}
+				{{ form.nombre.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<label for="nombre">Empresa:</label>
+				{{ form.empresa }}
+				{{ form.empresa.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<label for="nombre">Cargo:</label>
+				{{ form.cargo }}
+				{{ form.cargo.errors }}
+			</div>
+			<div class="campo">             
+				{{ field.errors }}
+				<label for="email">Correo Electrónico:</label>
+				{{ form.email }}
+				{{ form.email.errors }}
+				<div id="emailCorporativo" class="hidden red">Se recomienda usar un Correo Electrónico corporativo.</div>
+			</div>        
+			<div class="campo">
+				{{ field.errors }}
+				<label for="telefono">Teléfono:</label>
+				{{ form.telefono }}
+				{{ form.telefono.errors }}
+			</div>
+			<div class="campo">
+				{{ field.errors }}
+				<label for="provincia">Provincia:</label>
+				{{ form.provincia }}
+				{{ form.provincia.errors }}
+			</div>
+			<div class="campo">
+				{{ field.erros }}
+				<label for="id_terms">Aceptar nuestros <a href="{% url 'terminosycondiciones' %}">términos y condiciones.</a>:</label>
+				{{ form.terms }}
+				{{ form.terms.errors }}
+			</div>
+			<input id="id_pais" name="pais" type="hidden">
+			<div class="botonEnviar">
+				<input id="botonEnviar" type="submit">
+			</div>
+		</div>
+		<div class="lineagris"></div>
+	</form>
+	{% block jsBottom %}
+	<script type="text/javascript">
+	$(document).ready(function() {
+		$("#id_telefono").intlTelInput({
+			preferredCountries: ["es"],
+		});
+		$('#id_email').focusout(function() {
+			var email = $('#id_email').val();
+			//var emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+			var freemail = '[a-zA-Z_\\.-]+@((hotmail)|(yahoo)|(gmail))\\.[a-z]{2,4}';
+			if (email.match(freemail)) {
+				$('#emailCorporativo').show();
+			}else{
+				$('#emailCorporativo').hide();
+			}
+		});	
+		$('#botonEnviar').click(function(e){
+			e.preventDefault();
+			//do ur stuff.
+			$('#id_pais').val($("#id_telefono").intlTelInput("getSelectedCountryData").name+'  +'+$("#id_telefono").intlTelInput("getSelectedCountryData").dialCode);
+			//submit form
+			//console.log(JSON.stringify($('#tablaDetalles').tableToJSON()));
+			$('#id_formulario').submit();
+		});
+	});
+	</script>
+	{% endblock jsBottom %}
+	{% endif %}
+  
+	<!-- {# {% if request.user.is_staff %}
+		<a href="{% url "calendar_occurrence_update" pk=object.event.pk year=object.start.year month=object.start.month day=object.start.day %}">Editar</a>
+		<a href="{% url "calendar_occurrence_delete" pk=object.event.pk year=object.start.year month=object.start.month day=object.start.day %}">Eliminar</a>
+	{% endif %} #} -->
+</div>
+{% endblock %}
+
+{% block footerLlamados %}
+	<div class="footerLinks">
+		<a href="{{footer.enlace_uno}}">{{footer.titulo_uno}}</a> > 
+		<a href="{{footer.enlace_dos}}">{{footer.titulo_dos}}</a> > 
+		<a href="{{footer.enlace_tres}}">{{footer.titulo_tres}}</a>
+	</div>
+{% endblock %}
