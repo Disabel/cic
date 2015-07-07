@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load url from future %}
+
+{% block contenido %}
+<h1>Eliminar {{ object }}</h1>
+<form method="post" action=".">
+    {% csrf_token %}
+    ¿De verdad desea eliminar este evento?
+    <input type="submit" value="{% trans "Delete" %}" />
+</form>
+{% endblock %}

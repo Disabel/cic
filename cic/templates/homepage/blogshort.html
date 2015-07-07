@@ -1,0 +1,33 @@
+{% load thumbnail %}
+{% load staticfiles %}
+<section class="entradas">
+<h2>Blog</h2>
+<div class="noticias">
+	{% for entrada in entradas %}
+	<a href="{{ entrada.get_absolute_url }}" >
+		<article {% if not nextEvent %}id="blogcompleto"{% endif %}>
+		{% if entrada.image %}
+			{% thumbnail entrada.image "90x90" crop="center" as img %}
+				<div class="imgdiv">
+					<img src="{{img.url}}" alt="{{ entrada.title }}">
+				</div>
+			{% empty %}
+				<div class="imgdiv">
+					<img src="{% static 'img/ciclogo.png' %}" alt="Sin imagen">
+				</div>
+			{% endthumbnail %}
+		{% else %}
+			<div class="imgdiv">
+				<img src="{% static 'img/ciclogo.png' %}" alt="Sin imagen">
+			</div>
+		{% endif %}
+		<div class="titulo {% if not nextEvent %}titulolargo{% endif %}">{{ entrada.title }}</div>							
+		</article>
+	</a>
+	<div class="lineagris"></div>
+	{% endfor %}
+	<div class="centrarDiv">
+		<a href="/blog"><div class="botonMas">Ver todas</div></a>
+	</div>
+</div>
+</section>

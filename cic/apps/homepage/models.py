@@ -6,37 +6,44 @@ from django.core.exceptions import ValidationError
 from django.template import defaultfilters
 import re
 
+
 class sliderInicio(models.Model):
 	titulo = models.CharField(max_length=70)
 	texto_contenido = models.TextField()
 	imagen = models.ImageField(upload_to='sliderItems')
-	
+
+
 class quienesSomos(models.Model):
 	que_es_cic = models.TextField()
 	quienes_forman = models.TextField()
 	por_que_nace = models.TextField()
 
-class quienesSomosOtros(models.Model):	
+
+class quienesSomosOtros(models.Model):
 	mision = models.TextField()
 	vision = models.TextField()
 	valores = HTMLField()
 
-class seccionesQuienesSomos(models.Model):		
+
+class seccionesQuienesSomos(models.Model):
 	paisesIntroduccion = models.TextField()
 	codigo_etica = models.TextField()
+
 
 class textosInicio(models.Model):
 	eres_coach = models.CharField(max_length=140)
 	certificaciones = models.CharField(max_length=140)
 	recursos_informativos = models.CharField(max_length=140)
 
+
 class paisesCic(models.Model):
 	nombre = models.CharField(max_length=70)
-	imagen_bandera = models.ImageField(upload_to='imgbanderas')	
+	imagen_bandera = models.ImageField(upload_to='imgbanderas')
 
 	class Meta:
 		verbose_name = ("Pais CIC")
 		verbose_name_plural = ("Paises de la CIC")
+
 
 class miembrosRegistro(models.Model):
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
@@ -87,6 +94,7 @@ class miembrosRegistro(models.Model):
 	areas_interes_personal = models.TextField()
 	que_desea_delacic = models.TextField()
 
+
 class invitadoRegistro(models.Model):
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
 	modificado_en = models.DateTimeField(auto_now=True)
@@ -119,7 +127,7 @@ class invitadoRegistro(models.Model):
 	certificacion_tres = models.CharField(max_length=300)
 	avalada_por_tres = models.CharField(max_length=300)
 	ano_tres = models.CharField(max_length=300)
-	pais_tres	 = models.CharField(max_length=300)
+	pais_tres = models.CharField(max_length=300)
 	coaching_profesion_principal = models.TextField()
 	experiencia_ejerciendo_coaching = models.CharField(max_length=100)
 	ejerce_coaching_como = models.TextField()
@@ -129,11 +137,11 @@ class invitadoRegistro(models.Model):
 	publicaciones_relacionadas = models.TextField(blank=True)
 	descripcion_publicaciones = models.TextField(blank=True)
 	eventos_internacionales = models.TextField(blank=True)
-	que_desea_delacic = models.TextField()	
+	que_desea_delacic = models.TextField()
 
 
 class miembros(models.Model):
-	TIPO_DE_MIEMBRO = (('comun','Miembro común'),('directivo','Directivo'))
+	TIPO_DE_MIEMBRO = (('comun', 'Miembro común'), ('directivo', 'Directivo'))
 	numero_registro = models.CharField(max_length=70)
 	nombre_completo = models.CharField(max_length=70)
 	descripcion_breve = models.CharField(max_length=100, help_text="Hasta 100 caractares")
@@ -146,13 +154,15 @@ class miembros(models.Model):
 		verbose_name = ("Miembro")
 		verbose_name_plural = ("Miembros")
 
+
 class representantesInternacionales(models.Model):
 	paises = models.CharField(max_length=150)
 	nombre = models.CharField(max_length=150)
-	
+
 	class Meta:
 		verbose_name = ("Representantes Internacionales")
-		verbose_name_plural = ("Representantes Internacionales")	
+		verbose_name_plural = ("Representantes Internacionales")
+
 
 class certificacionesIntroduccion(models.Model):
 	introduccion = models.TextField()
@@ -165,7 +175,8 @@ class certificacionesIntroduccion(models.Model):
 
 	class Meta:
 		verbose_name = ("Certificciones Texto General")
-		verbose_name_plural = ("Certificciones Texto General")	
+		verbose_name_plural = ("Certificciones Texto General")
+
 
 class certificacionesLista(models.Model):
 	TIPO = (('certificacion','Certificacion'),('especializacion','Especialización'))
@@ -189,10 +200,12 @@ class certificacionesLista(models.Model):
 		verbose_name = ("Lista de Certificciones")
 		verbose_name_plural = ("Lista de Certificciones")
 
+
 class servicios(models.Model):
 	asesoria_texto = HTMLField()
 	cursos_texto = HTMLField()
 	conferencias = HTMLField()
+
 
 class conferenciaslista(models.Model):
 	titulo = models.CharField(max_length=200)
@@ -214,13 +227,13 @@ class conferenciaslista(models.Model):
 		verbose_name = ("Lista de Conferencias")
 		verbose_name_plural = ("Lista de Conferencias")
 
+
 class cursoslista(models.Model):
 	titulo = models.CharField(max_length=200)
 	slugcurso = models.SlugField(max_length=50, verbose_name="Url", help_text="No modificar auto-generado")
 	cuerpo_general = HTMLField()
 	imagen = models.ImageField(upload_to='imgcursos', blank=True, help_text="Imagen sobre el curso")
 
-	
 	def __unicode__(self):
 		return self.titulo
 
@@ -233,7 +246,7 @@ class cursoslista(models.Model):
 
 	class Meta:
 		verbose_name = ("Lista de Cursos")
-		verbose_name_plural = ("Lista de Cursos")	
+		verbose_name_plural = ("Lista de Cursos")
 
 
 def validate_url_video(value):
@@ -244,7 +257,8 @@ def validate_url_video(value):
 
 class videosInicio(models.Model):
 	video_titulo = models.CharField(max_length=80, help_text="Título del video en homepage, hasta 80 caracteres")
-	video_link = models.CharField(max_length=100, validators=[validate_url_video])		
+	video_link = models.CharField(max_length=100, validators=[validate_url_video])
+
 	def __unicode__(self):
 		return self.video_titulo
 
@@ -285,7 +299,6 @@ class miembros(models.Model):
 class representantesInternacionales(models.Model):
 	paises = models.CharField(max_length=150)
 	nombre = models.CharField(max_length=150)
-	
 
 class certificacionesLista(models.Model):
 	titulo = models.CharField(max_length=200)
@@ -296,5 +309,4 @@ class cursoslista(models.Model):
 	cuerpo_general = HTMLField()
 
 
-'''
-
+"""

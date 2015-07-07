@@ -1,0 +1,33 @@
+.webinars{
+	background: #C2C2C2;
+}
+
+.content, aside{
+	display: inline-block;
+	vertical-align: top;
+}
+.content{
+	width: 65%;
+}
+.webinar{
+	display: inline-block;
+	width: 49%;
+	text-align: center;
+	border-bottom: 2px solid #0871B3;
+}
+.webinar img{
+	width: 100%;
+}
+.webinar a{
+	text-decoration: none;
+	color: gray;
+}
+.webinar h3{
+	font-size: 1.5em;
+	margin: 5px 0;
+}
+
+.content .webinarimagen{
+	width: 49%;
+	display: inline-block;
+}
