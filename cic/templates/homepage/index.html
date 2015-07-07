@@ -25,6 +25,10 @@ Comunidad Integrativa de Coaches
 {% block contenido %}
 		<div class="imagenhome">
 			<img src="{% static 'img/homeimage.jpg' %}" alt="Grupo coaches felices">
+			<div class="eslogan">
+				<div class="linea1">{% trans 'Un espacio para el' %} <span>Acercamiento</span></div>
+				<div class="linea2">{% trans 'y la ' %}<span>{% trans 'Integración' %}</span></div>
+			</div>
 		</div>
 		<div class="wrapper">	
 			<div class="trescuadros">
@@ -68,6 +72,8 @@ Comunidad Integrativa de Coaches
 					</ul>
 				</div>			
 			</div>
+
+
 			{% for video in videosinicio %}
 			<div class="video">
 				<h2 class="tituloh1">{{video.video_titulo}}</h2>

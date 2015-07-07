@@ -9,6 +9,36 @@ nav .index a{
 .imagenhome img{
 	width: 100%;
 }
+.eslogan{
+  position: absolute;
+  bottom: 18%;
+  left: 10%;
+  overflow: hidden;
+}
+.eslogan .linea1{
+  font-size: 2.1em;
+  background: rgb(255, 255, 255); 
+  background: rgba(255, 255, 255, .7);
+  color: #5b5b5b;
+}
+.eslogan .linea1 span{
+  background-color: #FFF;
+  color: #eb4923;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding-left: 8px;
+}
+.eslogan  .linea2{
+  background-color: #eb4923;
+  color: #FFF; 
+  font-size: 2.1em;
+  width: 286px;
+  margin-top: 15px;
+}
+.eslogan  .linea2 span{
+    font-weight: bold;
+  font-size: 1.2em;
+}
 h2{
 	text-transform: uppercase;
 	text-transform: uppercase;
@@ -100,4 +130,8 @@ h2{
   background: url(../../img/play.png) no-repeat;
   width: 48px;
   height: 48px;
+}
+.video .tituloh1{
+  height: 52px;
+  overflow: hidden; 
 }

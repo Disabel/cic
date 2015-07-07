@@ -1,5 +1,6 @@
 {% extends 'homepage/index.html' %}
 {% load zinnia_tags i18n %}
+{% load staticfiles %}
 {% load url from future %}
 {% get_tags as entry_tags %}
 {% block head %}
@@ -13,17 +14,15 @@
 		<link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}zinnia/css/print.css" />
 {% endblock %}
 {% block contenido %}
+		<div class="imagenrecursos">
+			<img src="{% static 'img/bannerrecursos.jpg' %}" alt="Certificaciones CIC">
+		</div>
 <section class="zinnia {% block body-class %}{% endblock %}">
-		<a href="/blog" >
-				<div class="tituloStyle">
-					<div class="wrapper">
-						<h2>{% trans "BLOG" %}</h2>
-						<div class="subt">News, Events, Information</div>
-					</div>
-				</div>
-			</a>	
 		<div class="container">
-			<div id="content" class="hfeed">							
+			<div id="content" class="hfeed">	
+				<div class="tituloblog">
+					<h2><span>{% trans 'Recursos' %}</span>{% trans 'Informativos' %}</h2>
+				</div>					
 				{% block content %}
 				<div class="links">
 					<h3>{% trans "Useful links" %}</h3>

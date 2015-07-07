@@ -1,6 +1,6 @@
 {% load i18n calendarium_tags %}
 {% load staticfiles %}
-{% load thumbnail %}
+{% load thumbnail %}     
 {% for occurrence in occurrences %}
     <div class="evento">
     <a href="{{ occurrence.event.get_absolute_url }}">

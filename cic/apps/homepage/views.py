@@ -3,6 +3,7 @@
 from django.shortcuts import render_to_response
 from .forms import *
 from .models import *
+from django.utils.timezone import now, timedelta
 from zinnia.models import Category
 from django.template import RequestContext
 from django.core.mail import send_mail
@@ -10,6 +11,7 @@ from django.views.generic import CreateView
 from django.shortcuts import redirect
 from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
+from cic.apps.calendarium.models import Event
 import datetime
 import nltk
 
@@ -23,10 +25,15 @@ def index(request):
 #		quitar_html = nltk.clean_html(ent.content) 
 #		ent.content =  quitar_html[:200]
 #		titulos.append(ent.title)	
+	#eventos del calendario
+	if Event.objects.get_occurrences(now(), now() + timedelta(days=356), None):
+		nextEvent = True
+	else:
+		nextEvent = False
 	textoshome = textosInicio.objects.get(pk=1)
 	imgslider = sliderInicio.objects.all()
 	videosinicio = videosInicio.objects.all()
-	ctx = {'textoshome':textoshome,'imgslider':imgslider,'videosinicio': videosinicio}	
+	ctx = {'textoshome':textoshome,'imgslider':imgslider,'videosinicio': videosinicio,'nextEvent': nextEvent,}	
 	return render_to_response('homepage/index.html', ctx, context_instance=RequestContext(request))
 def recursos(request):
 	categorias = Category.objects.all()
