@@ -138,6 +138,20 @@
 				</div>
 				<div class="suscribetefooter">
 					<p>{% trans 'Suscríbete a Nuestro Boletín' %}</p>
+					<form class="suscripcionForm" action="#correo" method="POST">
+						{% csrf_token %}
+						{% if newsletter %}
+						<div class="correo">
+							{{ boletinform.subject.errors }}
+							{{ boletinform.correo }}
+						</div>
+						{% else %}
+						<div class="correo">
+							¡GRACIAS!
+						</div>
+						{% endif %}
+						<input type="submit" value="Enviar" class="botoncorreo">
+					</form>
 				</div>
 			</div>
 			<div class="copyright">{% trans 'Comunidad Integrativa de Coaches © Copyright 2015 Todos los Derechos Reservados' %}</div>

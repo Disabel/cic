@@ -19,13 +19,20 @@ h2 span{
   padding-right: 50px;
 	} 
 
-
+/* SUBMENU */
 .submenu li{
   display: inline-block;
-  margin: 0 48px;
+  padding: 14px 49px;
+}
+.selectedmenu{
+	background-color: #eaebec;
+}
+.selectedmenu a{
+	color: #eb4923 !important;
+	font-weight: bold;
 }
 .submenu{
-  padding: 17px 0;
+  padding:0;
   width: 79%;
   margin: 0 auto;
   list-style: none;
@@ -36,6 +43,8 @@ h2 span{
 	text-decoration: none;
 	color: #5b5b5b;
 	}
+
+/* fin SUBMENU */
 
 .imagenabout img{
 	width: 100%;

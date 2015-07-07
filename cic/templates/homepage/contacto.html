@@ -38,19 +38,19 @@ Contacto Comunidad Integrativa de Coaches
 			<div class="izquierdacontacto">
 				<div class="campo">
 					{{ field.errors }}
-					 <li><label for="nombre">Nombre y Apellido:</label></li>
+					 <li class="labelcampo"><label for="nombre">Nombre y Apellido:</label></li>
 					{{ form.nombre_apellido }}
 					{{ form.nombre_apellido.errors }}
 				</div>
 				<div class="campo">				
 					{{ field.errors }}
-					<li><label for="email">Teléfono móvil:</label></li>
+					<li class="labelcampo"><label for="email">Teléfono móvil:</label></li>
 					{{ form.telefono_movil }}
 					{{ form.telefono_movil.errors }}
 				</div>
 				<div class="campo">
 					{{ field.errors }}
-					<li><label for="telefono">Teléfono ﬁjo:</label></li>
+					<li class="labelcampo"><label for="telefono">Teléfono ﬁjo:</label></li>
 					{{ form.telefono_fijo }}
 					{{ form.telefono_fijo.errors }}
 				</div>
@@ -58,26 +58,26 @@ Contacto Comunidad Integrativa de Coaches
 			<div class="derechacontacto">
 				<div class="campo">
 					{{ field.errors }}
-					<li><label for="telefono">Correo electrónico principal:</label></li>
+					<li class="labelcampo"><label for="telefono">Correo electrónico principal:</label></li>
 					{{ form.correo_principal }}
 					{{ form.correo_principal.errors }}
 				</div>
 				<div class="campo">
 					{{ field.errors }}
-					<li><label for="telefono">Correo electrónico alterno:</label></li>
+					<li class="labelcampo"><label for="telefono">Correo electrónico alterno:</label></li>
 					{{ form.correo_alterno }}
 					{{ form.correo_alterno.errors }}
 				</div>
 				<div class="campo">
 					{{ field.errors }}
-					<li><label for="telefono">Nombre de la Empresa:</label></li>
+					<li class="labelcampo"><label for="telefono">Nombre de la Empresa:</label></li>
 					{{ form.nombre_empresa }}
 					{{ form.nombre_empresa.errors }}
 				</div>	
 			</div>								
 			<div class="textareaDescripcion">
 				{{ field.errors }}
-				<li><label for="texto">Mensaje: </label></li>
+				<li class="labelcampo"><label for="texto">Mensaje: </label></li>
 				{{ form.mensaje }}
 				{{ form.mensaje.errors }}
 			</div>

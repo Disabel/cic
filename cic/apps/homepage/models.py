@@ -247,6 +247,12 @@ class videosInicio(models.Model):
 	video_link = models.CharField(max_length=100, validators=[validate_url_video])		
 	def __unicode__(self):
 		return self.video_titulo
+
+class CorreoBoletin(models.Model):
+	""""Lista de correos ingresados por los clientes en la pagina de inicio para el boletin"""
+	correo = models.EmailField(max_length=50)
+
+		
 '''
 def validate_url_video(value):
 	match = re.search(r'^(http|https)\:\/\/www\.youtube\.com\/watch\?v\=(\w*)(\&(.*))?$', value)

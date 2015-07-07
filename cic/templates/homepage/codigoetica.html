@@ -6,7 +6,7 @@
 <meta name="description" content="">
 {% endblock%}
 {% block title %}
-Quienes Somos - Comunidad Integrativa de Coaches
+Codigo de etica Comunidad Integrativa de Coaches
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/about.css">
@@ -27,7 +27,7 @@ Quienes Somos - Comunidad Integrativa de Coaches
 			<li><a  href="{% url 'homepageaboutus' %}">{% trans 'Sobre la CIC' %}</a></li>
 			<li><a href="{% url 'aboutdirectorio' %}">{% trans 'Directorio' %}</a></li>
 			<li><a href="{% url 'aboutpaises' %}">{% trans 'Paises de la CIC' %}</a></li>
-			<li><a href="{% url 'aboutcodigo' %}">{% trans 'Código de ética' %}</a></li>
+			<li class="selectedmenu"><a href="{% url 'aboutcodigo' %}">{% trans 'Código de ética' %}</a></li>
 		</ul>
 		<div class="introPaises">
 			{{quienesSomos.codigo_etica}}

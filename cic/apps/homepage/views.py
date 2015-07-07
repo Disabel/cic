@@ -34,6 +34,7 @@ def recursos(request):
 	return render_to_response('homepage/recursos.html', ctx, context_instance=RequestContext(request))
 
 def aboutus(request):
+	title = "Quienes Somos"
 	try:
 		quienestext = quienesSomos.objects.get(pk=1)
 	except Exception:
@@ -50,7 +51,7 @@ def aboutus(request):
 		otrostextos = quienesSomosOtros.objects.get(pk=1)	
 	except Exception:
 		otrostextos = None			
-	ctx = {'quienesSomos':quienestext, 'directores':directores,'otrostextos':otrostextos, 'representantes_internacionales':representantes_internacionales}	
+	ctx = {'title':title, 'quienesSomos':quienestext, 'directores':directores,'otrostextos':otrostextos, 'representantes_internacionales':representantes_internacionales}	
 	return render_to_response('homepage/quienessomos.html',ctx, context_instance=RequestContext(request))
 
 def serviciosCursos(request):
@@ -82,6 +83,7 @@ def directorio(request):
 	return render_to_response('homepage/directorio.html', context_instance=RequestContext(request))
 
 def paises(request):
+	title = "directoriocic"
 	try:
 		quienestextos = seccionesQuienesSomos.objects.get(pk=1)
 	except Exception:
@@ -90,7 +92,7 @@ def paises(request):
 		paisesdelacic = paisesCic.objects.all()	
 	except Exception:
 		paisesdelacic = None	
-	ctx = {'quienesSomos':quienestextos,'paisescic':paisesdelacic}			
+	ctx = {'title':title,'quienesSomos':quienestextos,'paisescic':paisesdelacic}			
 	return render_to_response('homepage/paises.html', ctx, context_instance=RequestContext(request))
 
 def codigoetica(request):

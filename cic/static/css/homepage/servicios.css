@@ -4,22 +4,33 @@ nav .servicios a{
   .imagenservicios img{
     width: 100%;
   }
+
+/* SUBMENU */
 .submenu li{
   display: inline-block;
-  margin: 0 70px;
+  padding: 14px 49px;
+}
+.selectedmenu{
+  background-color: #eaebec;
+}
+.selectedmenu a{
+  color: #eb4923 !important;
+  font-weight: bold;
 }
 .submenu{
-  padding: 17px 0;
-  width: 64%;
+  padding:0;
+  width: 51.3%;
   margin: 0 auto;
   list-style: none;
   border: solid 1px rgb(209, 204, 204);
 
 }
 .submenu li a{
-	text-decoration: none;
-	color: #5b5b5b;
-	}
+  text-decoration: none;
+  color: #5b5b5b;
+  }
+
+/* fin SUBMENU */
 h2{
   text-transform: uppercase;
   font-size: 1.6em;
@@ -41,10 +52,11 @@ h2 span{
  list-style-image: url(../../img/iconlist.png);
 }
 
-.contenidocurso li{
+.contenidocurso .info li,.contenidoconferencias .info li{
  list-style-image: url(../../img/iconlist.png);
  margin: 5px 0;
 }
+
 .back-link{
   color: rgb(154, 154, 154);
 }
