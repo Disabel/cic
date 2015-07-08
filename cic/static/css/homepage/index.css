@@ -135,3 +135,67 @@ h2{
   height: 52px;
   overflow: hidden; 
 }
+
+/*Entradas y evento */
+.tituloSection{
+  font-size: 2em;
+  margin: 0.5em;
+}
+.noticias article a{
+  text-decoration: none;
+  color: black;
+}
+.entradas, .eventoProximo{
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
+.entradas{
+  width: 63%;
+  background: #F7F7F7;
+}
+.entradas article{
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  margin: 0 1%;
+  margin-bottom: 2%;
+}
+.entradas article a{
+  text-decoration: none;
+  color: black;
+}
+.entradas .tituloent{
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.entradas .imgdiv img{
+  width: 100%;
+}
+.entradas .readmore{
+  text-align: right;
+}
+.eventoProximo{
+  width: 35%;
+  background: #EAEBEC;
+}
+.eventoProximo .descripcion{
+  text-align: left;
+  text-indent: 1em;
+}
+.eventoProximo .descripcion .titulo{
+  font-weight: bold;
+}
+.eventoProximo .evento a{
+  text-decoration: none;
+  color: black;
+}
+.eventoProximo .horario img{
+  width: 95%;
+  margin: 0 auto;
+  border: 1px solid #808080;
+  display: block;
+}
+.eventoProximo .fechaprecio{
+  margin-top: 5px;
+}

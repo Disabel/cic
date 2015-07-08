@@ -13,12 +13,12 @@
 				</div>
 			{% empty %}
 				<div class="imgdiv">
-					<img src="{% static 'img/ciclogo.png' %}" alt="Sin imagen">
+					<img src="{% static 'img/logo.png' %}" alt="Sin imagen">
 				</div>
 			{% endthumbnail %}
 		{% else %}
 			<div class="imgdiv">
-				<img src="{% static 'img/ciclogo.png' %}" alt="Sin imagen">
+				<img src="{% static 'img/logo.png' %}" alt="Sin imagen">
 			</div>
 		{% endif %}
 		<div class="titulo {% if not nextEvent %}titulolargo{% endif %}">{{ entrada.title }}</div>							

@@ -83,8 +83,14 @@ a > span{
 	display: block;
 	color: gray;
 }
-
-
+.menuagenda li{
+	display: inline-block;
+	padding: 1%;
+}
+.menuagenda li a{
+	text-decoration: none;
+	color: #414141;
+}
 .calendario{
 	background: #C2C2C2;
 }

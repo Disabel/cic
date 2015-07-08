@@ -8,6 +8,14 @@ h2{
 .bold{
 	font-weight: bold;
 }
+.menuagenda li {
+  display: inline-block;
+  padding: 1%;
+}
+.menuagenda li a {
+  text-decoration: none;
+  color: #414141;
+}
 .enlaceAgenda{
 	text-align: center;
 	background: #D9E6F0;

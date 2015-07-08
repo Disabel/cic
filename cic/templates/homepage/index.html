@@ -1,6 +1,5 @@
 {% extends "base.html" %}
-{% load i18n %}
-{% load url from future %}
+{% load i18n calendarium_tags %}
 {% load custom_filters %}
 {% load staticfiles %}
 {% block head %} 
@@ -84,31 +83,37 @@ Comunidad Integrativa de Coaches
 			</div>	
 			{% endfor %}		
 		</div>
-	<section class="entradas">
-		<div class="wrapper">	
+	<div class="wrapper">
+		<section class="eventoProximo">
+			<h2 class="tituloSection">Eventos</h2>
+			{% if nextEvent %}
+				{% render_upcoming_events_index 2 current_category %}
+			{% endif %}
+		</section>
+		<section class="entradas">
+			<h2 class="tituloSection">Blog</h2>
 			<div class="noticias">
 				{% for entrada in entradas %}
-				<a href="{{ entrada.get_absolute_url }}" >
-				<article>
-				<div class="tituloent">{{ entrada.title }}</div>
-				<div class="imgdiv">
-					{% if entrada.image %}
-						<img src="{{ MEDIA_URL }}{{entrada.image}}" alt="{{ entrada.title }}">
-					{% else %}
-						<img src="{% static 'img/about.jpg' %}" alt="HISPANIC AMERICAN BANKERS"/>
-					{% endif %}	
-				</div>				
-					<div class="texto">{{ entrada.content }}...</div>
-					<div class="readmore">
-						<a href="#" class="btn">Read</a>
-						<a href="{{ entrada.get_absolute_url }}"> <img src="{% static 'img/botonicon.png' %}" alt="icono 	suma mas"></a>
-					</div>
-				</article>
-			</a>
+					<article>
+						<a href="{{ entrada.get_absolute_url }}" >
+							<div class="tituloent">{{ entrada.title }}</div>
+							<div class="imgdiv">
+								{% if entrada.image %}
+									<img src="{{ MEDIA_URL }}{{entrada.image}}" alt="{{ entrada.title }}">
+								{% else %}
+									<img src="{% static 'img/logo.png' %}" alt="Logo entrada sin imagen"/>
+								{% endif %}	
+							</div>				
+							<div class="texto">{{ entrada.content }}...</div>
+							<div class="readmore">
+								<span>Leer más</span>
+							</div>
+						</a>
+					</article>
 				{% endfor %}
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 	<!-- Google+ SCRIPT --> 
 		<!-- Place this tag after the last badge tag. -->
 		<script  async type="text/javascript">
