@@ -22,9 +22,8 @@
 				<img class="imagenLogo" src="{% static 'img/ciclogo.png' %}" alt="evento sin imagen">
 			{% endif %}
 			<div class="fechaprecio">
-				<div class="dia">{{occurrence.event.start.day}}</div>
-				<div class="mes">{{occurrence.event.start.month|month_name}}</div>
-				<div class="precio">{{occurrence.event.price}}</div>
+				<div class="dia">{{occurrence.event.start.day}} / {{occurrence.event.start.month|month_name}}</div>
+				<div class="precio">Precio: {{occurrence.event.price}}</div>
 			</div>			
 		</div>
 		</a>

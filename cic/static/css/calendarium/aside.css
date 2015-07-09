@@ -1,11 +1,18 @@
 /* BARRA ASIDE */
 aside{
-	background: #F7F9F9;
 	padding: 2%;
-	width: 45%;
+	width: 100%;
 	margin: 0 auto 50px 1em;
 	display: inline-block;
 	vertical-align: top;
+}
+aside form, aside .imagenEvento{
+	display: inline-block;
+	width: 49%;
+	vertical-align: top;
+}
+.imagenEvento img{
+	width: 100%;
 }
 .noticias{
 	margin: 5px;
@@ -19,6 +26,7 @@ aside{
 }
 textarea{
 	width: 94%;
+	background-color: #F5F5F5;
 }
 .entradas h2{
 	background: #0871B3;
@@ -95,6 +103,7 @@ textarea{
 	width: 95%;
 	border: none;
 	color: #000;
+	background-color: #F5F5F5;
 }
 .campo input[type="checkbox"]{
 	width: auto;
