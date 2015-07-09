@@ -42,20 +42,32 @@ Contacto Comunidad Integrativa de Coaches
 					{{ form.nombre_apellido }}
 					{{ form.nombre_apellido.errors }}
 				</div>
+				<div class="campo">
+					{{ field.errors }}
+					 <li class="labelcampo"><label for="pais_origen">Pais:</label></li>
+					{{ form.pais_origen }}
+					{{ form.pais_origen.errors }}
+				</div>	
+				<div class="campo">
+					{{ field.errors }}
+					 <li class="labelcampo"><label for="pais_origen">Código de área:</label></li>
+					{{ form.codigo_area }}
+					{{ form.codigo_area.errors }}
+				</div>								
 				<div class="campo">				
 					{{ field.errors }}
 					<li class="labelcampo"><label for="email">Teléfono móvil:</label></li>
 					{{ form.telefono_movil }}
 					{{ form.telefono_movil.errors }}
 				</div>
+			</div>	
+			<div class="derechacontacto">
 				<div class="campo">
 					{{ field.errors }}
 					<li class="labelcampo"><label for="telefono">Teléfono ﬁjo:</label></li>
 					{{ form.telefono_fijo }}
 					{{ form.telefono_fijo.errors }}
-				</div>
-			</div>	
-			<div class="derechacontacto">
+				</div>			
 				<div class="campo">
 					{{ field.errors }}
 					<li class="labelcampo"><label for="telefono">Correo electrónico principal:</label></li>

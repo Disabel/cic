@@ -93,7 +93,8 @@ class miembrosRegistro(models.Model):
 	eventos_internacionales = models.TextField(blank=True)
 	areas_interes_personal = models.TextField()
 	que_desea_delacic = models.TextField()
-
+	def __unicode__(self):
+		return self.nombre_completo
 
 class invitadoRegistro(models.Model):
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
@@ -138,22 +139,22 @@ class invitadoRegistro(models.Model):
 	descripcion_publicaciones = models.TextField(blank=True)
 	eventos_internacionales = models.TextField(blank=True)
 	que_desea_delacic = models.TextField()
-
+	def __unicode__(self):
+		return self.nombre_completo
 
 class miembros(models.Model):
 	TIPO_DE_MIEMBRO = (('comun', 'Miembro común'), ('directivo', 'Directivo'))
 	numero_registro = models.CharField(max_length=70)
-	nombre_completo = models.CharField(max_length=70)
 	descripcion_breve = models.CharField(max_length=100, help_text="Hasta 100 caractares")
-	pais = models.ForeignKey(paisesCic)
-	correo_electronico = models.EmailField(max_length=80)
 	imagen = models.ImageField(upload_to='imgdirectorio', blank=True)
 	tipo_de_miembro = models.CharField(max_length=20, choices=TIPO_DE_MIEMBRO)
-
+	registro_certificado_cic = models.ForeignKey(miembrosRegistro, blank=True, null=True)
+	registro_invitado = models.ForeignKey(invitadoRegistro, blank=True, null=True)
 	class Meta:
 		verbose_name = ("Miembro")
 		verbose_name_plural = ("Miembros")
-
+	def __unicode__(self):
+		return self.numero_registro
 
 class representantesInternacionales(models.Model):
 	paises = models.CharField(max_length=150)
@@ -265,3 +266,4 @@ class videosInicio(models.Model):
 class CorreoBoletin(models.Model):
 	""""Lista de correos ingresados por los clientes en la pagina de inicio para el boletin"""
 	correo = models.EmailField(max_length=50)
+	nombre = models.CharField(max_length=100)

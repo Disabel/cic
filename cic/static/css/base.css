@@ -160,3 +160,11 @@ footer{
 	display: inline-block;
 	margin-right: 15px;
 }
+.suscribetefooter,.suscribetefooter p, .suscribetefooter form, .suscribetefooter .correo {
+	display: inline-block;
+}
+.naranjasfooter{
+	color:#FFF;
+	background-color: #eb4923;
+	  text-align: center;
+}

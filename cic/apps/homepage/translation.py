@@ -26,6 +26,9 @@ class seccionesQuienesSomosTranslationOptions(TranslationOptions):
 	fields = ('paisesIntroduccion', 'codigo_etica',)
 #quienesSomosOtros,'mision','vision','valores','paisesIntroduccion','codigo_etica'
 
+class miembrosTranslationOptions(TranslationOptions):
+	fields = ('descripcion_breve',)
+
 
 class paisesCicTranslationOptions(TranslationOptions):
 	fields = ('nombre',)
@@ -67,3 +70,4 @@ translator.register(quienesSomosOtros, quienesSomosOtrosTranslationOptions)
 translator.register(seccionesQuienesSomos, seccionesQuienesSomosTranslationOptions)
 translator.register(conferenciaslista, conferenciaslistaTranslationOptions)
 translator.register(videosInicio, videosInicioTranslationOptions)
+translator.register(miembros, miembrosTranslationOptions)

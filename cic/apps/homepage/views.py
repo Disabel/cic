@@ -74,20 +74,28 @@ def serviciosCursos(request):
 	return render_to_response('homepage/servicios.html',ctx, context_instance=RequestContext(request))
 
 def cursodetalle(request, slugcurso):
+	curso = get_object_or_404(cursoslista, slugcurso=slugcurso)
 	if request.method == 'POST':
 		form = solicitudForm(request.POST)
 		if form.is_valid():
 			success = True
 			cd = form.cleaned_data
+			asunto = u'[CONTACTO WEB] - Solicitud de Información sobre Curso: %s ' % (curso.titulo)
+			content = u'Persona interesada en el curso: %s \n Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (curso.titulo, cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
+			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])						
 	else:
 		form = solicitudForm()		
-	curso = get_object_or_404(cursoslista, slugcurso=slugcurso)
 	ctx = {'curso':curso,'form':form}
 	return render_to_response('homepage/cursodetalle.html', ctx, context_instance=RequestContext(request))
 
 
 def directorio(request):
-	return render_to_response('homepage/directorio.html', context_instance=RequestContext(request))
+	try:
+		miembroslista = miembros.objects.all()
+	except Exception:
+		miembroslista = None	
+	ctx = {'miembros':miembroslista,}
+	return render_to_response('homepage/directorio.html',ctx, context_instance=RequestContext(request))
 
 def paises(request):
 	title = "directoriocic"
@@ -127,14 +135,17 @@ def certificaciones(request):
 	return render_to_response('homepage/certificaciones.html', ctx, context_instance=RequestContext(request))
 
 def certificaciondetalle(request, slug):
+	certificacion = get_object_or_404(certificacionesLista, slug=slug)
 	if request.method == 'POST':
 		form = solicitudForm(request.POST)
 		if form.is_valid():
 			success = True
 			cd = form.cleaned_data
+			asunto = u'[CONTACTO WEB] - Solicitud de Información sobre Certificacion; %s ' % (certificacion.titulo)
+			content = u'Persona interesada en la certificacion: %s \n Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (certificacion.titulo, cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
+			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])			
 	else:
 		form = solicitudForm()		
-	certificacion = get_object_or_404(certificacionesLista, slug=slug)
 	ctx = {'certificacion':certificacion,'form':form}
 	return render_to_response('homepage/certificaciondetalle.html', ctx, context_instance=RequestContext(request))
 
@@ -152,14 +163,17 @@ def conferencias(request):
 	return render_to_response('homepage/conferencias.html', ctx, context_instance=RequestContext(request))
 
 def conferenciasdetalle(request, slugconf):
+	conferencia = get_object_or_404(conferenciaslista, slugconf=slugconf)
 	if request.method == 'POST':
 		form = solicitudForm(request.POST)
 		if form.is_valid():
 			success = True
 			cd = form.cleaned_data
+			asunto = u'[CONTACTO WEB] - Solicitud de Información sobre Conferencia: %s ' % (conferencia.titulo)
+			content = u'Persona interesada en la conferencia: %s \n Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (conferencia.titulo, cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
+			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])									
 	else:
 		form = solicitudForm()			
-	conferencia = get_object_or_404(conferenciaslista, slugconf=slugconf)
 	ctx = {'conferencia':conferencia,'form':form}
 	return render_to_response('homepage/conferenciadetalle.html', ctx, context_instance=RequestContext(request))
 
@@ -207,9 +221,9 @@ def contact(request):
 		form = contactForm(request.POST)
 		if form.is_valid():
 			success = True
-		#	cd = form.cleaned_data
-		#	asunto = u'[CONTACTO WEB] Por: %s email: %s ' % (cd['nombre'], cd['email'])
-		#	content = u'Email contacto: %s \nAsunto: %s \nTelefono: %s \nDescripcion: %s' % (cd['email'], asunto, cd['telefono'], cd['texto'])
+			cd = form.cleaned_data
+			asunto = u'[CONTACTO WEB] - Formulario de Contacto por: %s ' % (cd['nombre_apellido'])
+			content = u'Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
 		#	send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])
 	else:
 		form = contactForm()

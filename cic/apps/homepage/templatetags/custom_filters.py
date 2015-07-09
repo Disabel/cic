@@ -3,6 +3,7 @@ import os
 from django.template import Library
 from urlparse import parse_qs
 from django.template.defaultfilters import stringfilter
+from cic.apps.homepage.models import miembrosRegistro
 import re
 register = Library()
 
@@ -41,3 +42,17 @@ def youtube_embed_url(value):
 def filesize(value):
     """Returns the filesize of the filename given in value"""
     return os.path.getsize(value)
+'''
+@register.filter
+def getnombre(pkregistro):
+	#miembrot = miembrosRegistro.objects.get(pk=pkregistro)
+	print pkregistro
+#	imgfinal = ''
+#	imagenes = ImgEntradas.objects.filter(entrada = entry)
+#	fc = 1
+#	for i in imagenes:
+#		if fc == loop:
+#			imgfinal = i
+#		fc = fc + 1		
+	return 'hola'
+'''

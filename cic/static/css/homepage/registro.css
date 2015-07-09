@@ -39,9 +39,18 @@ h2 span{
   height: 25px;
 }
 .campo, .campocorto, .campocorto2{
-	  height: 50px;
+	    margin-bottom: 20px;
 }
 
+.errorlist{
+  padding: 0;
+  margin: 0;
+}
+.errorlist li{
+  color: rgb(191, 73, 73);
+  font-size: 0.8em;
+  font-weight: bold;
+}
 .campocorto input, .campocorto2 input{
   width: 41%;
   height: 25px;

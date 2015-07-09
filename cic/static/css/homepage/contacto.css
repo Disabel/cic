@@ -9,7 +9,15 @@ h2 span{
   display: block;
   font-size: 2em;
 }
-
+.errorlist{
+  padding: 0;
+  margin: 0;
+}
+.errorlist li{
+  color: rgb(191, 73, 73);
+  font-size: 0.8em;
+  font-weight: bold;
+}
  .labelcampo{
      list-style-image: url(../../img/iconlist.png);
       margin: 5px 0;

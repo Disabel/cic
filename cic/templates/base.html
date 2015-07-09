@@ -119,7 +119,14 @@
 					<li class="contacto"><a href="#">{% trans 'Contacto' %}</a></li>
 				</ul>	
 				<div class="abajofooter">
-					<div class="esloganfooter">{% trans 'Un espacio para el acercamiento y la Integración' %}</div>	
+					<div class="esloganfooter">{% trans 'Un espacio para el acercamiento y la Integración.' %}</div>	
+					<div class="redesSociales">
+						<a href="https://www.facebook.com" rel="nofollow"><div class="facebook"></div></a>		
+						<a href="https://twitter.com/*" rel="nofollow"><div class="twitterlogo"></div></a>
+						<a href="http://instagram.com" rel="nofollow"><div class="instagram"></div></a>
+						<a href="youtube.com" rel="nofollow"><div class="youtube"></div></a>
+						<a href="https://plus.google.com" rel="nofollow"><div class="googleplus"></div></a>
+					</div>
 					<div class="correofooter">
 						<div class="sobre"></div>
 						<p>correo@correo.com</p>
@@ -129,23 +136,22 @@
 			<div class="logofooter">
 				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Comunidad Integrativa de Coaches">
 			</div>
+			</div>
 			<div class="naranjasfooter">
-				<div class="redesSociales">
-					<a href="https://www.facebook.com" rel="nofollow"><div class="facebook"></div></a>		
-					<a href="https://twitter.com/*" rel="nofollow"><div class="twitterlogo"></div></a>
-					<a href="http://instagram.com" rel="nofollow"><div class="instagram"></div></a>
-					<a href="youtube.com" rel="nofollow"><div class="youtube"></div></a>
-					<a href="https://plus.google.com" rel="nofollow"><div class="googleplus"></div></a>
-				</div>
-				<div class="suscribetefooter">
+				<div class="wrapper">
+			<div id="correo" class="suscribetefooter">
 					<p>{% trans 'Suscríbete a Nuestro Boletín' %}</p>
 					<form class="suscripcionForm" action="#correo" method="POST">
 						{% csrf_token %}
 						{% if newsletter %}
 						<div class="correo">
 							{{ boletinform.subject.errors }}
+							{{ boletinform.nombre }}
+						</div>							
+						<div class="correo">
+							{{ boletinform.subject.errors }}
 							{{ boletinform.correo }}
-						</div>
+						</div>					
 						{% else %}
 						<div class="correo">
 							¡GRACIAS!
@@ -155,8 +161,9 @@
 					</form>
 				</div>
 			</div>
+				</div>
 			<div class="copyright">{% trans 'Comunidad Integrativa de Coaches © Copyright 2015 Todos los Derechos Reservados' %}</div>
-		</div>
+	
 	</footer>
 	<script>
 	$("nav select").change(function() {

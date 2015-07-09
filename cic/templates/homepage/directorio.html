@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load custom_filters %}
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
@@ -29,6 +30,20 @@ Directorio CIC
 			<li><a href="{% url 'aboutpaises' %}">{% trans 'Paises de la CIC' %}</a></li>
 			<li><a href="{% url 'aboutcodigo' %}">{% trans 'Código de ética' %}</a></li>
 		</ul>
-	<h2></div></h2>
-	Directorio
+		<div>
+			{% for miembro in miembros %}
+				{{miembro.numero_registro}}	
+				{% if miembro.registro_certificado_cic %}
+					{{miembro.registro_certificado_cic}}
+					{{miembro.registro_certificado_cic.pais_recidencia}}
+					{{miembro.registro_certificado_cic.correo}}
+				{% else %}	
+					{{miembro.registro_invitado}}
+					{{miembro.registro_invitado.pais_recidencia}}
+					{{miembro.registro_invitado.correo}}					
+				{% endif %}
+			{% endfor %}	
+		</div>
+	</div>
+
 {% endblock%}

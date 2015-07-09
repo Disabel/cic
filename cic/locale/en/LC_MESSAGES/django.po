@@ -8,19 +8,1271 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-06-11 17:22-0430\n"
+"POT-Creation-Date: 2015-07-08 10:12-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
-#: .\templates\base.html:42
-msgid "Idioma:"
+#: .\apps\calendarium\constants.py:14
+msgid "Yearly"
 msgstr ""
 
-#: .\templates\homepage\index.html:32
+#: .\apps\calendarium\constants.py:15
+msgid "Monthly"
+msgstr ""
+
+#: .\apps\calendarium\constants.py:16
+msgid "Weekly"
+msgstr ""
+
+#: .\apps\calendarium\constants.py:17
+msgid "Daily"
+msgstr ""
+
+#: .\apps\calendarium\constants.py:28
+msgid "all"
+msgstr ""
+
+#: .\apps\calendarium\constants.py:29
+msgid "following"
+msgstr ""
+
+#: .\apps\calendarium\constants.py:30
+msgid "this one"
+msgstr ""
+
+#: .\apps\calendarium\models.py:97
+msgid "Fecha inicio"
+msgstr ""
+
+#: .\apps\calendarium\models.py:101
+msgid "Fecha final"
+msgstr ""
+
+#: .\apps\calendarium\models.py:105
+msgid "Fecha creacion"
+msgstr ""
+
+#: .\apps\calendarium\models.py:110
+msgid "Descripcion"
+msgstr ""
+
+#: .\apps\calendarium\models.py:143
+msgid "Creado por"
+msgstr ""
+
+#: .\apps\calendarium\models.py:150
+msgid "Categoria"
+msgstr ""
+
+#: .\apps\calendarium\models.py:157
+msgid "Pauta"
+msgstr ""
+
+#: .\apps\calendarium\models.py:163
+msgid "Fin de repeticion"
+msgstr ""
+
+#: .\apps\calendarium\models.py:169
+msgid "Titulo"
+msgstr ""
+
+#: .\apps\calendarium\models.py:174 .\apps\calendarium\models.py:343
+#: .\apps\calendarium\models.py:457
+msgid "Muletilla"
+msgstr ""
+
+#: .\apps\calendarium\models.py:181 .\apps\calendarium\models.py:463
+msgid "Sub-titulo"
+msgstr ""
+
+#: .\apps\calendarium\models.py:186 .\apps\calendarium\models.py:468
+msgid "lugar"
+msgstr ""
+
+#: .\apps\calendarium\models.py:193 .\apps\calendarium\models.py:475
+msgid "precio"
+msgstr ""
+
+#: .\apps\calendarium\models.py:197 .\apps\calendarium\models.py:479
+msgid "Imagen"
+msgstr ""
+
+#: .\apps\calendarium\models.py:203 .\apps\calendarium\models.py:485
+msgid "Imagen Index"
+msgstr ""
+
+#: .\apps\calendarium\models.py:210 .\apps\calendarium\models.py:492
+msgid "Alt de imagen index"
+msgstr ""
+
+#: .\apps\calendarium\models.py:338 .\apps\calendarium\models.py:558
+msgid "Nombre"
+msgstr ""
+
+#: .\apps\calendarium\models.py:348
+msgid "Color"
+msgstr ""
+
+#: .\apps\calendarium\models.py:355
+msgid "Pariente"
+msgstr ""
+
+#: .\apps\calendarium\models.py:388
+msgid "Evento"
+msgstr ""
+
+#: .\apps\calendarium\models.py:403
+msgid "Tipo de relaciones"
+msgstr ""
+
+#: .\apps\calendarium\models.py:427
+msgid "Created by"
+msgstr ""
+
+#: .\apps\calendarium\models.py:434
+msgid "Event"
+msgstr ""
+
+#: .\apps\calendarium\models.py:439
+msgid "Original start"
+msgstr ""
+
+#: .\apps\calendarium\models.py:443
+msgid "Original end"
+msgstr ""
+
+#: .\apps\calendarium\models.py:447
+msgid "Cancelled"
+msgstr ""
+
+#: .\apps\calendarium\models.py:452
+msgid "Title"
+msgstr ""
+
+#: .\apps\calendarium\models.py:563
+msgid "description"
+msgstr ""
+
+#: .\apps\calendarium\models.py:567
+msgid "Frecuencia"
+msgstr ""
+
+#: .\apps\calendarium\models.py:573
+msgid "Parametros"
+msgstr ""
+
+#: .\templates\base.html:83 .\templates\base.html.py:113
+msgid "Inicio"
+msgstr "Home"
+
+#: .\templates\base.html:84 .\templates\base.html.py:114
+msgid "Quienes Somos"
+msgstr "About Us"
+
+#: .\templates\base.html:85 .\templates\base.html.py:115
+#: .\templates\homepage\index.html:45
+msgid "Certificaciones"
+msgstr "Certifications"
+
+#: .\templates\base.html:86 .\templates\base.html.py:116
+msgid "Servicios"
+msgstr "Services"
+
+#: .\templates\base.html:87 .\templates\base.html.py:117
+msgid "Eventos"
+msgstr "Events"
+
+#: .\templates\base.html:88 .\templates\base.html.py:118
+#: .\templates\homepage\index.html:53
+msgid "Recursos Informativos"
+msgstr "Information Resources"
+
+#: .\templates\base.html:89 .\templates\base.html.py:119
+#: .\templates\homepage\contacto.html:24
+msgid "Contacto"
+msgstr "Contact Us"
+
+#: .\templates\base.html:122
+msgid "Un espacio para el acercamiento y la Integración."
+msgstr ""
+
+#: .\templates\base.html:143
+msgid "Suscríbete a Nuestro Boletín"
+msgstr "Subscribe to our Newsletter"
+
+#: .\templates\base.html:165
+msgid ""
+"Comunidad Integrativa de Coaches © Copyright 2015 Todos los Derechos "
+"Reservados"
+msgstr "Comunidad Integrativa de Coaches © Copyright 2015. All rights reserved."
+
+#: .\templates\calendarium\calendar_week.html:6
+msgid "Occurrences"
+msgstr ""
+
+#: .\templates\calendarium\event_confirm_delete.html:10
+#: .\templates\calendarium\occurrence_confirm_delete.html:6
+#: .\templates\calendarium\occurrence_confirm_delete.html:18
+msgid "Delete"
+msgstr ""
+
+#: .\templates\calendarium\event_form.html:16
+#: .\templates\calendarium\occurrence_form.html:16
+msgid "Save"
+msgstr ""
+
+#: .\templates\homepage\asesorias.html:28
+#: .\templates\homepage\conferenciadetalle.html:29
+#: .\templates\homepage\conferencias.html:28
+#: .\templates\homepage\cursodetalle.html:29
+#: .\templates\homepage\servicios.html:28
+#: .\templates\homepage\servicios.html:34
+msgid "Cursos"
+msgstr "Courses"
+
+#: .\templates\homepage\asesorias.html:29
+#: .\templates\homepage\conferenciadetalle.html:30
+#: .\templates\homepage\conferencias.html:29
+#: .\templates\homepage\cursodetalle.html:30
+#: .\templates\homepage\servicios.html:29
+msgid "Conferencias"
+msgstr "Conferences"
+
+#: .\templates\homepage\asesorias.html:30
+#: .\templates\homepage\asesorias.html:34
+#: .\templates\homepage\conferenciadetalle.html:31
+#: .\templates\homepage\conferencias.html:30
+#: .\templates\homepage\cursodetalle.html:31
+#: .\templates\homepage\servicios.html:30
+msgid "Asesorías"
+msgstr Advisory""
+
+#: .\templates\homepage\certificaciondetalle.html:34
+#: .\templates\homepage\conferenciadetalle.html:39
+#: .\templates\homepage\cursodetalle.html:39
+msgid "FORMULARIO DE SOLICITUD DE INFORMACIÓN"
+msgstr "Information Request Form"
+
+#: .\templates\homepage\certificaciondetalle.html:39
+#: .\templates\homepage\conferenciadetalle.html:44
+#: .\templates\homepage\cursodetalle.html:44
+msgid "Nombre y Apellido:"
+msgstr "Full Name:"
+
+#: .\templates\homepage\certificaciondetalle.html:45
+#: .\templates\homepage\conferenciadetalle.html:50
+#: .\templates\homepage\cursodetalle.html:50
+msgid "Pais:"
+msgstr "Country:"
+
+#: .\templates\homepage\certificaciondetalle.html:51
+#: .\templates\homepage\conferenciadetalle.html:56
+#: .\templates\homepage\cursodetalle.html:56
+msgid "Código de área:"
+msgstr "Area Code"
+
+#: .\templates\homepage\certificaciondetalle.html:57
+#: .\templates\homepage\conferenciadetalle.html:62
+#: .\templates\homepage\cursodetalle.html:62
+msgid "Teléfono Móvil"
+msgstr "Mobile Phone"
+
+#: .\templates\homepage\certificaciondetalle.html:63
+#: .\templates\homepage\conferenciadetalle.html:68
+#: .\templates\homepage\cursodetalle.html:68
+msgid "Teléfono Fijo"
+msgstr "Other Phone"
+
+#: .\templates\homepage\certificaciondetalle.html:69
+#: .\templates\homepage\conferenciadetalle.html:74
+#: .\templates\homepage\cursodetalle.html:74
+msgid "Correo Electrónico Principal"
+msgstr "Primary Email Address"
+
+#: .\templates\homepage\certificaciondetalle.html:75
+#: .\templates\homepage\conferenciadetalle.html:80
+#: .\templates\homepage\cursodetalle.html:80
+msgid "Correo Electrónico Alterno"
+msgstr "Secondary Email Address"
+
+#: .\templates\homepage\certificaciondetalle.html:81
+#: .\templates\homepage\conferenciadetalle.html:86
+#: .\templates\homepage\cursodetalle.html:86
+msgid "Nombre de la Empresa"
+msgstr "Company Name:"
+
+#: .\templates\homepage\certificaciondetalle.html:87
+#: .\templates\homepage\conferenciadetalle.html:92
+#: .\templates\homepage\cursodetalle.html:92
+msgid "Mensaje: "
+msgstr "Message"
+
+#: .\templates\homepage\certificaciones.html:29
+msgid "Certificaciones CIC"
+msgstr "CIC Certifications"
+
+#: .\templates\homepage\certificaciones.html:33
+#: .\templates\homepage\certificaciones.html:37
+msgid "¿Por qué"
+msgstr "Reasons to"
+
+#: .\templates\homepage\certificaciones.html:33
+msgid "certificarte con los entrenadoresde la CIC?"
+msgstr "get a certification with our trainers"
+
+#: .\templates\homepage\certificaciones.html:37
+msgid "los trainers de la CIC?"
+msgstr "choose our trainers"
+
+#: .\templates\homepage\certificaciones.html:56
+msgid "¿Quienes"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:56
+msgid "certifican en la CIC?"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:63
+msgid "Certificación"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:63
+msgid "Se un Coach certificado por la CIC en:"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:69
+msgid "Especializaciones"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:75
+#: .\templates\homepage\quienessomos.html:96
+msgid "Visita nuestros "
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:75
+#: .\templates\homepage\quienessomos.html:96
+msgid " Recursos Informativos"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:77
+#: .\templates\homepage\quienessomos.html:98
+#: .\templates\homepage\recursos.html:29
+msgid "Noticias"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:82
+#: .\templates\homepage\quienessomos.html:103
+#: .\templates\homepage\recursos.html:34
+msgid "Herramientas y Otros Artículos"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:87
+#: .\templates\homepage\quienessomos.html:108
+#: .\templates\homepage\recursos.html:39
+msgid "Artículos"
+msgstr ""
+
+#: .\templates\homepage\certificaciones.html:92
+#: .\templates\homepage\quienessomos.html:113
+#: .\templates\homepage\recursos.html:44
+#: .\templates\homepage\registrocic.html:339
+#: .\templates\homepage\registroinvitado.html:303
+msgid "Libros"
+msgstr ""
+
+#: .\templates\homepage\codigoetica.html:27
+#: .\templates\homepage\directorio.html:28 .\templates\homepage\paises.html:27
+#: .\templates\homepage\quienessomos.html:26
+msgid "Sobre la CIC"
+msgstr ""
+
+#: .\templates\homepage\codigoetica.html:28
+#: .\templates\homepage\directorio.html:29 .\templates\homepage\paises.html:28
+#: .\templates\homepage\quienessomos.html:27
+msgid "Directorio"
+msgstr ""
+
+#: .\templates\homepage\codigoetica.html:29
+#: .\templates\homepage\directorio.html:30 .\templates\homepage\paises.html:29
+#: .\templates\homepage\quienessomos.html:28
+msgid "Paises de la CIC"
+msgstr ""
+
+#: .\templates\homepage\codigoetica.html:30
+#: .\templates\homepage\directorio.html:31 .\templates\homepage\paises.html:30
+#: .\templates\homepage\quienessomos.html:29
+msgid "Código de ética"
+msgstr ""
+
+#: .\templates\homepage\conferencias.html:34
+msgid "Conferencias CIC"
+msgstr ""
+
+#: .\templates\homepage\conferencias.html:37
+#: .\templates\homepage\servicios.html:36
+msgid "Listado "
+msgstr ""
+
+#: .\templates\homepage\conferencias.html:37
+msgid "de nuestras Conferencias"
+msgstr ""
+
+#: .\templates\homepage\eventos.html:26
 msgid "Banking and financial issues"
 msgstr "banco y financiero problemas"
+
+#: .\templates\homepage\index.html:29
+msgid "Un espacio para el"
+msgstr ""
+
+#: .\templates\homepage\index.html:30
+msgid "y la "
+msgstr ""
+
+#: .\templates\homepage\index.html:30
+msgid "Integración"
+msgstr ""
+
+#: .\templates\homepage\index.html:37
+msgid "¿Eres un coach certificado?"
+msgstr ""
+
+#: .\templates\homepage\index.html:40
+msgid "Beneficios de Registrarme"
+msgstr ""
+
+#: .\templates\homepage\index.html:48
+msgid "Conocer Más"
+msgstr ""
+
+#: .\templates\homepage\index.html:56
+msgid "Ver Recursos"
+msgstr ""
+
+#: .\templates\homepage\paises.html:36
+msgid "Países"
+msgstr ""
+
+#: .\templates\homepage\paises.html:36
+msgid "donde actúa la CIC"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:33
+msgid "¿Qué es"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:33
+msgid "la comunidad Integrativa de Coaches CIC?"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:45
+msgid "Nuestro"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:45
+msgid "equipo directivo"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:46
+msgid ""
+"Son directores fundadores de la comunidad Integrativa de Coaches, los "
+"Coaches Internacionales y Trainers en NLP:"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:54
+msgid "Representantes"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:54
+msgid "Internacionales de la CIC"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:77
+msgid "Misión"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:77
+#: .\templates\homepage\quienessomos.html:81
+#: .\templates\homepage\quienessomos.html:86
+msgid "de la CIC"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:81
+msgid "Visión"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:86
+msgid "Valores"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:92
+msgid "Únete a la"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:92
+msgid "Comunidad Integrativa de Coaches"
+msgstr ""
+
+#: .\templates\homepage\quienessomos.html:93
+msgid "Regístrate Aquí"
+msgstr ""
+
+#: .\templates\homepage\registro.html:29
+msgid "Regístrate "
+msgstr ""
+
+#: .\templates\homepage\registro.html:30
+#: .\templates\homepage\registrocic.html:30
+#: .\templates\homepage\registroinvitado.html:30
+msgid "Registro para coaches certificados CIC"
+msgstr ""
+
+#: .\templates\homepage\registro.html:31
+msgid "Registro para coaches Invitados o No certificados por CIC"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:29
+#: .\templates\homepage\registroinvitado.html:29
+msgid "Regístrate como coach de la CIC"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:35
+#: .\templates\homepage\registroinvitado.html:35
+msgid "Datos Personales"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:39
+#: .\templates\homepage\registroinvitado.html:39
+msgid "Nombre y apellidos completos"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:45
+#: .\templates\homepage\registroinvitado.html:45
+msgid "Número de identificación o pasaporte"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:51
+#: .\templates\homepage\registroinvitado.html:51
+msgid "Fecha de nacimiento"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:57
+#: .\templates\homepage\registroinvitado.html:57
+msgid "Nacionalidad"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:63
+#: .\templates\homepage\registroinvitado.html:63
+msgid "País de residencia"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:69
+#: .\templates\homepage\registroinvitado.html:69
+msgid "Dirección exacta"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:75
+#: .\templates\homepage\registroinvitado.html:75
+msgid "Apartado postal"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:81
+#: .\templates\homepage\registroinvitado.html:81
+msgid "Código de área"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:87
+#: .\templates\homepage\registroinvitado.html:87
+msgid "Teléfono habitación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:93
+#: .\templates\homepage\registroinvitado.html:93
+msgid "Teléfono móvil"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:99
+#: .\templates\homepage\registroinvitado.html:99
+msgid "Otro número telefónico"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:105
+#: .\templates\homepage\registroinvitado.html:105
+msgid "Correo electrónico"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:111
+#: .\templates\homepage\registroinvitado.html:111
+msgid "Profesión"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:117
+#: .\templates\homepage\registroinvitado.html:117
+msgid "Años de experiencia"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:123
+msgid "Datos de la Certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:127
+#: .\templates\homepage\registrocic.html:210
+#: .\templates\homepage\registroinvitado.html:163
+#: .\templates\homepage\registroinvitado.html:198
+#: .\templates\homepage\registroinvitado.html:223
+msgid "País donde se certificó"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:133
+msgid "Ciudad donde se certificó"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:139
+msgid "Institución que organizó la certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:145
+msgid "Nombre de la certificación que obtuvo (Título)"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:151
+msgid "Trainer que lo certifico"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:157
+msgid "Período de la certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:163
+msgid "Número de horas presenciales del programa"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:169
+msgid "Fecha exacta de la certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:175
+#: .\templates\homepage\registrocic.html:198
+#: .\templates\homepage\registrocic.html:235
+#: .\templates\homepage\registroinvitado.html:145
+msgid "Código de certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:182
+msgid "Que otras Certificaciones Posee"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:185
+msgid "¿Posee otra Certificación CIC?"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:192
+msgid "Nombre de la certificación  "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:204
+msgid "Fecha exacta en la que se certificó"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:216
+msgid "Trainer de la certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:222
+msgid "¿Posee Certificaciones de otras Asociaciones o Federaciones?"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:229
+#: .\templates\homepage\registroinvitado.html:139
+#: .\templates\homepage\registroinvitado.html:180
+#: .\templates\homepage\registroinvitado.html:205
+msgid "Nombre de la certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:241
+#: .\templates\homepage\registroinvitado.html:151
+msgid "Fecha de certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:247
+msgid "Quién lo certifica"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:253
+msgid "País donde se certifico"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:258
+#: .\templates\homepage\registroinvitado.html:169
+msgid "Entidad responsable de la certificación"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:265
+#: .\templates\homepage\registroinvitado.html:229
+msgid "De su Desempeño como Coach"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:267
+#: .\templates\homepage\registroinvitado.html:231
+msgid "Seleccione la Frecuencia con que ejerce el Coaching:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:269
+#: .\templates\homepage\registroinvitado.html:233
+msgid "Actualmente ejerce el Coaching como profesión principal"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:270
+#: .\templates\homepage\registroinvitado.html:234
+msgid "Ejerce la profesión del coaching ocasionalmente"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:271
+#: .\templates\homepage\registroinvitado.html:235
+msgid "Nunca ha ejercido la profesión del coaching"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:275
+#: .\templates\homepage\registroinvitado.html:239
+msgid "Indique los años de experiencia ejerciendo la profesión del coaching"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:280
+#: .\templates\homepage\registroinvitado.html:244
+msgid "Ejerce el Coahing Como:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:282
+#: .\templates\homepage\registroinvitado.html:246
+msgid "Coach externo"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:283
+#: .\templates\homepage\registroinvitado.html:247
+msgid "Coach interno"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:284
+#: .\templates\homepage\registroinvitado.html:248
+msgid "Coach y Mentoría"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:285
+#: .\templates\homepage\registroinvitado.html:249
+msgid "Líder Coach "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:286
+#: .\templates\homepage\registroinvitado.html:250
+msgid "Entrenador de Coaching "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:287
+#: .\templates\homepage\registroinvitado.html:251
+msgid "Coach speaker o conferenciante"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:288
+#: .\templates\homepage\registroinvitado.html:252
+msgid "Coach Investigator "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:289
+#: .\templates\homepage\registroinvitado.html:253
+msgid "Coach escritor "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:290
+#: .\templates\homepage\registrocic.html:302
+#: .\templates\homepage\registrocic.html:318
+#: .\templates\homepage\registrocic.html:344
+#: .\templates\homepage\registrocic.html:379
+#: .\templates\homepage\registrocic.html:400
+#: .\templates\homepage\registroinvitado.html:254
+#: .\templates\homepage\registroinvitado.html:266
+#: .\templates\homepage\registroinvitado.html:282
+#: .\templates\homepage\registroinvitado.html:308
+#: .\templates\homepage\registroinvitado.html:347
+msgid "Otros"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:294
+#: .\templates\homepage\registroinvitado.html:258
+msgid "SU DESEMPEÑO COMO COACH HA SIDO O ES A NIVEL DE:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:296
+#: .\templates\homepage\registroinvitado.html:260
+msgid "Vida o personal "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:297
+#: .\templates\homepage\registroinvitado.html:261
+msgid "Transpersonal"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:298
+#: .\templates\homepage\registroinvitado.html:262
+msgid "Organizacional o empresarial "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:299
+#: .\templates\homepage\registroinvitado.html:263
+msgid "De negocios "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:300
+#: .\templates\homepage\registroinvitado.html:264
+msgid "Ejecutivo"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:301
+#: .\templates\homepage\registroinvitado.html:265
+msgid "De Equipos "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:306
+#: .\templates\homepage\registroinvitado.html:270
+msgid "¿DESEMPEÑA EL COACHING EN UN CAMPO ESPECÍFICO?:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:308
+#: .\templates\homepage\registroinvitado.html:272
+msgid "Vida "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:309
+#: .\templates\homepage\registroinvitado.html:273
+msgid "Salud "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:310
+#: .\templates\homepage\registroinvitado.html:274
+msgid "Educación "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:311
+#: .\templates\homepage\registroinvitado.html:275
+msgid "Deportivo "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:312
+#: .\templates\homepage\registroinvitado.html:276
+msgid "Teratológico "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:313
+#: .\templates\homepage\registroinvitado.html:277
+msgid "Liderazgo "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:314
+#: .\templates\homepage\registroinvitado.html:278
+msgid "Emprendimiento "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:315
+#: .\templates\homepage\registroinvitado.html:279
+msgid "Empresarial "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:316
+#: .\templates\homepage\registroinvitado.html:280
+msgid "Religioso "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:317
+#: .\templates\homepage\registroinvitado.html:281
+msgid "Innovación "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:322
+#: .\templates\homepage\registroinvitado.html:286
+msgid "EJERCE EL COACHING DE MANERA:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:324
+#: .\templates\homepage\registroinvitado.html:288
+msgid "Individual"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:325
+#: .\templates\homepage\registroinvitado.html:289
+msgid "En equipo permanentemente "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:326
+#: .\templates\homepage\registroinvitado.html:290
+msgid "En equipo ocasionalmente "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:327
+#: .\templates\homepage\registroinvitado.html:291
+msgid "Contratado por una empresa "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:328
+#: .\templates\homepage\registroinvitado.html:292
+msgid "Sub contratado como outsoursing "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:329
+#: .\templates\homepage\registroinvitado.html:293
+msgid "Otro"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:333
+#: .\templates\homepage\registroinvitado.html:297
+msgid "CUENTA USTED CON PUBLICACIONES RELACIONADAS CON EL COACHING:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:340
+#: .\templates\homepage\registroinvitado.html:304
+msgid "Revistas"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:341
+#: .\templates\homepage\registroinvitado.html:305
+msgid "Artículos de prensa "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:342
+#: .\templates\homepage\registroinvitado.html:306
+msgid "Artículos por internet "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:343
+#: .\templates\homepage\registroinvitado.html:307
+msgid "No cuento con publicaciones relacionadas con el Coaching"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:349
+#: .\templates\homepage\registroinvitado.html:313
+msgid "DESCRIBA BREVEMENTE SUS PUBLICACIONES: "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:355
+#: .\templates\homepage\registroinvitado.html:319
+msgid "¿HA PARTICIPADO EN EVENTOS INTERNACIONALES DE COACHING?:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:362
+#: .\templates\homepage\registroinvitado.html:326
+msgid "Describa a continuación nombre y año de cada evento: "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:366
+msgid "ÁREAS DE INTERÉS:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:367
+msgid "Identiﬁque las áreas que sean de su interés personal:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:369
+msgid "Lectura general "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:370
+msgid "Lectura especializada "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:371
+msgid "Escritura general o literaria "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:372
+msgid "Escritura especializada"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:373
+msgid "Deportes"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:374
+msgid "Meditación y espiritualidad "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:375
+msgid "Relaciones sociales y entretenimiento "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:376
+msgid "Viajes"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:377
+msgid "Arte, música y pintura "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:378
+msgid "Tecnología"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:383
+#: .\templates\homepage\registroinvitado.html:330
+msgid ""
+"IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:385
+#: .\templates\homepage\registroinvitado.html:332
+msgid "Oportunidades de empleo "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:386
+#: .\templates\homepage\registroinvitado.html:333
+msgid "Oportunidades para la investigación "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:387
+#: .\templates\homepage\registroinvitado.html:334
+msgid "Apoyo para publicaciones "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:388
+#: .\templates\homepage\registroinvitado.html:335
+msgid "Respaldo institucional "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:389
+#: .\templates\homepage\registroinvitado.html:336
+msgid "Imagen y prestigio internacional "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:390
+#: .\templates\homepage\registroinvitado.html:337
+msgid "Información bibliográﬁca actualizada "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:391
+#: .\templates\homepage\registroinvitado.html:338
+msgid "Temas de actualidad sobre coaching y áreas aﬁnes o relacionadas "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:392
+#: .\templates\homepage\registroinvitado.html:339
+msgid "Aportes e innovaciones "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:393
+#: .\templates\homepage\registroinvitado.html:340
+msgid "Noticias y sucesos relacionados con el coaching "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:394
+#: .\templates\homepage\registroinvitado.html:341
+msgid "Intercambio social con otros miembros "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:395
+#: .\templates\homepage\registroinvitado.html:342
+msgid "Intercambio profesional y de experiencias con otros miembros "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:396
+#: .\templates\homepage\registroinvitado.html:343
+msgid "Congresos, eventos especiales, conferencias"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:397
+#: .\templates\homepage\registroinvitado.html:344
+msgid "Certiﬁcaciones"
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:398
+#: .\templates\homepage\registroinvitado.html:345
+msgid "Talleres, cursos y seminarios "
+msgstr ""
+
+#: .\templates\homepage\registrocic.html:399
+#: .\templates\homepage\registroinvitado.html:346
+msgid "Intercambios sociales, deportivos y recreacionales "
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:123
+msgid "Código de inscripción"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:129
+msgid "Razón que lo motiva a registrarse en CIC"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:135
+msgid "Datos de Certificación"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:157
+msgid "Quien lo certifica"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:175
+msgid ""
+"Si posee otras certificaciones adicionales en Coaching, por favor descríbalas"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:177
+msgid "Certificación (2):"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:186
+#: .\templates\homepage\registroinvitado.html:211
+msgid "Avalada por"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:192
+#: .\templates\homepage\registroinvitado.html:217
+msgid "Año de Certificación"
+msgstr ""
+
+#: .\templates\homepage\registroinvitado.html:202
+msgid "Certificación (3):"
+msgstr ""
+
+#: .\templates\homepage\servicios.html:36
+msgid "de nuestros Cursos"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:17
+msgid "Written by"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:22
+msgctxt "on date"
+msgid "on"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:24
+msgid "Written on"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:34
+msgid "in"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:37
+#, python-format
+msgid "Show all entries in %(category)s"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:45
+msgid "Last update on"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:77
+#, python-format
+msgid "%(percent)s%% of %(object)s still remains to read."
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:79
+msgid "Continue reading"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:91
+msgid "Tags"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:94
+#, python-format
+msgid "Show all entries tagged by %(tag)s"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:97
+msgid "No tags"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:103
+msgid "Short url"
+msgstr ""
+
+#: .\templates\zinnia\_entry_detail_base.html:105
+#, python-format
+msgid "Short URL to %(object)s"
+msgstr ""
+
+#: .\templates\zinnia\base.html:16
+msgid "RSS Feed of latest entries"
+msgstr ""
+
+#: .\templates\zinnia\base.html:17
+msgid "RSS Feed of latest discussions"
+msgstr ""
+
+#: .\templates\zinnia\base.html:28
+msgid "Categories"
+msgstr ""
+
+#: .\templates\zinnia\base.html:32 .\templates\zinnia\skeleton.html:43
+msgid "Recent entries"
+msgstr ""
+
+#: .\templates\zinnia\base.html:36
+#: .\templates\zinnia\tags\archives_entries_link.html:2
+msgid "Archives"
+msgstr ""
+
+#: .\templates\zinnia\base.html:42
+msgid "Tools"
+msgstr ""
+
+#: .\templates\zinnia\base.html:46 .\templates\zinnia\base.html.py:47
+msgid "Dashboard"
+msgstr ""
+
+#: .\templates\zinnia\base.html:53 .\templates\zinnia\base.html.py:54
+msgid "Post an entry"
+msgstr ""
+
+#: .\templates\zinnia\base.html:61 .\templates\zinnia\base.html.py:62
+msgid "Log out"
+msgstr ""
+
+#: .\templates\zinnia\entry_detail_base.html:38
+msgid "Next entry"
+msgstr ""
+
+#: .\templates\zinnia\entry_detail_base.html:52
+msgid "Previous entry"
+msgstr ""
+
+#: .\templates\zinnia\entry_detail_base.html:66
+msgid "Related entries"
+msgstr ""
+
+#: .\templates\zinnia\entry_detail_base.html:80
+msgid "Similar entries"
+msgstr ""
+
+#: .\templates\zinnia\entry_detail_base.html:93
+#: .\templates\zinnia\entry_detail_base.html:94
+msgid "Edit the entry"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:24
+msgid "Recursos"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:24
+msgid "Informativos"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:28
+msgid "Useful links"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:31 .\templates\zinnia\skeleton.html:32
+msgid "Blog index"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:36 .\templates\zinnia\skeleton.html:37
+msgid "Sitemap"
+msgstr ""
+
+#: .\templates\zinnia\skeleton.html:47
+msgid "Search"
+msgstr ""
