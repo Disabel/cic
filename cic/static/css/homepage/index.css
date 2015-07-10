@@ -91,13 +91,13 @@ h2{
 .icono2{
 	width: 180px;
 	height: 139px;
-	background: url(../../img/iconoshome.png) -94px;
+	background: url(../../img/iconoshome.png) -94px 0px;
 	margin: 0 auto;
 }
 .icono3{
 	width: 81px;
 	height: 108px;	
-	background: url(../../img/iconoshome.png) -291px -33px;
+	background: url(../../img/iconoshome.png) -290px -32px;
 	margin: 0 auto;
 }
 
@@ -125,6 +125,7 @@ h2{
   width: 45%;
   display: inline-block;
   vertical-align: top;
+  margin-right: 4%;
 }
 .video img{
   width: 100%;

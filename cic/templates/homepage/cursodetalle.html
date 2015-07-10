@@ -30,7 +30,7 @@ Cursos - Comunidad Integrativa de Coaches
 			<li><a href="{% url 'serviciosconferencias' %}">{% trans 'Conferencias' %}</a></li>
 			<li><a href="{% url 'serviciosasesorias' %}">{% trans 'Asesorías' %}</a></li>
 		</ul>
-		<a class="back-link" href="{% url 'homepageservicios' %}">«Volver</a>
+		<a class="back-link" href="{% url 'homepageservicios' %}">«{% trans 'Volver' %}</a>
 			<div class="info">
 				<h2><span>{{ curso.titulo|safe }}</span></h2>
 				{{ curso.cuerpo_general|safe }}
@@ -38,12 +38,12 @@ Cursos - Comunidad Integrativa de Coaches
 			</div>	
 		{% if success %}
 		<div class="mensajeenviado">
-			<div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
+			<div class="enviado">{% trans 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.' %}</div>
 		</div>
 		{% else %}
 		{% if form.errors %}
         <p>
-            Por favor corregir los errores debajo.
+            {% trans 'Por favor corregir los errores debajo.' %}
         </p>
    		{% endif %}			
 			<h3>{% trans 'FORMULARIO DE SOLICITUD DE INFORMACIÓN' %}</h3>

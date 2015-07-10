@@ -25,10 +25,10 @@
         <h2>{{ object.subtitle }}</h2>
         <div class="eventoHorario">
             <ul>
-                <li>Inicio: <span>{{ object.start }}</span></li>
-                <li>Final: <span>{{ object.end }}</span></li>
-                <li>Duración: <span>{{ object.end|timeuntil:object.start }}</span></li>
-                <li>Categoría: <span>{{ object.category }}</span></li>
+                <li>{% trans 'Inicio:' %} <span>{{ object.start }}</span></li>
+                <li>{% trans 'Final:' %} <span>{{ object.end }}</span></li>
+                <li>{% trans 'Duración:' %} <span>{{ object.end|timeuntil:object.start }}</span></li>
+                <li>{% trans 'Categoría:' %} <span>{{ object.category }}</span></li>
             </ul>
         </div>
         <div>
@@ -37,7 +37,7 @@
             {% endautoescape %}
         </div>
         <div>
-            <span class="red bold">Lugar:</span>
+            <span class="red bold">{% trans 'Lugar:' %}</span>
             <span>
                 {% if object.place %}
                     {{ object.place }}
@@ -47,22 +47,22 @@
             </span>
         </div>
         <div class="precioEvento">
-            <span class="red bold">Precio:</span>
+            <span class="red bold">{% trans 'Precio:' %}</span>
             <span>{{ object.price }}</span>
         </div>
     </div>
     <aside>
         <!-- COLOCAR LLAMADOS A LA ACCION PORQUE DOS FORM DA PROBLEMAS -->
-        <h2 class="mensajeForm">Llene el formulario para solicitar entrar al evento</h2>
+        <h2 class="mensajeForm">{% trans 'Llene el formulario para solicitar entrar al evento' %}</h2>
         {% if success %}
         <div class="mensajeenviado">
-            <div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
+            <div class="enviado">{% trans 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.' %}</div>
             <img class="sobre" src="{% static 'img/sobre.png' %}" alt="formulario de contacto">    
         </div>
         {% else %}
         {% if form.errors %}
         <p>
-            Por favor corregir los errores debajo.
+            {% trans 'Por favor corregir los errores debajo.' %}
         </p>
         {% endif %}
         <form id="id_formulario" action="#" method="POST">
@@ -70,37 +70,37 @@
             <div class="campos">
                 <div class="campo">
                     {{ field.errors }}
-                    <label for="nombre">Nombre y apellidos:</label>
+                    <label for="nombre">{% trans 'Nombre y apellidos:' %}</label>
                     {{ form.nombre }}
                     {{ form.nombre.errors }}
                 </div>
                 <div class="campo">
                     {{ field.errors }}
-                    <label for="nombre">Empresa:</label>
+                    <label for="nombre">{% trans 'Empresa:' %}</label>
                     {{ form.empresa }}
                     {{ form.empresa.errors }}
                 </div>
                 <div class="campo">
                     {{ field.errors }}
-                    <label for="nombre">Cargo:</label>
+                    <label for="nombre">{% trans 'Cargo:' %}</label>
                     {{ form.cargo }}
                     {{ form.cargo.errors }}
                 </div>
                 <div class="campo">             
                     {{ field.errors }}
-                    <label for="email">Correo Electrónico:</label>
+                    <label for="email">{% trans 'Correo Electrónico:' %}</label>
                     {{ form.email }}
                     {{ form.email.errors }}
                 </div>        
                 <div class="campo">
                     {{ field.errors }}
-                    <label for="telefono">Teléfono:</label>
+                    <label for="telefono">{% trans 'Teléfono:' %}</label>
                     {{ form.telefono }}
                     {{ form.telefono.errors }}
                 </div>
                 <div class="textareaDescripcion">
                     {{ field.errors }}
-                    <label for="comentario">Comentario adicional: </label>
+                    <label for="comentario">{% trans 'Comentario adicional:' %} </label>
                     {{ form.comentario }}
                     {{ form.comentario.errors }}
                 </div>     

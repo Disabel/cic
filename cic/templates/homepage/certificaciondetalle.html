@@ -25,7 +25,7 @@ Certificaciones - Comunidad Integrativa de Coaches
 			<img src="{% static 'img/bannercertificaciones.jpg' %}" alt="Certificaciones CIC">
 		</div>
 		<div class="wrapper">
-		<a class="back-link" href="{% url 'homepagecertificaciones' %}">«Volver</a>
+		<a class="back-link" href="{% url 'homepagecertificaciones' %}">«{% trans 'Volver' %}</a>
 			<div class="info">
 				<h2><span>{{ certificacion.titulo|safe }}</span></h2>
 				
@@ -34,12 +34,12 @@ Certificaciones - Comunidad Integrativa de Coaches
 			<h3>{% trans 'FORMULARIO DE SOLICITUD DE INFORMACIÓN' %}</h3>
 		{% if success %}
 		<div class="mensajeenviado">
-			<div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
+			<div class="enviado">{% trans 'Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.' %}</div>
 		</div>
 		{% else %}
 		{% if form.errors %}
         <p>
-            Por favor corregir los errores debajo.
+            {% trans 'Por favor corregir los errores debajo.' %}
         </p>
    		{% endif %}			
 		<form class="infoform" action="#" method="POST">

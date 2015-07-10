@@ -34,11 +34,11 @@ Quienes Somos
 				{{ quienesSomos.que_es_cic|safe }}
 			</div>
 			<div class="info">
-				<h2><span>¿Quiénes</span> forman la CIC?</h2>
+				<h2><span>{% trans '¿Quiénes' %}</span>{% trans 'conforman la CIC?' %}</h2>
 				{{ quienesSomos.quienes_forman|safe }}
 			</div>	
 			<div class="info">
-				<h2><span>¿Por qué</span> nace esta comunidad</h2>
+				<h2><span>{% trans '¿Por qué ' %}</span>{% trans 'nace esta comunidad' %}</h2>
 				{{ quienesSomos.por_que_nace|safe }}
 			</div>	
 			<div class="info equipo">
@@ -63,7 +63,7 @@ Quienes Somos
 				</ul>
 			</div>			
 			<div id="beneficioscic" class="info beneficioscic">
-				<h2><span>Lo que usted</span> gana al pertenecer a la CIC</h2>
+				<h2><span>{% trans 'Lo que usted' %}</span>{% trans 'gana al pertenecer a la CIC' %}</h2>
 				<ul>  
 				    	<li>Trabajo en red con coaches profesionales de todo los países donde tiene operaciones la CIC.</li>
 				    	<li>Acceso a una red social para coaches profesionales a través del Campus de la CIC que le permite el intercambio profesional, cultural y social.</li>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-09 22:22-0430\n"
+"POT-Creation-Date: 2015-07-10 09:06-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,6 +166,10 @@ msgstr ""
 msgid "Parametros"
 msgstr ""
 
+#: .\templates\base.html:52 .\templates\homepage\registrocic.html:34
+msgid "Regístrate como coach"
+msgstr "Register as Coach"
+
 #: .\templates\base.html:83 .\templates\base.html.py:113
 msgid "Inicio"
 msgstr "Home"
@@ -175,6 +179,7 @@ msgid "Quienes Somos"
 msgstr "About Us"
 
 #: .\templates\base.html:85 .\templates\base.html.py:115
+#: .\templates\homepage\certificaciones.html:63
 #: .\templates\homepage\index.html:44
 msgid "Certificaciones"
 msgstr "Certifications"
@@ -184,6 +189,7 @@ msgid "Servicios"
 msgstr "Services"
 
 #: .\templates\base.html:87 .\templates\base.html.py:117
+#: .\templates\homepage\index.html:78
 msgid "Eventos"
 msgstr "Events"
 
@@ -212,6 +218,48 @@ msgid ""
 msgstr ""
 "Comunidad Integrativa de Coaches © Copyright 2015. All rights reserved."
 
+#: .\templates\calendarium\calendar_day.html:24
+msgid "Volver al calendario"
+msgstr "Back to Calendar"
+
+#: .\templates\calendarium\calendar_day.html:37
+msgid "¡No hay eventos para este día!"
+msgstr "No Events"
+
+#: .\templates\calendarium\calendar_month.html:31
+msgid ""
+"Puede hacer clic en alguno de los eventos para ver más detalles e "
+"inscribirse."
+msgstr "For Details, click on Events:"
+
+#: .\templates\calendarium\calendar_month.html:35
+msgid "Lunes"
+msgstr "Monday"
+
+#: .\templates\calendarium\calendar_month.html:36
+msgid "Martes"
+msgstr "Tuesday"
+
+#: .\templates\calendarium\calendar_month.html:37
+msgid "Miércoles"
+msgstr "Wednesday"
+
+#: .\templates\calendarium\calendar_month.html:38
+msgid "Jueves"
+msgstr "Thursday"
+
+#: .\templates\calendarium\calendar_month.html:39
+msgid "Viernes"
+msgstr "Friday"
+
+#: .\templates\calendarium\calendar_month.html:40
+msgid "Sábado"
+msgstr "Saturday"
+
+#: .\templates\calendarium\calendar_month.html:41
+msgid "Domingo"
+msgstr "Sunday"
+
 #: .\templates\calendarium\calendar_week.html:6
 msgid "Occurrences"
 msgstr ""
@@ -222,10 +270,102 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
+#: .\templates\calendarium\event_detail.html:28
+msgid "Inicio:"
+msgstr "Start"
+
+#: .\templates\calendarium\event_detail.html:29
+msgid "Final:"
+msgstr "End:"
+
+#: .\templates\calendarium\event_detail.html:30
+msgid "Duración:"
+msgstr "Duration "
+
+#: .\templates\calendarium\event_detail.html:31
+msgid "Categoría:"
+msgstr "Category"
+
+#: .\templates\calendarium\event_detail.html:40
+#: .\templates\calendarium\upcoming_events.html:39
+msgid "Lugar:"
+msgstr "Place:"
+
+#: .\templates\calendarium\event_detail.html:50
+msgid "Precio:"
+msgstr "Cost:"
+
+#: .\templates\calendarium\event_detail.html:56
+msgid "Llene el formulario para solicitar entrar al evento"
+msgstr "Fill out form"
+
+#: .\templates\calendarium\event_detail.html:59
+#: .\templates\homepage\certificaciondetalle.html:37
+#: .\templates\homepage\conferenciadetalle.html:42
+#: .\templates\homepage\contacto.html:27
+#: .\templates\homepage\cursodetalle.html:41
+msgid ""
+"Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto "
+"con usted."
+msgstr "Message Sent."
+
+#: .\templates\calendarium\event_detail.html:65
+#: .\templates\homepage\certificaciondetalle.html:42
+#: .\templates\homepage\conferenciadetalle.html:47
+#: .\templates\homepage\cursodetalle.html:46
+#: .\templates\homepage\registrocic.html:31
+#: .\templates\homepage\registroinvitado.html:32
+msgid "Por favor corregir los errores debajo."
+msgstr "Please correct the errors below."
+
+#: .\templates\calendarium\event_detail.html:73
+msgid "Nombre y apellidos:"
+msgstr "Full Name:"
+
+#: .\templates\calendarium\event_detail.html:79
+msgid "Empresa:"
+msgstr "Company: "
+
+#: .\templates\calendarium\event_detail.html:85
+msgid "Cargo:"
+msgstr "Position:"
+
+#: .\templates\calendarium\event_detail.html:91
+#: .\templates\homepage\directorio.html:41
+#: .\templates\homepage\directorio.html:45
+#: .\templates\homepage\directorio.html:54
+#: .\templates\homepage\directorio.html:58
+msgid "Correo Electrónico:"
+msgstr "Email Address:"
+
+#: .\templates\calendarium\event_detail.html:97
+msgid "Teléfono:"
+msgstr "Phone Number"
+
+#: .\templates\calendarium\event_detail.html:103
+msgid "Comentario adicional:"
+msgstr "Message"
+
 #: .\templates\calendarium\event_form.html:16
 #: .\templates\calendarium\occurrence_form.html:16
 msgid "Save"
 msgstr ""
+
+#: .\templates\calendarium\recent_events.html:22
+msgid "Próximos eventos"
+msgstr "Next Events"
+
+#: .\templates\calendarium\recent_events.html:23
+msgid "¡Registrate ya!"
+msgstr "Register"
+
+#: .\templates\calendarium\recent_events.html:25
+msgid "Ir al calendario"
+msgstr "Go to Calendar"
+
+#: .\templates\calendarium\upcoming_events.html:32
+msgid "Conocer más"
+msgstr "Learn More"
 
 #: .\templates\homepage\asesorias.html:28
 #: .\templates\homepage\conferenciadetalle.html:29
@@ -253,6 +393,12 @@ msgstr "Conferences"
 msgid "Asesorías"
 msgstr "Advisory"
 
+#: .\templates\homepage\certificaciondetalle.html:28
+#: .\templates\homepage\conferenciadetalle.html:33
+#: .\templates\homepage\cursodetalle.html:33
+msgid "Volver"
+msgstr "Back"
+
 #: .\templates\homepage\certificaciondetalle.html:34
 #: .\templates\homepage\conferenciadetalle.html:39
 #: .\templates\homepage\cursodetalle.html:49
@@ -261,12 +407,14 @@ msgstr "Information Request Form"
 
 #: .\templates\homepage\certificaciondetalle.html:49
 #: .\templates\homepage\conferenciadetalle.html:55
+#: .\templates\homepage\contacto.html:40
 #: .\templates\homepage\cursodetalle.html:54
 msgid "Nombre y Apellido:"
 msgstr "Full Name:"
 
 #: .\templates\homepage\certificaciondetalle.html:55
 #: .\templates\homepage\conferenciadetalle.html:61
+#: .\templates\homepage\contacto.html:46
 #: .\templates\homepage\cursodetalle.html:60
 #: .\templates\homepage\directorio.html:44
 #: .\templates\homepage\directorio.html:53
@@ -276,6 +424,7 @@ msgstr "Country:"
 
 #: .\templates\homepage\certificaciondetalle.html:61
 #: .\templates\homepage\conferenciadetalle.html:67
+#: .\templates\homepage\contacto.html:52
 #: .\templates\homepage\cursodetalle.html:66
 msgid "Código de área:"
 msgstr "Area Code"
@@ -288,30 +437,35 @@ msgstr "Mobile Phone"
 
 #: .\templates\homepage\certificaciondetalle.html:73
 #: .\templates\homepage\conferenciadetalle.html:79
+#: .\templates\homepage\contacto.html:66
 #: .\templates\homepage\cursodetalle.html:78
 msgid "Teléfono Fijo"
 msgstr "Other Phone"
 
 #: .\templates\homepage\certificaciondetalle.html:79
 #: .\templates\homepage\conferenciadetalle.html:85
+#: .\templates\homepage\contacto.html:72
 #: .\templates\homepage\cursodetalle.html:84
 msgid "Correo Electrónico Principal"
 msgstr "Primary Email Address"
 
 #: .\templates\homepage\certificaciondetalle.html:85
 #: .\templates\homepage\conferenciadetalle.html:91
+#: .\templates\homepage\contacto.html:78
 #: .\templates\homepage\cursodetalle.html:90
 msgid "Correo Electrónico Alterno"
 msgstr "Secondary Email Address"
 
 #: .\templates\homepage\certificaciondetalle.html:91
 #: .\templates\homepage\conferenciadetalle.html:97
+#: .\templates\homepage\contacto.html:84
 #: .\templates\homepage\cursodetalle.html:96
 msgid "Nombre de la Empresa"
 msgstr "Company Name:"
 
 #: .\templates\homepage\certificaciondetalle.html:97
 #: .\templates\homepage\conferenciadetalle.html:103
+#: .\templates\homepage\contacto.html:91
 #: .\templates\homepage\cursodetalle.html:102
 msgid "Mensaje: "
 msgstr "Message"
@@ -340,10 +494,6 @@ msgstr "Who"
 #: .\templates\homepage\certificaciones.html:56
 msgid "certifican en la CIC?"
 msgstr "are our coaches?"
-
-#: .\templates\homepage\certificaciones.html:63
-msgid "Certificación"
-msgstr "Certification"
 
 #: .\templates\homepage\certificaciones.html:64
 msgid "Se un Coach certificado por la CIC en:"
@@ -421,11 +571,17 @@ msgstr "CIC Conferences"
 #: .\templates\homepage\conferencias.html:37
 #: .\templates\homepage\servicios.html:36
 msgid "Listado "
-msgstr "List"
+msgstr "CIC"
 
 #: .\templates\homepage\conferencias.html:37
 msgid "de nuestras Conferencias"
 msgstr "Conferences"
+
+#: .\templates\homepage\contacto.html:58
+#: .\templates\homepage\registrocic.html:104
+#: .\templates\homepage\registroinvitado.html:106
+msgid "Teléfono móvil"
+msgstr "Mobile Phone"
 
 #: .\templates\homepage\directorio.html:34
 msgid "Integrantes"
@@ -443,14 +599,6 @@ msgstr "CIC"
 msgid "Pais"
 msgstr "Country:"
 
-#: .\templates\homepage\directorio.html:41
-#: .\templates\homepage\directorio.html:45
-#: .\templates\homepage\directorio.html:54
-#: .\templates\homepage\directorio.html:58
-#, fuzzy
-msgid "Correo Electrónico:"
-msgstr "Secondary Email Address"
-
 #: .\templates\homepage\directorio.html:64
 msgid ""
 "Para Acceder al directorio de la Comunidad Integrativa de Coaches debe "
@@ -461,7 +609,9 @@ msgstr "To access the directory,please enter your code below"
 msgid ""
 "Si usted es miembro de la comunidad y desea obtener su código de ingreso, "
 "solo debe contactarnos y le será proporcionado."
-msgstr "Are you a member of the CIC community? contact us in order to get your access code."
+msgstr ""
+"Are you a member of the CIC community? contact us in order to get your "
+"access code."
 
 #: .\templates\homepage\eventos.html:26
 msgid "Banking and financial issues"
@@ -485,7 +635,7 @@ msgstr "Are you a certified coach?"
 
 #: .\templates\homepage\index.html:39
 msgid "Beneficios de Registrarme"
-msgstr "benefits"
+msgstr "Benefits"
 
 #: .\templates\homepage\index.html:47
 msgid "Conocer Más"
@@ -494,6 +644,14 @@ msgstr "Learn More"
 #: .\templates\homepage\index.html:55
 msgid "Ver Recursos"
 msgstr "View all"
+
+#: .\templates\homepage\index.html:84
+msgid "Últimos Artículos"
+msgstr "Lastest Entries"
+
+#: .\templates\homepage\index.html:99
+msgid "Leer más"
+msgstr "Read More"
 
 #: .\templates\homepage\paises.html:36
 msgid "Países"
@@ -511,6 +669,22 @@ msgstr "What is"
 msgid "la comunidad Integrativa de Coaches CIC?"
 msgstr "CIC?"
 
+#: .\templates\homepage\quienessomos.html:37
+msgid "¿Quiénes"
+msgstr "Who"
+
+#: .\templates\homepage\quienessomos.html:37
+msgid "conforman la CIC?"
+msgstr "are our coaches?"
+
+#: .\templates\homepage\quienessomos.html:41
+msgid "¿Por qué "
+msgstr "Why our community"
+
+#: .\templates\homepage\quienessomos.html:41
+msgid "nace esta comunidad"
+msgstr "was created?"
+
 #: .\templates\homepage\quienessomos.html:45
 msgid "Nuestro"
 msgstr "Our"
@@ -523,7 +697,9 @@ msgstr "Leadership Team"
 msgid ""
 "Son directores fundadores de la comunidad Integrativa de Coaches, los "
 "Coaches Internacionales y Trainers en NLP:"
-msgstr "They are founding directors of CIC, the International Coaches and NLP Trainers:"
+msgstr ""
+"They are founding directors of CIC, the International Coaches and NLP "
+"Trainers:"
 
 #: .\templates\homepage\quienessomos.html:58
 msgid "Representantes"
@@ -532,6 +708,14 @@ msgstr "International"
 #: .\templates\homepage\quienessomos.html:58
 msgid "Internacionales de la CIC"
 msgstr "Representatives"
+
+#: .\templates\homepage\quienessomos.html:66
+msgid "Lo que usted"
+msgstr "Benefits"
+
+#: .\templates\homepage\quienessomos.html:66
+msgid "gana al pertenecer a la CIC"
+msgstr "of the Membership "
 
 #: .\templates\homepage\quienessomos.html:81
 msgid "Misión"
@@ -561,6 +745,10 @@ msgstr "Register Here"
 msgid "Regístrate "
 msgstr "Register"
 
+#: .\templates\homepage\registro.html:29
+msgid " como coach de la CIC"
+msgstr "as a CIC coach"
+
 #: .\templates\homepage\registro.html:30
 msgid "Seleccione alguna de las siguientes opciones:"
 msgstr "Select from the following options:"
@@ -578,16 +766,9 @@ msgstr "Registration for guest coaches or not certified by CIC"
 msgid ""
 "Muchas gracias por su información; en pocos días le llegará un correo con su "
 "nuevo número de registro."
-msgstr "Thank you very much for the provided information; in a few days you will receive an email with your new registration number."
-
-#: .\templates\homepage\registrocic.html:31
-#: .\templates\homepage\registroinvitado.html:32
-msgid "Por favor corregir los errores debajo."
-msgstr "Please correct the errors below."
-
-#: .\templates\homepage\registrocic.html:34
-msgid "Regístrate como coach"
-msgstr "Register as Coach"
+msgstr ""
+"Thank you very much for the provided information; in a few days you will "
+"receive an email with your new registration number."
 
 #: .\templates\homepage\registrocic.html:34
 #: .\templates\homepage\registroinvitado.html:35
@@ -599,7 +780,9 @@ msgstr "Registration for CIC certified coaches"
 msgid ""
 "Si ya se ha registrado antes por favor proporcione su número de registro, de "
 "lo contrario deje en blanco:"
-msgstr "If you have already registered before please provide your registration number, otherwise leave blank:"
+msgstr ""
+"If you have already registered before please provide your registration "
+"number, otherwise leave blank:"
 
 #: .\templates\homepage\registrocic.html:40
 #: .\templates\homepage\registroinvitado.html:42
@@ -655,11 +838,6 @@ msgstr "Area Code"
 #: .\templates\homepage\registroinvitado.html:100
 msgid "Teléfono habitación"
 msgstr "Home Phone"
-
-#: .\templates\homepage\registrocic.html:104
-#: .\templates\homepage\registroinvitado.html:106
-msgid "Teléfono móvil"
-msgstr "Mobile Phone"
 
 #: .\templates\homepage\registrocic.html:110
 #: .\templates\homepage\registroinvitado.html:112
@@ -983,7 +1161,8 @@ msgstr "Hired by a company "
 
 #: .\templates\homepage\registrocic.html:364
 #: .\templates\homepage\registroinvitado.html:330
-msgid "Sub contratado como outsourcing "
+#, fuzzy
+msgid "Sub contratado como outsoursing "
 msgstr "As an outsourcing "
 
 #: .\templates\homepage\registrocic.html:365
@@ -1183,7 +1362,8 @@ msgstr ""
 #: .\templates\homepage\registroinvitado.html:188
 msgid ""
 "Si posee otras certificaciones adicionales en Coaching, por favor descríbalas"
-msgstr "If you have additional certifications in Coaching, please describe them"
+msgstr ""
+"If you have additional certifications in Coaching, please describe them"
 
 #: .\templates\homepage\registroinvitado.html:190
 msgid "Certificación (2):"
@@ -1205,7 +1385,7 @@ msgstr "Certificacion (3):"
 
 #: .\templates\homepage\servicios.html:36
 msgid "de nuestros Cursos"
-msgstr ""
+msgstr "Courses"
 
 #: .\templates\zinnia\_entry_detail_base.html:17
 msgid "Written by"
@@ -1324,11 +1504,11 @@ msgstr ""
 
 #: .\templates\zinnia\skeleton.html:24
 msgid "Recursos"
-msgstr ""
+msgstr "Information"
 
 #: .\templates\zinnia\skeleton.html:24
 msgid "Informativos"
-msgstr ""
+msgstr "Resources"
 
 #: .\templates\zinnia\skeleton.html:28
 msgid "Useful links"
@@ -1345,3 +1525,6 @@ msgstr ""
 #: .\templates\zinnia\skeleton.html:47
 msgid "Search"
 msgstr ""
+
+#~ msgid "Certificación"
+#~ msgstr "Certification"

@@ -29,14 +29,14 @@
 			</div>
 			<div class="centrarDiv">
 				<a href="{{ occurrence.event.get_absolute_url }}">
-					<div class="botonMas">Conocer más</div>
+					<div class="botonMas">{% trans 'Conocer más' %}</div>
 				</a>
 			</div>
 		</div>
 		<div class="horario">
 			{% if occurrence.event.place %}
 			<div class="lugar">
-				<span class="red">Lugar:</span> {{occurrence.event.place}}
+				<span class="red">{% trans 'Lugar:' %}</span> {{occurrence.event.place}}
 			</div>
 			{% endif %}			
 			<div class="tiempo">

@@ -21,7 +21,7 @@ Información del día en el cronograma - Comunidad Integrativa de Coaches
         <input type="submit" name="next" value="Siguiente" />
         <input type="submit" name="today" value="hoy" />
     </form>
-    <a href="{% url 'calendar_current_month' %}">Volver al calendario</a>
+    <a href="{% url 'calendar_current_month' %}">{% trans 'Volver al calendario' %}</a>
     <table class="table">
         <tr>
             <th>{{ date|date:'D m/d' }}</th>
@@ -34,7 +34,7 @@ Información del día en el cronograma - Comunidad Integrativa de Coaches
                     </td>
                 {% endfor %}
             {% else %}
-                <td><p>¡No hay eventos para este día!</p></td>
+                <td><p>{% trans '¡No hay eventos para este día!' %}</p></td>
             {% endif %}
         </tr>
     </table>

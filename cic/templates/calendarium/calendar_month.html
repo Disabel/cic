@@ -28,17 +28,17 @@ Agenda | Comunidad Integrativa de Coaches
             <a href="{% url "calendar_event_create" %}">Crear nuevo evento</a>
         {% endif %} #} -->
     </form>
-    <p class="centrartxt">Puede hacer clic en alguno de los eventos para ver más detalles e inscribirse.</p>
+    <p class="centrartxt">{% trans 'Puede hacer clic en alguno de los eventos para ver más detalles e inscribirse.' %}</p>
     <table>
         <tr>
             <th class="semanaCounter"></th>
-            <th data-title="Lun">Lunes</td>
-            <th data-title="Mar">Martes</td>
-            <th data-title="Mie">Miércoles</td>
-            <th data-title="Jue">Jueves</td>
-            <th data-title="Vie">Viernes</td>
-            <th data-title="Sab">Sábado</td>
-            <th data-title="Dom">Domingo</td>
+            <th data-title="Lun">{% trans 'Lunes' %}</td>
+            <th data-title="Mar">{% trans 'Martes' %}</td>
+            <th data-title="Mie">{% trans 'Miércoles' %}</td>
+            <th data-title="Jue">{% trans 'Jueves' %}</td>
+            <th data-title="Vie">{% trans 'Viernes' %}</td>
+            <th data-title="Sab">{% trans 'Sábado' %}</td>
+            <th data-title="Dom">{% trans 'Domingo' %}</td>
         </tr>
         {% for week in month %}
             {% if week %}

@@ -65,7 +65,8 @@ Comunidad Integrativa de Coaches
 								<h2>{{ image.titulo }}</h2>
 								<p>{{ image.texto_contenido }}	</p>
 							</div>						
-							<img src="{{ MEDIA_URL }}{{image.imagen}}" alt="image.tutulo">		
+							<img src="{{ MEDIA_URL }}{{image.imagen}}" alt="image.tutulo">
+							<!-- HTML Credit Code for Can Stock Photo-->	
 						</li>
 					{% endfor %}
 					</ul>
@@ -74,13 +75,13 @@ Comunidad Integrativa de Coaches
 
 	<div class="wrapper">
 		<section class="eventoProximo">
-			<h2 class="tituloSection">Eventos</h2>
+			<h2 class="tituloSection">{% trans 'Eventos' %}</h2>
 			{% if nextEvent %}
 				{% render_upcoming_events_index 2 current_category %}
 			{% endif %}
 		</section>
 		<section class="entradas">
-			<h2 class="tituloSection">Últimos Artículos</h2>
+			<h2 class="tituloSection">{% trans 'Últimos Artículos' %}</h2>
 			<div class="noticias">
 				{% for entrada in entradas %}
 					<article>
@@ -95,7 +96,7 @@ Comunidad Integrativa de Coaches
 							</div>				
 							<div class="texto">{{ entrada.content }}...</div>
 							<div class="readmore">
-								<span>Leer más</span>
+								<span>{% trans 'Leer más' %}</span>
 							</div>
 						</a>
 					</article>
