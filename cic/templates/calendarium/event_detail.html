@@ -31,27 +31,6 @@
                 <li>Categoría: <span>{{ object.category }}</span></li>
             </ul>
         </div>
-        <div class="green">Hora:</div>
-        <div class="hora">            
-            <div class="celdaHora">
-                <span>Venezuela:</span> {{ object.start|date:"g:iA | d-m" }}                
-            </div>
-            <div class="celdaHora">
-                {% timezone "America/Santiago" %}
-                    <span>Chile:</span> {{ object.start|date:"g:iA | d-m" }}
-                {% endtimezone %}
-            </div>    
-            <div class="celdaHora">
-                {% timezone "America/Bogota" %}
-                    <span>Colombia:</span> {{ object.start|date:"g:iA | d-m" }}
-                {% endtimezone %}
-            </div>
-            <div class="celdaHora">
-                {% timezone "America/Mexico_City" %}
-                    <span>México:</span> {{ object.start|date:"g:iA | d-m" }}
-                {% endtimezone %}
-            </div>  
-        </div>
         <div>
             {% autoescape off %}
                 {{ object.description }}

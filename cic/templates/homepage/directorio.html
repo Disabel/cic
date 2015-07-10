@@ -10,7 +10,7 @@
 Directorio CIC
 {% endblock%}
 {% block css%}
-<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/about.css">
+<link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/directorio.css">
 <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
 {% endblock %}
 {% block js %}
@@ -30,20 +30,55 @@ Directorio CIC
 			<li><a href="{% url 'aboutpaises' %}">{% trans 'Paises de la CIC' %}</a></li>
 			<li><a href="{% url 'aboutcodigo' %}">{% trans 'Código de ética' %}</a></li>
 		</ul>
-		<div>
-			{% for miembro in miembros %}
-				{{miembro.numero_registro}}	
-				{% if miembro.registro_certificado_cic %}
-					{{miembro.registro_certificado_cic}}
-					{{miembro.registro_certificado_cic.pais_recidencia}}
-					{{miembro.registro_certificado_cic.correo}}
-				{% else %}	
-					{{miembro.registro_invitado}}
-					{{miembro.registro_invitado.pais_recidencia}}
-					{{miembro.registro_invitado.correo}}					
-				{% endif %}
-			{% endfor %}	
-		</div>
+		{% if bandera %}
+			<h2><span>{% trans 'Integrantes' %}</span>{% trans 'de la CIC' %}</h2>
+			<div class="miembrosdirectorio">
+				{% for miembro in miembrosDirectivos %}
+					<div class="mdirectorio">
+						{% if miembro.registro_certificado_cic %}
+							<div class="nombre">{{miembro.registro_certificado_cic}} </div>
+							<div class="pais">{% trans 'Pais' %} {{miembro.registro_certificado_cic.pais_recidencia}}</div>
+							<div class="correo">{% trans 'Correo Electrónico:' %} <div>{{miembro.registro_certificado_cic.correo}}</div></div>
+						{% else %}	
+							<div class="nombre">{{miembro.registro_invitado}}</div>
+							<div class="pais">{% trans 'Pais:' %} {{miembro.registro_invitado.pais_recidencia}}</div>
+							<div class="correo">{% trans 'Correo Electrónico:' %} <div>{{miembro.registro_invitado.correo}}</div></div>							
+						{% endif %}
+					</div>
+				{% endfor %}
+				{% for miembro in miembrosComunes %}
+					<div class="mdirectorio">
+						{% if miembro.registro_certificado_cic %}
+							<div class="nombre">{{miembro.registro_certificado_cic}}</div>
+							<div class="pais">{% trans 'Pais:' %} {{miembro.registro_certificado_cic.pais_recidencia}}</div>
+							<div class="correo">{% trans 'Correo Electrónico:' %}<div> {{miembro.registro_certificado_cic.correo}}</div></div>
+						{% else %}	
+							<div class="nombre">{{miembro.registro_invitado}}</div>
+							<div class="pais">{% trans 'Pais:' %} {{miembro.registro_invitado.pais_recidencia}}</div>
+							<div class="correo">{% trans 'Correo Electrónico:' %}<div> {{miembro.registro_invitado.correo}}</div></div>							
+						{% endif %}
+					</div>
+				{% endfor %}				
+		</div>	
+		{% else %}
+			<div class="introdirect">{% trans 'Para Acceder al directorio de la Comunidad Integrativa de Coaches debe ingresar el código de acceso que le fue suministrado:' %}</div>
+		<form  class="acceso" action="#" method="POST">
+			{% csrf_token %}
+					{% if mensaje %}
+						<div>{{mensaje}}</div>
+					{% endif %}
+				<div class="campo">
+					{{ field.errors }}
+					<label for="codigo_directorio">Código de Acceso:</label>
+					{{ form.codigo_directorio }}
+					{{ form.codigo_directorio.errors }}
+				</div>
+			<div class="botonEnviar">
+				<input type="submit">
+			</div>
+		</form>
+			<div class="notadirect">{% trans 'Si usted es miembro de la comunidad y desea obtener su código de ingreso, solo debe contactarnos y le será proporcionado.' %}</div>	
+		{% endif %}
 	</div>
 
 {% endblock%}

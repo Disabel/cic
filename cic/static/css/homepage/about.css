@@ -49,17 +49,32 @@ h2 span{
 .imagenabout img{
 	width: 100%;
 }
-
-.equipo li{
-	color: #eb4923;
+.equipo ul{
+	padding: 0;
 }
+.equipo li{
+	font-weight: bold;
+	margin-bottom: 10px;	
+	display: inline-block;
+	width: 49%;	
+	height: 21px;
+	overflow: hidden;	
+}
+ .equipo li::before {
+	content: url(../../img/iconlist.png);
+	margin-right: 3px;
+  }
 .representantes li span{
-	text-transform: uppercase;
-	font-size: 1.3em;
 	color: #4fb77f;
 	font-weight: bold;
 	display: block;
 
+}
+.representantes{
+	padding: 0;
+}
+.representantes li{
+	margin: 15px 0;
 }
 
 /* SIDEBAR */
@@ -78,6 +93,7 @@ h2 span{
 	background-color: #4fb77f;
 	width: 67%;
 	margin: 0 auto;
+	text-align: center;
 	color: #FFF;
 	text-decoration: none;
 	border-radius: 10px;
@@ -93,6 +109,9 @@ h2 span{
 	font-weight: bold;
 	display: inline-block;
 }
+.herramientasyotros p{
+	width: 89%
+}
 .tituloside{
 	font-weight: bold;
 	text-transform: uppercase;
@@ -106,7 +125,9 @@ h2 span{
 	width: 100%;
 }
 /* FIN SIDEBAR */
-
+.beneficioscic li{
+	margin: 7px 0px;
+}
 /*PAISES*/
 .paiscic{
 display: inline-block;

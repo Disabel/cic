@@ -7,11 +7,11 @@ h1, input{
 	display: inline-block;
 }
 .contenido > .wrapper > span{
-	color: red;
+	color: #eb4923;
 	text-align: center;
 	display: block;
 }
-form{
+.calendarform{
 	background: #F8F8F8;
 	text-align: center;
 	padding: 1%;
@@ -27,10 +27,9 @@ table{
 }
 .centrartxt{
 	text-align: center;
-	color: #0871B3;
 	font-size: 1.5em;
 }
-input{
+.calendarform input{
 	width: 17%;
   	padding: 15px;
 }
@@ -70,11 +69,9 @@ td > .hayeventos, td strong > .hayeventos{
 	display: inline-block;
 }
 .categoriasEvento li a{
-	color: red;
+	color: #eb4923;
 }
-p{
-	background: white;
-}
+
 p > a{
 	text-decoration: none;
 	color: #ED4600;
@@ -94,7 +91,7 @@ a > span{
 .calendario{
 	background: #C2C2C2;
 }
-input{
+.calendarform input{
 	background: #697881;
 	padding: 5px 15px;
 	color: #FFF;

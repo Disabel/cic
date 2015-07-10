@@ -25,11 +25,24 @@ Registro - Comunidad Integrativa de Coaches
 		</div>
 	<div class="contenidocertificaciones">
 		<div class="wrapper">
+		{% if success %} 
+			<p>{% trans 'Muchas gracias por su información; en pocos días le llegará un correo con su nuevo número de registro.' %}</p>
+		{% else %} 
+			{% if form.errors %}
+      		  <p class="corregirerrores">{% trans 'Por favor corregir los errores debajo.' %}    </p>
+   			{% endif %}	
 			<div class="info">
-				<h2><span> {% trans 'Regístrate como coach de la CIC' %}</span></h2>
-				{% trans 'Registro para coaches certificados CIC' %}
+				<h2><span> {% trans 'Regístrate como coach de la CIC' %}</span>{% trans 'Registro sólo para coaches certificados CIC' %}</h2>
+				
 			<form action="#" method="POST" id="registroform">
 				{% csrf_token %}
+				<div class="campo">
+					{% trans 'Si ya se ha registrado antes por favor proporcione su número de registro, de lo contrario deje en blanco:' %}
+					{{ field.errors }}
+					<label for="numero_registro">{% trans 'Número de Registro' %}: </label>
+					{{ form.numero_registro }}
+					{{ form.numero_registro.errors }}
+				</div>				
 				<div class="tituloform">
 					<div class="flecha"></div>
 					<p>{% trans 'Datos Personales' %}</p>
@@ -230,6 +243,11 @@ Registro - Comunidad Integrativa de Coaches
 				</div>
 				<p class="subti">{% trans 'Seleccione la Frecuencia con que ejerce el Coaching:' %}</p>
 				<div class="ejercecoaching">
+					<div class="notShow">
+						{{ field.errors }}
+						{{ form.coaching_profesion_principal }}
+					</div>	
+					{{ form.coaching_profesion_principal.errors }}
 				    <li><input class="ejercecoach" name="Actualmente ejerce el Coaching como profesión principal" type="checkbox"> {% trans 'Actualmente ejerce el Coaching como profesión principal' %}</input></li>
 				    <li><input class="ejercecoach" name="Ejerce la profesión del coaching ocasionalmente" type="checkbox"> {% trans 'Ejerce la profesión del coaching ocasionalmente' %}</input></li>
 				    <li><input class="ejercecoach" name="Nunca ha ejercido la profesión del coaching" type="checkbox"> {% trans 'Nunca ha ejercido la profesión del coaching' %}</input></li>
@@ -243,6 +261,11 @@ Registro - Comunidad Integrativa de Coaches
 				</div>
 				<p class="subti">{% trans 'Ejerce el Coahing Como:' %}</p>
 				<div class="ejercecoachingcomo">
+					<div class="notShow">
+						{{ field.errors }}
+						{{ form.ejerce_coaching_como }}
+					</div>	
+					{{ form.ejerce_coaching_como.errors }}				
 				    <li><input class="ejercecoachingcomo" name="Coach externo" type="checkbox"> {% trans 'Coach externo' %}</input></li>
 				    <li><input class="ejercecoachingcomo" name="Coach interno" type="checkbox"> {% trans 'Coach interno' %}</input></li>
 				    <li><input class="ejercecoachingcomo" name="Coach y Mentoría" type="checkbox"> {% trans 'Coach y Mentoría' %}</input></li>
@@ -253,9 +276,14 @@ Registro - Comunidad Integrativa de Coaches
 				   <li> <input class="ejercecoachingcomo" name="Coach escritor " type="checkbox"> {% trans 'Coach escritor ' %}</input></li>
 				   <li> <input class="ejercecoachingcomo" id="otroopcion" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>		
 				   	<p class="especifique notShow">Especifíque:</p>
-				   	<input id="otrotexto1" class="ejercecoachingcomo notShow" type="text">		    	    				    
+				   	<input id="otrotexto1" class="agrandar ejercecoachingcomo notShow" type="text">		    	    				    
 				</div>
 				<p class="subti">{% trans 'SU DESEMPEÑO COMO COACH HA SIDO O ES A NIVEL DE:' %}</p>
+					<div class="notShow">
+						{{ field.errors }}
+						{{ form.coach_a_nivel_de }}
+					</div>	
+					{{ form.coach_a_nivel_de.errors }}								
 				<div class="coachnivelde">
 					<li><input class="cnivelde" name="Vida o personal " type="checkbox"> {% trans 'Vida o personal ' %}</input></li>
 					<li><input class="cnivelde" name="Transpersonal" type="checkbox"> {% trans 'Transpersonal' %}</input></li>
@@ -265,9 +293,14 @@ Registro - Comunidad Integrativa de Coaches
 					<li><input class="cnivelde" name="De Equipos " type="checkbox"> {% trans 'De Equipos ' %}</input></li>
 					<li><input id="otro2" class="cnivelde" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
 					<p class="especifique2 notShow">Especifíque:</p>
-				   	<input id="otrotexto2" class="notShow" type="text">
+				   	<input id="otrotexto2" class="agrandar notShow" type="text">
 				</div>
 				<p class="subti">{% trans '¿DESEMPEÑA EL COACHING EN UN CAMPO ESPECÍFICO?:' %}</p>
+					<div class="notShow">
+						{{ field.errors }}
+						{{ form.campo_especifico }}
+					</div>	
+					{{ form.campo_especifico.errors }}									
 				<div class="coachencampo">
 					<li><input class="coachcampo" name="Vida " type="checkbox"> {% trans 'Vida ' %}</input></li>
 					<li><input class="coachcampo" name="Salud " type="checkbox"> {% trans 'Salud ' %}</input></li>
@@ -281,9 +314,14 @@ Registro - Comunidad Integrativa de Coaches
 					<li><input class="coachcampo" name="Innovación " type="checkbox"> {% trans 'Innovación ' %}</input></li>
 					<li><input id="otro3" class="coachcampo" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
 					<p class="especifique3 notShow">Especifíque:</p>
-				   	<input id="otrotexto3" class="notShow" type="text">	
+				   	<input id="otrotexto3" class="agrandar notShow" type="text">	
 				</div>
 				<p class="subti">{% trans 'EJERCE EL COACHING DE MANERA:' %}</p>
+					<div class="notShow">
+						{{ field.errors }}
+						{{ form.coaching_de_manera }}
+					</div>	
+					{{ form.coaching_de_manera.errors }}					
 				<div class="coachingdemanera">
 					<li><input class="coachmanera" name="Individual" type="checkbox"> {% trans 'Individual' %}</input></li>
 					<li><input class="coachmanera" name="En equipo permanentemente " type="checkbox"> {% trans 'En equipo permanentemente ' %}</input></li>
@@ -292,7 +330,7 @@ Registro - Comunidad Integrativa de Coaches
 					<li><input class="coachmanera" name="Sub contratado como outsoursing " type="checkbox"> {% trans 'Sub contratado como outsoursing ' %}</input></li>
 					<li><input id="otro4" class="coachmanera" name="Otro" type="checkbox"> {% trans 'Otro' %}</input></li>
 					<p class="especifique4 notShow">Especifíque:</p>
-				   	<input id="otrotexto4" class="notShow" type="text">
+				   	<input id="otrotexto4" class="agrandar notShow" type="text">
 				</div>
 				<p class="subti">{% trans 'CUENTA USTED CON PUBLICACIONES RELACIONADAS CON EL COACHING:' %}</p>
 				<div class="sino">
@@ -307,7 +345,7 @@ Registro - Comunidad Integrativa de Coaches
 					<li><input class="publicaciones" name="No cuento con publicaciones relacionadas con el Coaching" type="checkbox"> {% trans 'No cuento con publicaciones relacionadas con el Coaching' %}</input></li>
 					<li><input id="otro5" class="publicaciones" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
 					<p class="especifique5 notShow">Especifíque:</p>
-				   	<input id="otrotexto5" class="notShow" type="text">	
+				   	<input id="otrotexto5" class="agrandar notShow" type="text">	
 					<div class="campotxt">
 						{{ field.errors }}
 						<label for="descripcion_publicaciones">{% trans 'DESCRIBA BREVEMENTE SUS PUBLICACIONES: ' %}</label>
@@ -327,7 +365,12 @@ Registro - Comunidad Integrativa de Coaches
 					{{ form.eventos_internacionales }}
 					{{ form.eventos_internacionales.errors }}
 				</div>
-				<p class="subti">{% trans 'IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:' %}</p>	
+				<p class="subti">{% trans 'IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:' %}</p>
+					<div class="notShow">
+						{{ field.errors }}
+						{{ form.que_desea_delacic }}
+					</div>	
+					{{ form.que_desea_delacic.errors }}								
 				<div class="comomiembro">
 					<li><input class="comomiembrocic" name="Oportunidades de empleo " type="checkbox"> {% trans 'Oportunidades de empleo ' %}</input></li>
 					<li><input class="comomiembrocic" name="Oportunidades para la investigación " type="checkbox"> {% trans 'Oportunidades para la investigación ' %}</input></li>
@@ -346,30 +389,18 @@ Registro - Comunidad Integrativa de Coaches
 					<li><input class="comomiembrocic" name="Intercambios sociales, deportivos y recreacionales " type="checkbox"> {% trans 'Intercambios sociales, deportivos y recreacionales ' %}</input></li>
 					<li><input id="otro7" class="comomiembrocic" name="Otros" type="checkbox"> {% trans 'Otros' %}</input></li>
 					<p class="especifique7 notShow">Especifíque:</p>
-				   	<input id="otrotexto7" class="notShow" type="text">						
+				   	<input id="otrotexto7" class="agrandar notShow" type="text">						
 				</div>
 				<div class="notShow">
-					{{ form.coaching_profesion_principal }}
-					{{ form.coaching_profesion_principal.errors }}
-					{{ form.ejerce_coaching_como }}
-					{{ form.ejerce_coaching_como.errors }}
-					{{ form.coach_a_nivel_de }}
-					{{ form.coach_a_nivel_de.errors }}
-					{{ form.campo_especifico }}
-					{{ form.campo_especifico.errors }}
-					{{ form.coaching_de_manera }}
-					{{ form.coaching_de_manera.errors }}
 					{{ form.publicaciones_relacionadas }}
-					{{ form.publicaciones_relacionadas.errors }}
-					{{ form.que_desea_delacic }}
-					{{ form.que_desea_delacic.errors }}
 				</div>
 
 				<div class="botonEnviar">
 					<input id='enviar' type="submit">
 				</div>
 				</form>	
-			</div>			
+			</div>
+		{% endif %} 				
 		</div>
 	</div>
 {% endblock%}

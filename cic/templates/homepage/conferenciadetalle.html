@@ -24,7 +24,7 @@ Cursos - Comunidad Integrativa de Coaches
 			<img src="{% static 'img/Bannerservicios.jpg' %}" alt="Servicios CIC">
 		</div>
 	<div class="contenidocurso">
-		<div class="wrapper">
+		<div class="wrapper">		
 		<ul class="submenu">
 			<li><a  href="{% url 'homepageservicios' %}">{% trans 'Cursos' %}</a></li>
 			<li class="selectedmenu"><a href="{% url 'serviciosconferencias' %}">{% trans 'Conferencias' %}</a></li>
@@ -37,59 +37,70 @@ Cursos - Comunidad Integrativa de Coaches
 				
 			</div>	
 			<h3>{% trans 'FORMULARIO DE SOLICITUD DE INFORMACIÓN' %}</h3>
+		{% if success %}
+		<div class="mensajeenviado">
+			<div class="enviado">Su mensaje ha sido enviado correctamente, pronto nos pondremos en contacto con usted.</div>
+		</div>
+		{% else %}
+		{% if form.errors %}
+        <p>
+            Por favor corregir los errores debajo.
+        </p>
+   		{% endif %}				
+
 		<form class="infoform" action="#" method="POST">
 			{% csrf_token %}
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="nombre_apellido">{% trans 'Nombre y Apellido:' %} </label></li>
+				<li class="labelcampo"><label for="nombre_apellido">{% trans 'Nombre y Apellido:' %} </label></li>
 				{{ form.nombre_apellido }}
 				{{ form.nombre_apellido.errors }}
 			</div>
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="pais_origen">{% trans 'Pais:' %} </label></li>
+				<li class="labelcampo"><label for="pais_origen">{% trans 'Pais:' %} </label></li>
 				{{ form.pais_origen }}
 				{{ form.pais_origen.errors }}
 			</div>
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="codigo_area">{% trans 'Código de área:' %} </label></li>
+				<li class="labelcampo"><label for="codigo_area">{% trans 'Código de área:' %} </label></li>
 				{{ form.codigo_area }}
 				{{ form.codigo_area.errors }}
 			</div>						
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="telefono_movil">{% trans 'Teléfono Móvil' %}</label></li>
+				<li class="labelcampo"><label for="telefono_movil">{% trans 'Teléfono Móvil' %}</label></li>
 				{{ form.telefono_movil }}
 				{{ form.telefono_movil.errors }}
 			</div>
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="telefono_fijo">{% trans 'Teléfono Fijo' %}</label></li>
+				<li class="labelcampo"><label for="telefono_fijo">{% trans 'Teléfono Fijo' %}</label></li>
 				{{ form.telefono_fijo }}
 				{{ form.telefono_fijo.errors }}
 			</div>	
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="correo_principal">{% trans 'Correo Electrónico Principal' %}</label></li>
+				<li class="labelcampo"><label for="correo_principal">{% trans 'Correo Electrónico Principal' %}</label></li>
 				{{ form.correo_principal }}
 				{{ form.correo_principal.errors }}
 			</div>	
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="correo_alterno">{% trans 'Correo Electrónico Alterno' %}</label></li>
+				<li class="labelcampo"><label for="correo_alterno">{% trans 'Correo Electrónico Alterno' %}</label></li>
 				{{ form.correo_alterno }}
 				{{ form.correo_alterno.errors }}
 			</div>	
 			<div class="campo">
 				{{ field.errors }}
-				<li><label for="nombre_empresa">{% trans 'Nombre de la Empresa' %}</label></li>
+				<li class="labelcampo"><label for="nombre_empresa">{% trans 'Nombre de la Empresa' %}</label></li>
 				{{ form.nombre_empresa }}
 				{{ form.nombre_empresa.errors }}
 			</div>													
 			<div class="textareaDescripcion">
 				{{ field.errors }}
-				<li><label for="mensaje">{% trans 'Mensaje: ' %}</label></li>
+				<li class="labelcampo"><label for="mensaje">{% trans 'Mensaje: ' %}</label></li>
 				{{ form.mensaje }}
 				{{ form.mensaje.errors }}
 			</div>
@@ -97,6 +108,7 @@ Cursos - Comunidad Integrativa de Coaches
 				<input id="botonsend" type="submit">
 			</div>
 		</form>
+		{% endif %}	
 		<div class="imagencurso">
 			<img src="{{ MEDIA_URL }}{{conferencia.imagen}}" alt="{{ conferencia.titulo }}">
 		</div>	

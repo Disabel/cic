@@ -16,7 +16,7 @@ h3{
 	width: 65%;
 }
 .evento{	
-	border-top: 2px solid #0871B3;
+	border-top: 2px solid #eb4923;
 	box-shadow: 0 -1px 0 #808080;
 	margin-bottom: 40px;
 }
@@ -57,7 +57,7 @@ h3{
 	min-height: 150px;
 }
 .botonMas{
-	background: #E85B52;
+	background: #4fb77f;
 	width: 20%;
 	margin: 0 auto;
 	text-align: center;
@@ -67,7 +67,7 @@ h3{
 	float: right;
 }
 .botonCalendario{
-	background: #00A8A9;
+	background: #4fb77f;
 	width: 30%;
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -136,7 +136,7 @@ textarea{
 	width: 94%;
 }
 .entradas h2{
-	background: #0871B3;
+	background: #eb4923;
 	margin: 5px;
 	padding: 0;
 	color: white;
@@ -144,7 +144,7 @@ textarea{
 	text-align: center;
 }
 .entradas .botonMas{
-	background: #E85B52;
+	background: #4fb77f;
 	width: 40%;
 	margin: 0 auto;
 	text-align: center;

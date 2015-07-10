@@ -32,7 +32,9 @@ class MiembroInvitadoForm(forms.ModelForm):
 	class Meta:
 		model = invitadoRegistro
 
-
+class codigoDirectorioForm(forms.Form):
+	codigo_directorio = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Código para Ingresar'}))
+	
 class solicitudForm(forms.Form):
 	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre y apellido'}))
 	pais_origen = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Pais de Origen'}))

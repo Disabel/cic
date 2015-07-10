@@ -84,11 +84,23 @@ h2 span{
   width: 38%;
   vertical-align: top;
   }
+.imagencurso img{
+  width: 100%;
+}
   .infoform textarea{
     width: 80%;
     margin-bottom: 20px;
   }
-  .campo li, .textareaDescripcion li{
+.errorlist{
+  padding: 0;
+  margin: 0;
+}
+.errorlist li{
+  color: rgb(191, 73, 73);
+  font-size: 0.8em;
+  font-weight: bold;
+}
+.labelcampo{
      list-style-image: url(../../img/iconlist.png);
       margin: 5px 0;
   }

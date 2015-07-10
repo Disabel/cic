@@ -36,7 +36,7 @@ Comunidad Integrativa de Coaches
 						<h2>{% trans '¿Eres un coach certificado?' %}</h2>
 						<p>{{ textoshome.eres_coach }}</p>
 						<div class="icono1"></div>
-						<a class="cuadroboton" href="#">{% trans 'Beneficios de Registrarme' %}</a>
+						<a class="cuadroboton" href="{% url 'homepageaboutus' %}#beneficioscic">{% trans 'Beneficios de Registrarme' %}</a>
 					</div>
 				</div>
 				<div class="cuadroblanco">
@@ -44,7 +44,7 @@ Comunidad Integrativa de Coaches
 						<h2>{% trans 'Certificaciones' %}</h2>
 						<p>{{ textoshome.certificaciones }}</p>
 						<div class="icono2"></div>
-						<a class="cuadroboton" href="#">{% trans 'Conocer Más' %}</a>
+						<a class="cuadroboton" href="{% url 'homepagecertificaciones' %}">{% trans 'Conocer Más' %}</a>
 					</div>
 				</div>
 				<div class="cuadroblanco maspabajo">
@@ -52,7 +52,7 @@ Comunidad Integrativa de Coaches
 						<h2>{% trans 'Recursos Informativos' %}</h2>
 						<p>{{ textoshome.recursos_informativos }}</p>
 						<div class="icono3"></div>
-						<a class="cuadroboton" href="#">{% trans 'Ver Recursos' %}</a>				
+						<a class="cuadroboton" href="{% url 'homepagerecursos' %}">{% trans 'Ver Recursos' %}</a>				
 					</div>
 				</div>
 			</div>
@@ -72,17 +72,6 @@ Comunidad Integrativa de Coaches
 				</div>			
 			</div>
 
-
-			{% for video in videosinicio %}
-			<div class="video">
-				<h2 class="tituloh1">{{video.video_titulo}}</h2>
-				<a class="fancybox-media" href="{{video.video_link}}">
-					<div class="playIcon"></div>
-					<img src="{{video.video_link|youthumbnail:'l'}}" alt="{{video.video_titulo}}">
-				</a>	
-			</div>	
-			{% endfor %}		
-		</div>
 	<div class="wrapper">
 		<section class="eventoProximo">
 			<h2 class="tituloSection">Eventos</h2>
@@ -91,7 +80,7 @@ Comunidad Integrativa de Coaches
 			{% endif %}
 		</section>
 		<section class="entradas">
-			<h2 class="tituloSection">Blog</h2>
+			<h2 class="tituloSection">Últimos Artículos</h2>
 			<div class="noticias">
 				{% for entrada in entradas %}
 					<article>
@@ -113,6 +102,16 @@ Comunidad Integrativa de Coaches
 				{% endfor %}
 			</div>
 		</section>
+			{% for video in videosinicio %}
+			<div class="video">
+				<h2 class="tituloh1">{{video.video_titulo}}</h2>
+				<a class="fancybox-media" href="{{video.video_link}}">
+					<div class="playIcon"></div>
+					<img src="{{video.video_link|youthumbnail:'l'}}" alt="{{video.video_titulo}}">
+				</a>	
+			</div>	
+			{% endfor %}		
+		</div>
 	</div>
 	<!-- Google+ SCRIPT --> 
 		<!-- Place this tag after the last badge tag. -->

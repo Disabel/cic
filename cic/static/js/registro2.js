@@ -91,6 +91,22 @@ $(document).ready(function(){
 
 	    var ejercecoachStr = checked.join();
 		document.getElementById('id_publicaciones_relacionadas').value = ejercecoachStr;
+  
+  	/* String AREAS DE INTERES:  */
+	    var boxes = document.getElementsByClassName('areasinteres');
+	    var otraopcion = document.getElementById('otro6');
+	    var checked = [];
+	    for(var i=0; boxes[i]; ++i){
+	      if(boxes[i].checked){
+	        checked.push(boxes[i].name);
+	      }
+	    }
+	    if(otraopcion.checked){
+	        checked.push($("#otrotexto6").val());
+	    }
+
+	    var ejercecoachStr = checked.join();
+		document.getElementById('id_areas_interes_personal').value = ejercecoachStr;
 
   	/* String IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:  */
 	    var boxes = document.getElementsByClassName('comomiembrocic');

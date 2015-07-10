@@ -1,0 +1,77 @@
+nav .aboutus a{
+	color: #eb4923;
+}
+
+h2{
+	text-transform: uppercase;
+	font-size: 1.6em;
+}
+h2 span{
+	display: block;
+	font-size: 2em;
+}
+.imagenabout img{
+	width: 100%;
+}
+
+/* SUBMENU */
+.submenu li{
+  display: inline-block;
+  padding: 14px 49px;
+}
+.selectedmenu{
+	background-color: #eaebec;
+}
+.selectedmenu a{
+	color: #eb4923 !important;
+	font-weight: bold;
+}
+.submenu{
+  padding:0;
+  width: 79%;
+  margin: 0 auto;
+  list-style: none;
+  border: solid 1px rgb(209, 204, 204);
+
+}
+.submenu li a{
+	text-decoration: none;
+	color: #5b5b5b;
+	}
+
+
+/* fin SUBMENU */
+
+.campo{
+	display: inline-block;
+}
+.botonEnviar{
+	display: inline-block;
+}
+.introdirect{
+	text-align: center;
+	padding: 20px;
+	font-size: 1.4em;
+}
+.acceso{
+	text-align: center;
+}
+.campo label{
+	text-transform: uppercase;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #4fb77f;
+}
+.notadirect{
+	margin-top: 15px;
+	font-weight: bold;
+}
+.mdirectorio{
+  display: inline-block;
+  vertical-align: top;
+  width: 27%;
+  margin: 27px 0 0 6%;
+}
+.mdirectorio .nombre{
+	font-weight: bold;
+}

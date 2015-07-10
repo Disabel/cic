@@ -1,4 +1,4 @@
-nav .recursos a{
+nav .recursos a, .tituloh1{
   color: #eb4923;
 }
 h2{
@@ -9,6 +9,29 @@ h2 span{
 	display: block;
 	font-size: 2em;
 }
+
+.video{
+  position: relative;
+  width: 45%;
+  display: inline-block;
+  vertical-align: top;
+}
+.video img{
+  width: 100%;
+}
+.playIcon{
+  position: absolute;
+  top: 53%;
+  left: 46%;
+  background: url(../../img/play.png) no-repeat;
+  width: 48px;
+  height: 48px;
+}
+.video .tituloh1{
+  height: 52px;
+  overflow: hidden; 
+}
+
 
 .imagenrecursos img{
 	width: 100%;
@@ -25,7 +48,7 @@ h2 span{
 .recursoinfo .recursoimg{
 	width: 100%;
 }
-.recursoinfo p{
+.recursoinfo p, .tituloh1{
 	text-transform: uppercase;
 	font-size: 1.3em;
 	color: #4fb77f;

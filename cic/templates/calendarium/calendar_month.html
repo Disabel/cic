@@ -7,7 +7,7 @@ Agenda | Comunidad Integrativa de Coaches
 {% endblock %}
 {% block head %}
 <meta name="description" content="Calendarío en el cual se puede observar las actividades y eventos que dispone la comunidad integrativa de coaches">
-<meta name="keywords" content="Planning Manufacturing, scheduling, Optimización, Producción, Control, Eficiencia, Planeación, Planificación, de  la produccion, Production planning, software Production, Planificacion industrial, Programacion industrial, Planificación industrial, Programación industrial, Planificador, Software, de planificación de producción">
+<meta name="keywords" content="">
 {% endblock %}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/calendarium/pormes.css' %}">
@@ -20,7 +20,7 @@ Agenda | Comunidad Integrativa de Coaches
     {% include 'calendarium/menuagenda.html' %}
     <span>Filtrar por categorias:</span>{% include "calendarium/partials/category_list.html" %}
     <h1>{{ date|date:"F Y" }}</h1>
-    <form action="." method="post">{% csrf_token %}
+    <form class="calendarform" action="." method="post">{% csrf_token %}
         <input type="submit" name="previous" value="<< Mes anterior" />        
         <input type="submit" name="next" value="Mes siguiente >>" />
         <input type="submit" name="today" value="Hoy" />

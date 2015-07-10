@@ -60,7 +60,8 @@ Certificaciones - Comunidad Integrativa de Coaches
 		</div>
 				<div class="sidebar">
 			<div class="unete">
-				<p class="tituloside"><span>{% trans 'Certificación' %}</span>{% trans 'Se un Coach certificado por la CIC en:' %}</p>
+				<p class="tituloside"><span>{% trans 'Certificación' %}</span></p>
+				{% trans 'Se un Coach certificado por la CIC en:' %}
 				{% for certificacionlist in certificaciones_lista %}	
 					<a class="mainlink" href="{{certificacionlist.get_absolute_url}}"><li>{{ certificacionlist.titulo }}</li></a>
 				{% endfor %}
@@ -73,22 +74,22 @@ Certificaciones - Comunidad Integrativa de Coaches
 			</div>			
 			<div class="recursosinformativos">
 				<p class="tituloside"><span>{% trans 'Visita nuestros ' %}</span>{% trans ' Recursos Informativos' %}</p>
-				<a class="recursoinfo" href="#">
+				<a class="recursoinfo" href="/blog/categories/noticias/">
 					<p>{% trans 'Noticias' %}</p>
 					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
 					<img class="recursoimg" src="{% static 'img/noticias.png' %}" alt="flecha naranja">
 				</a>
-				<a class="recursoinfo" href="#">
+				<a class="recursoinfo herramientasyotros" href="/blog/categories/herramientas-y-otros-recursos/">
 					<p>{% trans 'Herramientas y Otros Artículos' %}</p>
 					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
 					<img class="recursoimg" src="{% static 'img/herramientas.png' %}" alt="flecha naranja">
 				</a>
-				<a class="recursoinfo" href="#">
+				<a class="recursoinfo" href="/blog/categories/articulos/">
 					<p>{% trans 'Artículos' %}</p>
 					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
 					<img class="recursoimg" src="{% static 'img/articulos.png' %}" alt="flecha naranja">
 				</a>				
-				<a class="recursoinfo" href="#">
+				<a class="recursoinfo" href="/blog/categories/libros/">
 					<p>{% trans 'Libros' %}</p>
 					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
 					<img class="recursoimg" src="{% static 'img/libros.png' %}" alt="flecha naranja">

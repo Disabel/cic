@@ -113,6 +113,7 @@ nav span{
 /* FOOTER ´*/
 footer{
 	background-color: #eaebec;
+	margin-top: 100px;
 }
 .infofooter{
   display: inline-block;

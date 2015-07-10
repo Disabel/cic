@@ -4,6 +4,17 @@ nav .certificaciones a{
 .imagencertificaciones img{
 	width: 100%;
 }
+.imagencurso img{
+	width: 100%;
+}
+.unete .mainlink{
+	display: block;
+	text-decoration: none;
+	color: #4fb77f;
+	font-size: 1.3em;
+	margin: 10px 0px;
+}
+
 .contenidocertificaciones{
 display: inline-block;
   width: 70%;
@@ -77,6 +88,9 @@ h2 span{
 	color: #4fb77f;
 	font-weight: bold;
 	display: inline-block;
+}
+.herramientasyotros p{
+	width: 89%
 }
 .tituloside{
 	font-weight: bold;

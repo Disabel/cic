@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load custom_filters %}
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
@@ -11,11 +12,13 @@ Recursos Informativos - Comunidad Integrativa de Coaches
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/recursos.css">
 <link rel="stylesheet" href="{% static 'css/flexslider.css' %}">
+<link rel="stylesheet" href="{% static 'css/jquery.fancybox.css' %}">
 {% endblock %}
 {% block js %}
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'js/adquiridos/back-top.js' %}"></script>
-<script src="{% static 'js/adquiridos/jquery.flexslider-min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancybox/source/jquery.fancybox.pack.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/fancybox/source/helpers/jquery.fancybox-media.js' %}"></script>
 {% endblock %}
 
 {% block clear %}{% endblock%}
@@ -44,7 +47,28 @@ Recursos Informativos - Comunidad Integrativa de Coaches
 					<p>{% trans 'Libros' %}</p>
 					<img src="{% static 'img/flechasidebar.jpg' %}" alt="flecha naranja">
 					<img class="recursoimg" src="{% static 'img/libros.png' %}" alt="flecha naranja">
-				</a>									
+				</a>
+				<h2>Videos	</h2>
+			{% for video in videosinicio %}
+			<div class="video">
+				<div class="tituloh1">{{video.video_titulo}}</div>
+				<a class="fancybox-media" href="{{video.video_link}}">
+					<div class="playIcon"></div>
+					<img src="{{video.video_link|youthumbnail:'l'}}" alt="{{video.video_titulo}}">
+				</a>	
+			</div>	
+			{% endfor %}												
 		</div>
 	</section>
+	<script>
+	$(document).ready(function() {
+		$('.fancybox-media').fancybox({
+			openEffect  : 'none',
+			closeEffect : 'none',
+			helpers : {
+				media : {}
+			}
+		});
+	});
+	</script>	
 {% endblock%}

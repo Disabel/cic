@@ -125,8 +125,8 @@ h2{
 }
 .playIcon{
   position: absolute;
-  top: 45%;
-  left: 44%;
+  top: 53%;
+  left: 46%;
   background: url(../../img/play.png) no-repeat;
   width: 48px;
   height: 48px;
@@ -152,7 +152,6 @@ h2{
 }
 .entradas{
   width: 63%;
-  background: #F7F7F7;
 }
 .entradas article{
   display: inline-block;
@@ -168,9 +167,17 @@ h2{
 .entradas .tituloent{
   font-weight: bold;
   text-transform: capitalize;
+  height: 40px;
+  overflow: hidden; 
+}
+.noticias .texto{
+    height: 137px;
+  overflow: hidden;
+  margin-bottom: 7px;
 }
 .entradas .imgdiv img{
-  width: 100%;
+  width: 70%;
+  height: 159px;
 }
 .entradas .readmore{
   text-align: right;

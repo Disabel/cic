@@ -53,10 +53,10 @@ h2{
 }
 .eventoHorario ul li span{
 	font-weight: normal;
-	color: #41B3B3;
+	color: #4fb77f;
 }
 .green{
-	color: #41B3B3;
+	color: #eb4923;
 	font-weight: bold;
 	margin-top: 10px;
 }
@@ -68,7 +68,7 @@ h2{
 }
 .precioEvento{
 	position: relative;
-	border: 2px solid #67C2C2;
+	border: 2px solid #eb4923;
 	display: block;
 	width: 20%;
 	text-align: center;

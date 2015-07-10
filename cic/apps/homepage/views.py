@@ -22,10 +22,7 @@ import nltk
 def index(request):
 	#entradas blog
 	entradas = Entry.objects.filter(status=2).order_by('-creation_date')
-	entradas = entradas.exclude(start_publication__gte=datetime.date.today())[:6]
-	for ent in entradas:
-		quitar_html = nltk.clean_html(ent.content)
-		ent.content = quitar_html[:100]
+	entradas = entradas.exclude(start_publication__gte=datetime.date.today())[:2]
 	#eventos del calendario
 	if Event.objects.get_occurrences(now(), now() + timedelta(days=356), None):
 		nextEvent = True
@@ -40,7 +37,8 @@ def index(request):
 
 def recursos(request):
 	categorias = Category.objects.all()
-	ctx = {'categorias': categorias}
+	videosinicio = videosInicio.objects.all()	
+	ctx = {'categorias': categorias,'videosinicio':videosinicio}
 	return render_to_response('homepage/recursos.html', ctx, context_instance=RequestContext(request))
 
 
@@ -93,16 +91,39 @@ def cursodetalle(request, slugcurso):
 	else:
 
 		form = solicitudForm()		
-	ctx = {'curso':curso,'form':form}
+	ctx = {'curso':curso,'form':form,'success':success}
 	return render_to_response('homepage/cursodetalle.html', ctx, context_instance=RequestContext(request))
 
 
 def directorio(request):
-	try:
-		miembroslista = miembros.objects.all()
-	except Exception:
-		miembroslista = None	
-	ctx = {'miembros':miembroslista,}
+	bandera = False	
+	miembrosComunes = None
+	miembrosDirectivos = None
+	mensaje = ""
+	if request.method == 'POST':
+		form = codigoDirectorioForm(request.POST)
+		if form.is_valid():
+			cd = form.cleaned_data
+			try:
+				miembro = miembros.objects.get(acceso_directorio=cd['codigo_directorio'])
+			except Exception:
+				miembro = None
+			if miembro:
+				bandera = True
+				try:
+					miembrosComunes = miembros.objects.filter(tipo_de_miembro="comun")
+				except Exception:
+					miembrosComunes = None
+				try:
+					miembrosDirectivos = miembros.objects.filter(tipo_de_miembro="directivo")
+				except Exception:
+					miembrosDirectivos = None					
+			else:
+				mensaje ="Código no registrado"
+	else:
+		form = codigoDirectorioForm()
+		bandera = False			
+	ctx = {'miembrosComunes':miembrosComunes,'miembrosDirectivos':miembrosDirectivos,'bandera':bandera,'form':form,'mensaje':mensaje}
 	return render_to_response('homepage/directorio.html',ctx, context_instance=RequestContext(request))
 
 
@@ -147,6 +168,7 @@ def certificaciones(request):
 
 
 def certificaciondetalle(request, slug):
+	success = False
 	certificacion = get_object_or_404(certificacionesLista, slug=slug)
 	if request.method == 'POST':
 		form = solicitudForm(request.POST)
@@ -158,7 +180,7 @@ def certificaciondetalle(request, slug):
 			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])			
 	else:
 		form = solicitudForm()		
-	ctx = {'certificacion':certificacion,'form':form}
+	ctx = {'certificacion':certificacion,'form':form,'success':success}
 	return render_to_response('homepage/certificaciondetalle.html', ctx, context_instance=RequestContext(request))
 
 
@@ -189,7 +211,7 @@ def conferenciasdetalle(request, slugconf):
 			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])									
 	else:
 		form = solicitudForm()			
-	ctx = {'conferencia':conferencia,'form':form}
+	ctx = {'conferencia':conferencia,'form':form,'success':success}
 	return render_to_response('homepage/conferenciadetalle.html', ctx, context_instance=RequestContext(request))
 
 
