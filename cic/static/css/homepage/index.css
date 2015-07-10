@@ -4,6 +4,7 @@ nav .index a{
 
 .imagenhome{
 	width: 100%;
+  position: relative;
 }
 
 .imagenhome img{
@@ -11,8 +12,8 @@ nav .index a{
 }
 .eslogan{
   position: absolute;
-  bottom: 18%;
-  left: 10%;
+  bottom: 20%;
+  left: 4%;
   overflow: hidden;
 }
 .eslogan .linea1{
@@ -20,6 +21,8 @@ nav .index a{
   background: rgb(255, 255, 255); 
   background: rgba(255, 255, 255, .7);
   color: #5b5b5b;
+  text-indent: 10px;
+
 }
 .eslogan .linea1 span{
   background-color: #FFF;
@@ -34,6 +37,7 @@ nav .index a{
   font-size: 2.1em;
   width: 286px;
   margin-top: 15px;
+  text-indent: 10px;
 }
 .eslogan  .linea2 span{
     font-weight: bold;
@@ -55,7 +59,9 @@ h2{
     margin-right: -4px;
 }
 .trescuadros{
-    margin-top: -139px;
+  margin-top: -139px;
+  z-index: 5;
+  position: relative;
 }
 .trescuadros .cuadro{
   background-color: #eaebec;

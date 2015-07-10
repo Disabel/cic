@@ -257,7 +257,7 @@ class EventDetailView(DetailView):
             self.object = self.get_object()
             asunto = u'Por: %s Empresa: %s - asistencia a evento %s | Fecha: %s' % (cd['nombre'], cd['empresa'], self.object, self.object.start)
             content = u'Nombre: %s \nEmail contacto: %s \nEmpresa: %s \nPaís: %s \nProvincia: %s \nCargo: %s \nTelefono: %s \nEvento que desea asistir: %s \nFecha inicio: %s \nFecha final: %s\n Comentario: %s \nAceptó los términos y condiciones' % (cd['nombre'], cd['email'], cd['empresa'], cd['pais'], cd['provincia'], cd['cargo'], cd['telefono'], self.object, self.object.start, self.object.end, cd['comentario'])
-            email = EmailMessage(asunto, content, 'contacto@planningmanufacturing.com', ['contacto@planningmanufacturing.com'], headers={'Reply-To': cd['email']})
+            email = EmailMessage(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'], headers={'Reply-To': cd['email']})
             email.send()
             success = True
             return HttpResponseRedirect('/felicidades/')
@@ -382,7 +382,7 @@ class OccurrenceDetailView(OccurrenceViewMixin, DetailView):
             self.object = self.get_object()
             asunto = u'Por: %s Empresa: %s - asistencia a evento %s | Fecha: %s' % (cd['nombre'], cd['empresa'], self.object, self.object.original_start)
             content = u'Nombre: %s \nEmail contacto: %s \nEmpresa: %s \nPaís: %s \nProvincia: %s \nCargo: %s \nTeléfono: %s \nEvento que desea asistir: %s \nFecha inicio: %s \nFecha final: %s\n Aceptó los términos y condiciones' % (cd['nombre'], cd['email'], cd['empresa'], cd['pais'], cd['provincia'], cd['cargo'], cd['telefono'], self.object, self.object.original_start, self.object.original_end)
-            email = EmailMessage(asunto, content, 'contacto@planningmanufacturing.com', ['contacto@planningmanufacturing.com'], headers={'Reply-To': cd['email']})
+            email = EmailMessage(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'], headers={'Reply-To': cd['email']})
             email.send()
             return HttpResponseRedirect('/felicidades/')
         else:

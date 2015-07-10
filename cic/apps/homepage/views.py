@@ -6,9 +6,9 @@ from .models import *
 from django.utils.timezone import now, timedelta
 from django.template import RequestContext
 from django.core.mail import send_mail
-from django.views.generic import CreateView
-from django.shortcuts import redirect
-from django.http import HttpResponseRedirect
+#from django.views.generic import CreateView
+#from django.shortcuts import redirect
+#from django.http import HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 
 from cic.apps.calendarium.models import Event
@@ -16,7 +16,7 @@ from zinnia.models import Entry
 from zinnia.models import Category
 
 import datetime
-import nltk
+#import nltk
 
 
 def index(request):
@@ -37,8 +37,8 @@ def index(request):
 
 def recursos(request):
 	categorias = Category.objects.all()
-	videosinicio = videosInicio.objects.all()	
-	ctx = {'categorias': categorias,'videosinicio':videosinicio}
+	videosinicio = videosInicio.objects.all()
+	ctx = {'categorias': categorias, 'videosinicio': videosinicio}
 	return render_to_response('homepage/recursos.html', ctx, context_instance=RequestContext(request))
 
 
@@ -87,16 +87,15 @@ def cursodetalle(request, slugcurso):
 			cd = form.cleaned_data
 			asunto = u'[CONTACTO WEB] - Solicitud de Información sobre Curso: %s ' % (curso.titulo)
 			content = u'Persona interesada en el curso: %s \n Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (curso.titulo, cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
-			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])						
+			send_mail(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'])
 	else:
-
-		form = solicitudForm()		
-	ctx = {'curso':curso,'form':form,'success':success}
+		form = solicitudForm()
+	ctx = {'curso': curso, 'form': form, 'success': success}
 	return render_to_response('homepage/cursodetalle.html', ctx, context_instance=RequestContext(request))
 
 
 def directorio(request):
-	bandera = False	
+	bandera = False
 	miembrosComunes = None
 	miembrosDirectivos = None
 	mensaje = ""
@@ -117,14 +116,14 @@ def directorio(request):
 				try:
 					miembrosDirectivos = miembros.objects.filter(tipo_de_miembro="directivo")
 				except Exception:
-					miembrosDirectivos = None					
+					miembrosDirectivos = None
 			else:
-				mensaje ="Código no registrado"
+				mensaje = "Código no registrado"
 	else:
 		form = codigoDirectorioForm()
-		bandera = False			
-	ctx = {'miembrosComunes':miembrosComunes,'miembrosDirectivos':miembrosDirectivos,'bandera':bandera,'form':form,'mensaje':mensaje}
-	return render_to_response('homepage/directorio.html',ctx, context_instance=RequestContext(request))
+		bandera = False
+	ctx = {'miembrosComunes': miembrosComunes, 'miembrosDirectivos': miembrosDirectivos, 'bandera': bandera, 'form': form, 'mensaje': mensaje}
+	return render_to_response('homepage/directorio.html', ctx, context_instance=RequestContext(request))
 
 
 def paises(request):
@@ -177,10 +176,10 @@ def certificaciondetalle(request, slug):
 			cd = form.cleaned_data
 			asunto = u'[CONTACTO WEB] - Solicitud de Información sobre Certificacion; %s ' % (certificacion.titulo)
 			content = u'Persona interesada en la certificacion: %s \n Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (certificacion.titulo, cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
-			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])			
+			send_mail(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'])
 	else:
-		form = solicitudForm()		
-	ctx = {'certificacion':certificacion,'form':form,'success':success}
+		form = solicitudForm()
+	ctx = {'certificacion': certificacion, 'form': form, 'success': success}
 	return render_to_response('homepage/certificaciondetalle.html', ctx, context_instance=RequestContext(request))
 
 
@@ -208,10 +207,10 @@ def conferenciasdetalle(request, slugconf):
 			cd = form.cleaned_data
 			asunto = u'[CONTACTO WEB] - Solicitud de Información sobre Conferencia: %s ' % (conferencia.titulo)
 			content = u'Persona interesada en la conferencia: %s \n Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (conferencia.titulo, cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
-			#send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])									
+			send_mail(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'])
 	else:
-		form = solicitudForm()			
-	ctx = {'conferencia':conferencia,'form':form,'success':success}
+		form = solicitudForm()
+	ctx = {'conferencia': conferencia, 'form': form, 'success': success}
 	return render_to_response('homepage/conferenciadetalle.html', ctx, context_instance=RequestContext(request))
 
 
@@ -265,7 +264,7 @@ def contact(request):
 			cd = form.cleaned_data
 			asunto = u'[CONTACTO WEB] - Formulario de Contacto por: %s ' % (cd['nombre_apellido'])
 			content = u'Nombre y Apellido: %s \n Pais: %s \n Código de área: %s \n Teléfono Móvil: %s \n Teléfono Fijo: %s \n Correo Electrónico Principal: %s \n Correo Electrónico Alterno: %s \n Nombre de la Empresa: %s \n Mensaje: %s \n' % (cd['nombre_apellido'], cd['pais_origen'], cd['codigo_area'], cd['telefono_movil'], cd['telefono_fijo'], cd['correo_principal'], cd['correo_alterno'], cd['nombre_empresa'], cd['mensaje'])
-		#	send_mail(asunto, content, 'info@inverfanca.com', ['info@inverfanca.com'])
+			send_mail(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'])
 	else:
 		form = contactForm()
 	ctx = {'form': form, 'success': success}
