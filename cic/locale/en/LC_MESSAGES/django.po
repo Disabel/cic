@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-08 10:12-0430\n"
+"POT-Creation-Date: 2015-07-09 22:22-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -47,60 +47,60 @@ msgstr ""
 
 #: .\apps\calendarium\models.py:97
 msgid "Fecha inicio"
-msgstr ""
+msgstr "Start Date"
 
 #: .\apps\calendarium\models.py:101
 msgid "Fecha final"
-msgstr ""
+msgstr "Final Date"
 
 #: .\apps\calendarium\models.py:105
 msgid "Fecha creacion"
-msgstr ""
+msgstr "Creation Date"
 
 #: .\apps\calendarium\models.py:110
 msgid "Descripcion"
-msgstr ""
+msgstr "Description"
 
 #: .\apps\calendarium\models.py:143
 msgid "Creado por"
-msgstr ""
+msgstr "Created by"
 
 #: .\apps\calendarium\models.py:150
 msgid "Categoria"
-msgstr ""
+msgstr "Category"
 
 #: .\apps\calendarium\models.py:157
 msgid "Pauta"
-msgstr ""
+msgstr "Pauta"
 
 #: .\apps\calendarium\models.py:163
 msgid "Fin de repeticion"
-msgstr ""
+msgstr "Fin de repeticion"
 
 #: .\apps\calendarium\models.py:169
 msgid "Titulo"
-msgstr ""
+msgstr "Title"
 
 #: .\apps\calendarium\models.py:174 .\apps\calendarium\models.py:343
 #: .\apps\calendarium\models.py:457
 msgid "Muletilla"
-msgstr ""
+msgstr "Muletilla"
 
 #: .\apps\calendarium\models.py:181 .\apps\calendarium\models.py:463
 msgid "Sub-titulo"
-msgstr ""
+msgstr "Sub-title"
 
 #: .\apps\calendarium\models.py:186 .\apps\calendarium\models.py:468
 msgid "lugar"
-msgstr ""
+msgstr "Place"
 
 #: .\apps\calendarium\models.py:193 .\apps\calendarium\models.py:475
 msgid "precio"
-msgstr ""
+msgstr "Cost"
 
 #: .\apps\calendarium\models.py:197 .\apps\calendarium\models.py:479
 msgid "Imagen"
-msgstr ""
+msgstr "Image"
 
 #: .\apps\calendarium\models.py:203 .\apps\calendarium\models.py:485
 msgid "Imagen Index"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: .\apps\calendarium\models.py:338 .\apps\calendarium\models.py:558
 msgid "Nombre"
-msgstr ""
+msgstr "Name"
 
 #: .\apps\calendarium\models.py:348
 msgid "Color"
@@ -175,7 +175,7 @@ msgid "Quienes Somos"
 msgstr "About Us"
 
 #: .\templates\base.html:85 .\templates\base.html.py:115
-#: .\templates\homepage\index.html:45
+#: .\templates\homepage\index.html:44
 msgid "Certificaciones"
 msgstr "Certifications"
 
@@ -188,7 +188,7 @@ msgid "Eventos"
 msgstr "Events"
 
 #: .\templates\base.html:88 .\templates\base.html.py:118
-#: .\templates\homepage\index.html:53
+#: .\templates\homepage\index.html:52
 msgid "Recursos Informativos"
 msgstr "Information Resources"
 
@@ -209,7 +209,8 @@ msgstr "Subscribe to our Newsletter"
 msgid ""
 "Comunidad Integrativa de Coaches © Copyright 2015 Todos los Derechos "
 "Reservados"
-msgstr "Comunidad Integrativa de Coaches © Copyright 2015. All rights reserved."
+msgstr ""
+"Comunidad Integrativa de Coaches © Copyright 2015. All rights reserved."
 
 #: .\templates\calendarium\calendar_week.html:6
 msgid "Occurrences"
@@ -250,65 +251,68 @@ msgstr "Conferences"
 #: .\templates\homepage\cursodetalle.html:31
 #: .\templates\homepage\servicios.html:30
 msgid "Asesorías"
-msgstr Advisory""
+msgstr "Advisory"
 
 #: .\templates\homepage\certificaciondetalle.html:34
 #: .\templates\homepage\conferenciadetalle.html:39
-#: .\templates\homepage\cursodetalle.html:39
+#: .\templates\homepage\cursodetalle.html:49
 msgid "FORMULARIO DE SOLICITUD DE INFORMACIÓN"
 msgstr "Information Request Form"
 
-#: .\templates\homepage\certificaciondetalle.html:39
-#: .\templates\homepage\conferenciadetalle.html:44
-#: .\templates\homepage\cursodetalle.html:44
+#: .\templates\homepage\certificaciondetalle.html:49
+#: .\templates\homepage\conferenciadetalle.html:55
+#: .\templates\homepage\cursodetalle.html:54
 msgid "Nombre y Apellido:"
 msgstr "Full Name:"
 
-#: .\templates\homepage\certificaciondetalle.html:45
-#: .\templates\homepage\conferenciadetalle.html:50
-#: .\templates\homepage\cursodetalle.html:50
+#: .\templates\homepage\certificaciondetalle.html:55
+#: .\templates\homepage\conferenciadetalle.html:61
+#: .\templates\homepage\cursodetalle.html:60
+#: .\templates\homepage\directorio.html:44
+#: .\templates\homepage\directorio.html:53
+#: .\templates\homepage\directorio.html:57
 msgid "Pais:"
 msgstr "Country:"
 
-#: .\templates\homepage\certificaciondetalle.html:51
-#: .\templates\homepage\conferenciadetalle.html:56
-#: .\templates\homepage\cursodetalle.html:56
+#: .\templates\homepage\certificaciondetalle.html:61
+#: .\templates\homepage\conferenciadetalle.html:67
+#: .\templates\homepage\cursodetalle.html:66
 msgid "Código de área:"
 msgstr "Area Code"
 
-#: .\templates\homepage\certificaciondetalle.html:57
-#: .\templates\homepage\conferenciadetalle.html:62
-#: .\templates\homepage\cursodetalle.html:62
+#: .\templates\homepage\certificaciondetalle.html:67
+#: .\templates\homepage\conferenciadetalle.html:73
+#: .\templates\homepage\cursodetalle.html:72
 msgid "Teléfono Móvil"
 msgstr "Mobile Phone"
 
-#: .\templates\homepage\certificaciondetalle.html:63
-#: .\templates\homepage\conferenciadetalle.html:68
-#: .\templates\homepage\cursodetalle.html:68
+#: .\templates\homepage\certificaciondetalle.html:73
+#: .\templates\homepage\conferenciadetalle.html:79
+#: .\templates\homepage\cursodetalle.html:78
 msgid "Teléfono Fijo"
 msgstr "Other Phone"
 
-#: .\templates\homepage\certificaciondetalle.html:69
-#: .\templates\homepage\conferenciadetalle.html:74
-#: .\templates\homepage\cursodetalle.html:74
+#: .\templates\homepage\certificaciondetalle.html:79
+#: .\templates\homepage\conferenciadetalle.html:85
+#: .\templates\homepage\cursodetalle.html:84
 msgid "Correo Electrónico Principal"
 msgstr "Primary Email Address"
 
-#: .\templates\homepage\certificaciondetalle.html:75
-#: .\templates\homepage\conferenciadetalle.html:80
-#: .\templates\homepage\cursodetalle.html:80
+#: .\templates\homepage\certificaciondetalle.html:85
+#: .\templates\homepage\conferenciadetalle.html:91
+#: .\templates\homepage\cursodetalle.html:90
 msgid "Correo Electrónico Alterno"
 msgstr "Secondary Email Address"
 
-#: .\templates\homepage\certificaciondetalle.html:81
-#: .\templates\homepage\conferenciadetalle.html:86
-#: .\templates\homepage\cursodetalle.html:86
+#: .\templates\homepage\certificaciondetalle.html:91
+#: .\templates\homepage\conferenciadetalle.html:97
+#: .\templates\homepage\cursodetalle.html:96
 msgid "Nombre de la Empresa"
 msgstr "Company Name:"
 
-#: .\templates\homepage\certificaciondetalle.html:87
-#: .\templates\homepage\conferenciadetalle.html:92
-#: .\templates\homepage\cursodetalle.html:92
+#: .\templates\homepage\certificaciondetalle.html:97
+#: .\templates\homepage\conferenciadetalle.html:103
+#: .\templates\homepage\cursodetalle.html:102
 msgid "Mensaje: "
 msgstr "Message"
 
@@ -331,808 +335,873 @@ msgstr "choose our trainers"
 
 #: .\templates\homepage\certificaciones.html:56
 msgid "¿Quienes"
-msgstr ""
+msgstr "Who"
 
 #: .\templates\homepage\certificaciones.html:56
 msgid "certifican en la CIC?"
-msgstr ""
+msgstr "are our coaches?"
 
 #: .\templates\homepage\certificaciones.html:63
 msgid "Certificación"
-msgstr ""
+msgstr "Certification"
 
-#: .\templates\homepage\certificaciones.html:63
+#: .\templates\homepage\certificaciones.html:64
 msgid "Se un Coach certificado por la CIC en:"
-msgstr ""
+msgstr "CIC certifications:"
 
-#: .\templates\homepage\certificaciones.html:69
+#: .\templates\homepage\certificaciones.html:70
 msgid "Especializaciones"
-msgstr ""
+msgstr "Specialties"
 
-#: .\templates\homepage\certificaciones.html:75
-#: .\templates\homepage\quienessomos.html:96
+#: .\templates\homepage\certificaciones.html:76
+#: .\templates\homepage\quienessomos.html:100
 msgid "Visita nuestros "
-msgstr ""
+msgstr "Visit our"
 
-#: .\templates\homepage\certificaciones.html:75
-#: .\templates\homepage\quienessomos.html:96
+#: .\templates\homepage\certificaciones.html:76
+#: .\templates\homepage\quienessomos.html:100
 msgid " Recursos Informativos"
-msgstr ""
+msgstr " Information Resource"
 
-#: .\templates\homepage\certificaciones.html:77
-#: .\templates\homepage\quienessomos.html:98
-#: .\templates\homepage\recursos.html:29
+#: .\templates\homepage\certificaciones.html:78
+#: .\templates\homepage\quienessomos.html:102
+#: .\templates\homepage\recursos.html:32
 msgid "Noticias"
-msgstr ""
+msgstr "News"
 
-#: .\templates\homepage\certificaciones.html:82
-#: .\templates\homepage\quienessomos.html:103
-#: .\templates\homepage\recursos.html:34
+#: .\templates\homepage\certificaciones.html:83
+#: .\templates\homepage\quienessomos.html:107
+#: .\templates\homepage\recursos.html:37
 msgid "Herramientas y Otros Artículos"
-msgstr ""
+msgstr "Other tools and Articles"
 
-#: .\templates\homepage\certificaciones.html:87
-#: .\templates\homepage\quienessomos.html:108
-#: .\templates\homepage\recursos.html:39
+#: .\templates\homepage\certificaciones.html:88
+#: .\templates\homepage\quienessomos.html:112
+#: .\templates\homepage\recursos.html:42
 msgid "Artículos"
-msgstr ""
+msgstr "Articles"
 
-#: .\templates\homepage\certificaciones.html:92
-#: .\templates\homepage\quienessomos.html:113
-#: .\templates\homepage\recursos.html:44
-#: .\templates\homepage\registrocic.html:339
-#: .\templates\homepage\registroinvitado.html:303
+#: .\templates\homepage\certificaciones.html:93
+#: .\templates\homepage\quienessomos.html:117
+#: .\templates\homepage\recursos.html:47
+#: .\templates\homepage\registrocic.html:375
+#: .\templates\homepage\registroinvitado.html:341
 msgid "Libros"
-msgstr ""
+msgstr "Books"
 
 #: .\templates\homepage\codigoetica.html:27
 #: .\templates\homepage\directorio.html:28 .\templates\homepage\paises.html:27
 #: .\templates\homepage\quienessomos.html:26
 msgid "Sobre la CIC"
-msgstr ""
+msgstr "About CIC"
 
 #: .\templates\homepage\codigoetica.html:28
 #: .\templates\homepage\directorio.html:29 .\templates\homepage\paises.html:28
 #: .\templates\homepage\quienessomos.html:27
 msgid "Directorio"
-msgstr ""
+msgstr "Directory"
 
 #: .\templates\homepage\codigoetica.html:29
 #: .\templates\homepage\directorio.html:30 .\templates\homepage\paises.html:29
 #: .\templates\homepage\quienessomos.html:28
 msgid "Paises de la CIC"
-msgstr ""
+msgstr "CIC Countries"
 
 #: .\templates\homepage\codigoetica.html:30
+#: .\templates\homepage\codigoetica.html:32
 #: .\templates\homepage\directorio.html:31 .\templates\homepage\paises.html:30
 #: .\templates\homepage\quienessomos.html:29
 msgid "Código de ética"
-msgstr ""
+msgstr "Code of ethics"
 
 #: .\templates\homepage\conferencias.html:34
 msgid "Conferencias CIC"
-msgstr ""
+msgstr "CIC Conferences"
 
 #: .\templates\homepage\conferencias.html:37
 #: .\templates\homepage\servicios.html:36
 msgid "Listado "
-msgstr ""
+msgstr "List"
 
 #: .\templates\homepage\conferencias.html:37
 msgid "de nuestras Conferencias"
-msgstr ""
+msgstr "Conferences"
+
+#: .\templates\homepage\directorio.html:34
+msgid "Integrantes"
+msgstr "Members"
+
+#: .\templates\homepage\directorio.html:34
+#: .\templates\homepage\quienessomos.html:81
+#: .\templates\homepage\quienessomos.html:85
+#: .\templates\homepage\quienessomos.html:90
+msgid "de la CIC"
+msgstr "CIC"
+
+#: .\templates\homepage\directorio.html:40
+#, fuzzy
+msgid "Pais"
+msgstr "Country:"
+
+#: .\templates\homepage\directorio.html:41
+#: .\templates\homepage\directorio.html:45
+#: .\templates\homepage\directorio.html:54
+#: .\templates\homepage\directorio.html:58
+#, fuzzy
+msgid "Correo Electrónico:"
+msgstr "Secondary Email Address"
+
+#: .\templates\homepage\directorio.html:64
+msgid ""
+"Para Acceder al directorio de la Comunidad Integrativa de Coaches debe "
+"ingresar el código de acceso que le fue suministrado:"
+msgstr "To access the directory,please enter your code below"
+
+#: .\templates\homepage\directorio.html:80
+msgid ""
+"Si usted es miembro de la comunidad y desea obtener su código de ingreso, "
+"solo debe contactarnos y le será proporcionado."
+msgstr "Are you a member of the CIC community? contact us in order to get your access code."
 
 #: .\templates\homepage\eventos.html:26
 msgid "Banking and financial issues"
 msgstr "banco y financiero problemas"
 
-#: .\templates\homepage\index.html:29
+#: .\templates\homepage\index.html:28
 msgid "Un espacio para el"
 msgstr ""
 
-#: .\templates\homepage\index.html:30
+#: .\templates\homepage\index.html:29
 msgid "y la "
 msgstr ""
 
-#: .\templates\homepage\index.html:30
+#: .\templates\homepage\index.html:29
 msgid "Integración"
 msgstr ""
 
-#: .\templates\homepage\index.html:37
+#: .\templates\homepage\index.html:36
 msgid "¿Eres un coach certificado?"
-msgstr ""
+msgstr "Are you a certified coach?"
 
-#: .\templates\homepage\index.html:40
+#: .\templates\homepage\index.html:39
 msgid "Beneficios de Registrarme"
-msgstr ""
+msgstr "benefits"
 
-#: .\templates\homepage\index.html:48
+#: .\templates\homepage\index.html:47
 msgid "Conocer Más"
-msgstr ""
+msgstr "Learn More"
 
-#: .\templates\homepage\index.html:56
+#: .\templates\homepage\index.html:55
 msgid "Ver Recursos"
-msgstr ""
+msgstr "View all"
 
 #: .\templates\homepage\paises.html:36
 msgid "Países"
-msgstr ""
+msgstr "Countries"
 
 #: .\templates\homepage\paises.html:36
 msgid "donde actúa la CIC"
-msgstr ""
+msgstr "where CIC is acting"
 
 #: .\templates\homepage\quienessomos.html:33
 msgid "¿Qué es"
-msgstr ""
+msgstr "What is"
 
 #: .\templates\homepage\quienessomos.html:33
 msgid "la comunidad Integrativa de Coaches CIC?"
-msgstr ""
+msgstr "CIC?"
 
 #: .\templates\homepage\quienessomos.html:45
 msgid "Nuestro"
-msgstr ""
+msgstr "Our"
 
 #: .\templates\homepage\quienessomos.html:45
 msgid "equipo directivo"
-msgstr ""
+msgstr "Leadership Team"
 
 #: .\templates\homepage\quienessomos.html:46
 msgid ""
 "Son directores fundadores de la comunidad Integrativa de Coaches, los "
 "Coaches Internacionales y Trainers en NLP:"
-msgstr ""
+msgstr "They are founding directors of CIC, the International Coaches and NLP Trainers:"
 
-#: .\templates\homepage\quienessomos.html:54
+#: .\templates\homepage\quienessomos.html:58
 msgid "Representantes"
-msgstr ""
+msgstr "International"
 
-#: .\templates\homepage\quienessomos.html:54
+#: .\templates\homepage\quienessomos.html:58
 msgid "Internacionales de la CIC"
-msgstr ""
+msgstr "Representatives"
 
-#: .\templates\homepage\quienessomos.html:77
+#: .\templates\homepage\quienessomos.html:81
 msgid "Misión"
-msgstr ""
+msgstr "Mission"
 
-#: .\templates\homepage\quienessomos.html:77
-#: .\templates\homepage\quienessomos.html:81
-#: .\templates\homepage\quienessomos.html:86
-msgid "de la CIC"
-msgstr ""
-
-#: .\templates\homepage\quienessomos.html:81
+#: .\templates\homepage\quienessomos.html:85
 msgid "Visión"
-msgstr ""
+msgstr "Vission"
 
-#: .\templates\homepage\quienessomos.html:86
+#: .\templates\homepage\quienessomos.html:90
 msgid "Valores"
-msgstr ""
+msgstr "Values"
 
-#: .\templates\homepage\quienessomos.html:92
+#: .\templates\homepage\quienessomos.html:96
 msgid "Únete a la"
-msgstr ""
+msgstr "Join"
 
-#: .\templates\homepage\quienessomos.html:92
+#: .\templates\homepage\quienessomos.html:96
 msgid "Comunidad Integrativa de Coaches"
-msgstr ""
+msgstr "our community"
 
-#: .\templates\homepage\quienessomos.html:93
+#: .\templates\homepage\quienessomos.html:97
 msgid "Regístrate Aquí"
-msgstr ""
+msgstr "Register Here"
 
 #: .\templates\homepage\registro.html:29
 msgid "Regístrate "
-msgstr ""
+msgstr "Register"
 
 #: .\templates\homepage\registro.html:30
-#: .\templates\homepage\registrocic.html:30
-#: .\templates\homepage\registroinvitado.html:30
-msgid "Registro para coaches certificados CIC"
-msgstr ""
+msgid "Seleccione alguna de las siguientes opciones:"
+msgstr "Select from the following options:"
 
 #: .\templates\homepage\registro.html:31
+msgid "Registro para coaches certificados CIC"
+msgstr "Registration for CIC certified coaches"
+
+#: .\templates\homepage\registro.html:32
 msgid "Registro para coaches Invitados o No certificados por CIC"
-msgstr ""
+msgstr "Registration for guest coaches or not certified by CIC"
 
-#: .\templates\homepage\registrocic.html:29
+#: .\templates\homepage\registrocic.html:28
 #: .\templates\homepage\registroinvitado.html:29
-msgid "Regístrate como coach de la CIC"
-msgstr ""
+msgid ""
+"Muchas gracias por su información; en pocos días le llegará un correo con su "
+"nuevo número de registro."
+msgstr "Thank you very much for the provided information; in a few days you will receive an email with your new registration number."
 
-#: .\templates\homepage\registrocic.html:35
+#: .\templates\homepage\registrocic.html:31
+#: .\templates\homepage\registroinvitado.html:32
+msgid "Por favor corregir los errores debajo."
+msgstr "Please correct the errors below."
+
+#: .\templates\homepage\registrocic.html:34
+msgid "Regístrate como coach"
+msgstr "Register as Coach"
+
+#: .\templates\homepage\registrocic.html:34
 #: .\templates\homepage\registroinvitado.html:35
+msgid "Registro sólo para coaches certificados CIC"
+msgstr "Registration for CIC certified coaches"
+
+#: .\templates\homepage\registrocic.html:37
+#: .\templates\homepage\registroinvitado.html:40
+msgid ""
+"Si ya se ha registrado antes por favor proporcione su número de registro, de "
+"lo contrario deje en blanco:"
+msgstr "If you have already registered before please provide your registration number, otherwise leave blank:"
+
+#: .\templates\homepage\registrocic.html:40
+#: .\templates\homepage\registroinvitado.html:42
+msgid "Número de Registro"
+msgstr "Registration number"
+
+#: .\templates\homepage\registrocic.html:46
+#: .\templates\homepage\registroinvitado.html:48
 msgid "Datos Personales"
-msgstr ""
+msgstr "Personal Details"
 
-#: .\templates\homepage\registrocic.html:39
-#: .\templates\homepage\registroinvitado.html:39
+#: .\templates\homepage\registrocic.html:50
+#: .\templates\homepage\registroinvitado.html:52
 msgid "Nombre y apellidos completos"
-msgstr ""
+msgstr "Full Name"
 
-#: .\templates\homepage\registrocic.html:45
-#: .\templates\homepage\registroinvitado.html:45
+#: .\templates\homepage\registrocic.html:56
+#: .\templates\homepage\registroinvitado.html:58
 msgid "Número de identificación o pasaporte"
-msgstr ""
+msgstr "Identification number or passport"
 
-#: .\templates\homepage\registrocic.html:51
-#: .\templates\homepage\registroinvitado.html:51
+#: .\templates\homepage\registrocic.html:62
+#: .\templates\homepage\registroinvitado.html:64
 msgid "Fecha de nacimiento"
-msgstr ""
+msgstr "Date of birth"
 
-#: .\templates\homepage\registrocic.html:57
-#: .\templates\homepage\registroinvitado.html:57
+#: .\templates\homepage\registrocic.html:68
+#: .\templates\homepage\registroinvitado.html:70
 msgid "Nacionalidad"
-msgstr ""
+msgstr "Nationality"
 
-#: .\templates\homepage\registrocic.html:63
-#: .\templates\homepage\registroinvitado.html:63
+#: .\templates\homepage\registrocic.html:74
+#: .\templates\homepage\registroinvitado.html:76
 msgid "País de residencia"
-msgstr ""
+msgstr "Country of residence"
 
-#: .\templates\homepage\registrocic.html:69
-#: .\templates\homepage\registroinvitado.html:69
+#: .\templates\homepage\registrocic.html:80
+#: .\templates\homepage\registroinvitado.html:82
 msgid "Dirección exacta"
-msgstr ""
+msgstr "Exact Address"
 
-#: .\templates\homepage\registrocic.html:75
-#: .\templates\homepage\registroinvitado.html:75
+#: .\templates\homepage\registrocic.html:86
+#: .\templates\homepage\registroinvitado.html:88
 msgid "Apartado postal"
-msgstr ""
+msgstr "Postal Code"
 
-#: .\templates\homepage\registrocic.html:81
-#: .\templates\homepage\registroinvitado.html:81
+#: .\templates\homepage\registrocic.html:92
+#: .\templates\homepage\registroinvitado.html:94
 msgid "Código de área"
-msgstr ""
+msgstr "Area Code"
 
-#: .\templates\homepage\registrocic.html:87
-#: .\templates\homepage\registroinvitado.html:87
+#: .\templates\homepage\registrocic.html:98
+#: .\templates\homepage\registroinvitado.html:100
 msgid "Teléfono habitación"
-msgstr ""
+msgstr "Home Phone"
 
-#: .\templates\homepage\registrocic.html:93
-#: .\templates\homepage\registroinvitado.html:93
+#: .\templates\homepage\registrocic.html:104
+#: .\templates\homepage\registroinvitado.html:106
 msgid "Teléfono móvil"
-msgstr ""
+msgstr "Mobile Phone"
 
-#: .\templates\homepage\registrocic.html:99
-#: .\templates\homepage\registroinvitado.html:99
+#: .\templates\homepage\registrocic.html:110
+#: .\templates\homepage\registroinvitado.html:112
 msgid "Otro número telefónico"
-msgstr ""
+msgstr "Other phone number"
 
-#: .\templates\homepage\registrocic.html:105
-#: .\templates\homepage\registroinvitado.html:105
+#: .\templates\homepage\registrocic.html:116
+#: .\templates\homepage\registroinvitado.html:118
 msgid "Correo electrónico"
-msgstr ""
+msgstr "Mail Address"
 
-#: .\templates\homepage\registrocic.html:111
-#: .\templates\homepage\registroinvitado.html:111
+#: .\templates\homepage\registrocic.html:122
+#: .\templates\homepage\registroinvitado.html:124
 msgid "Profesión"
-msgstr ""
+msgstr "Profession"
 
-#: .\templates\homepage\registrocic.html:117
-#: .\templates\homepage\registroinvitado.html:117
+#: .\templates\homepage\registrocic.html:128
+#: .\templates\homepage\registroinvitado.html:130
 msgid "Años de experiencia"
-msgstr ""
+msgstr "Years of Experience"
 
-#: .\templates\homepage\registrocic.html:123
+#: .\templates\homepage\registrocic.html:134
 msgid "Datos de la Certificación"
-msgstr ""
+msgstr "Certification Information"
 
-#: .\templates\homepage\registrocic.html:127
-#: .\templates\homepage\registrocic.html:210
-#: .\templates\homepage\registroinvitado.html:163
-#: .\templates\homepage\registroinvitado.html:198
-#: .\templates\homepage\registroinvitado.html:223
+#: .\templates\homepage\registrocic.html:138
+#: .\templates\homepage\registrocic.html:221
+#: .\templates\homepage\registroinvitado.html:176
+#: .\templates\homepage\registroinvitado.html:211
+#: .\templates\homepage\registroinvitado.html:236
 msgid "País donde se certificó"
-msgstr ""
+msgstr "Country of certification"
 
-#: .\templates\homepage\registrocic.html:133
+#: .\templates\homepage\registrocic.html:144
 msgid "Ciudad donde se certificó"
-msgstr ""
+msgstr "City of certification"
 
-#: .\templates\homepage\registrocic.html:139
+#: .\templates\homepage\registrocic.html:150
 msgid "Institución que organizó la certificación"
-msgstr ""
+msgstr "Institution"
 
-#: .\templates\homepage\registrocic.html:145
+#: .\templates\homepage\registrocic.html:156
 msgid "Nombre de la certificación que obtuvo (Título)"
-msgstr ""
+msgstr "Certification Title"
 
-#: .\templates\homepage\registrocic.html:151
+#: .\templates\homepage\registrocic.html:162
 msgid "Trainer que lo certifico"
-msgstr ""
+msgstr "Certification Trainers"
 
-#: .\templates\homepage\registrocic.html:157
+#: .\templates\homepage\registrocic.html:168
 msgid "Período de la certificación"
-msgstr ""
+msgstr "Period of Certification"
 
-#: .\templates\homepage\registrocic.html:163
+#: .\templates\homepage\registrocic.html:174
 msgid "Número de horas presenciales del programa"
-msgstr ""
+msgstr "Number of teaching hours"
 
-#: .\templates\homepage\registrocic.html:169
+#: .\templates\homepage\registrocic.html:180
 msgid "Fecha exacta de la certificación"
-msgstr ""
+msgstr "Exact date of certification"
 
-#: .\templates\homepage\registrocic.html:175
-#: .\templates\homepage\registrocic.html:198
-#: .\templates\homepage\registrocic.html:235
-#: .\templates\homepage\registroinvitado.html:145
+#: .\templates\homepage\registrocic.html:186
+#: .\templates\homepage\registrocic.html:209
+#: .\templates\homepage\registrocic.html:246
+#: .\templates\homepage\registroinvitado.html:158
 msgid "Código de certificación"
-msgstr ""
+msgstr "Certification Code"
 
-#: .\templates\homepage\registrocic.html:182
+#: .\templates\homepage\registrocic.html:193
 msgid "Que otras Certificaciones Posee"
-msgstr ""
+msgstr "Other Certifications"
 
-#: .\templates\homepage\registrocic.html:185
+#: .\templates\homepage\registrocic.html:196
 msgid "¿Posee otra Certificación CIC?"
-msgstr ""
+msgstr "Do you have another CIC Certification?"
 
-#: .\templates\homepage\registrocic.html:192
+#: .\templates\homepage\registrocic.html:203
 msgid "Nombre de la certificación  "
-msgstr ""
+msgstr "Name of certification "
 
-#: .\templates\homepage\registrocic.html:204
+#: .\templates\homepage\registrocic.html:215
 msgid "Fecha exacta en la que se certificó"
-msgstr ""
+msgstr "Exact date of certification"
 
-#: .\templates\homepage\registrocic.html:216
+#: .\templates\homepage\registrocic.html:227
 msgid "Trainer de la certificación"
-msgstr ""
+msgstr "Certification Trainer"
 
-#: .\templates\homepage\registrocic.html:222
+#: .\templates\homepage\registrocic.html:233
 msgid "¿Posee Certificaciones de otras Asociaciones o Federaciones?"
-msgstr ""
+msgstr "Do you have certifications from other associations or federations?"
 
-#: .\templates\homepage\registrocic.html:229
-#: .\templates\homepage\registroinvitado.html:139
-#: .\templates\homepage\registroinvitado.html:180
-#: .\templates\homepage\registroinvitado.html:205
+#: .\templates\homepage\registrocic.html:240
+#: .\templates\homepage\registroinvitado.html:152
+#: .\templates\homepage\registroinvitado.html:193
+#: .\templates\homepage\registroinvitado.html:218
 msgid "Nombre de la certificación"
-msgstr ""
+msgstr "Name of Certification"
 
-#: .\templates\homepage\registrocic.html:241
-#: .\templates\homepage\registroinvitado.html:151
+#: .\templates\homepage\registrocic.html:252
+#: .\templates\homepage\registroinvitado.html:164
 msgid "Fecha de certificación"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:247
-msgid "Quién lo certifica"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:253
-msgid "País donde se certifico"
-msgstr ""
+msgstr "Certification Date"
 
 #: .\templates\homepage\registrocic.html:258
-#: .\templates\homepage\registroinvitado.html:169
-msgid "Entidad responsable de la certificación"
-msgstr ""
+msgid "Quién lo certifica"
+msgstr "Certification Trainer"
 
-#: .\templates\homepage\registrocic.html:265
-#: .\templates\homepage\registroinvitado.html:229
-msgid "De su Desempeño como Coach"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:267
-#: .\templates\homepage\registroinvitado.html:231
-msgid "Seleccione la Frecuencia con que ejerce el Coaching:"
-msgstr ""
+#: .\templates\homepage\registrocic.html:264
+msgid "País donde se certifico"
+msgstr "Certification Country"
 
 #: .\templates\homepage\registrocic.html:269
-#: .\templates\homepage\registroinvitado.html:233
-msgid "Actualmente ejerce el Coaching como profesión principal"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:182
+msgid "Entidad responsable de la certificación"
+msgstr "Entity of certification"
 
-#: .\templates\homepage\registrocic.html:270
-#: .\templates\homepage\registroinvitado.html:234
-msgid "Ejerce la profesión del coaching ocasionalmente"
-msgstr ""
+#: .\templates\homepage\registrocic.html:276
+#: .\templates\homepage\registroinvitado.html:242
+msgid "De su Desempeño como Coach"
+msgstr "Role as Coach"
 
-#: .\templates\homepage\registrocic.html:271
-#: .\templates\homepage\registroinvitado.html:235
-msgid "Nunca ha ejercido la profesión del coaching"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:275
-#: .\templates\homepage\registroinvitado.html:239
-msgid "Indique los años de experiencia ejerciendo la profesión del coaching"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:280
+#: .\templates\homepage\registrocic.html:278
 #: .\templates\homepage\registroinvitado.html:244
+msgid "Seleccione la Frecuencia con que ejerce el Coaching:"
+msgstr "How often do you work as a Coach?"
+
+#: .\templates\homepage\registrocic.html:285
+#: .\templates\homepage\registroinvitado.html:251
+msgid "Actualmente ejerce el Coaching como profesión principal"
+msgstr "Coaching is my main profession"
+
+#: .\templates\homepage\registrocic.html:286
+#: .\templates\homepage\registroinvitado.html:252
+msgid "Ejerce la profesión del coaching ocasionalmente"
+msgstr "I occasionally work as coach"
+
+#: .\templates\homepage\registrocic.html:287
+#: .\templates\homepage\registroinvitado.html:253
+msgid "Nunca ha ejercido la profesión del coaching"
+msgstr "I have never practiced the profession of coaching"
+
+#: .\templates\homepage\registrocic.html:291
+#: .\templates\homepage\registroinvitado.html:257
+msgid "Indique los años de experiencia ejerciendo la profesión del coaching"
+msgstr "Years of coaching experience"
+
+#: .\templates\homepage\registrocic.html:296
+#: .\templates\homepage\registroinvitado.html:262
 msgid "Ejerce el Coahing Como:"
 msgstr ""
 
-#: .\templates\homepage\registrocic.html:282
-#: .\templates\homepage\registroinvitado.html:246
+#: .\templates\homepage\registrocic.html:303
+#: .\templates\homepage\registroinvitado.html:269
 msgid "Coach externo"
-msgstr ""
+msgstr "Outer coach"
 
-#: .\templates\homepage\registrocic.html:283
-#: .\templates\homepage\registroinvitado.html:247
+#: .\templates\homepage\registrocic.html:304
+#: .\templates\homepage\registroinvitado.html:270
 msgid "Coach interno"
-msgstr ""
+msgstr "Inner coach"
 
-#: .\templates\homepage\registrocic.html:284
-#: .\templates\homepage\registroinvitado.html:248
+#: .\templates\homepage\registrocic.html:305
+#: .\templates\homepage\registroinvitado.html:271
 msgid "Coach y Mentoría"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:285
-#: .\templates\homepage\registroinvitado.html:249
-msgid "Líder Coach "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:286
-#: .\templates\homepage\registroinvitado.html:250
-msgid "Entrenador de Coaching "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:287
-#: .\templates\homepage\registroinvitado.html:251
-msgid "Coach speaker o conferenciante"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:288
-#: .\templates\homepage\registroinvitado.html:252
-msgid "Coach Investigator "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:289
-#: .\templates\homepage\registroinvitado.html:253
-msgid "Coach escritor "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:290
-#: .\templates\homepage\registrocic.html:302
-#: .\templates\homepage\registrocic.html:318
-#: .\templates\homepage\registrocic.html:344
-#: .\templates\homepage\registrocic.html:379
-#: .\templates\homepage\registrocic.html:400
-#: .\templates\homepage\registroinvitado.html:254
-#: .\templates\homepage\registroinvitado.html:266
-#: .\templates\homepage\registroinvitado.html:282
-#: .\templates\homepage\registroinvitado.html:308
-#: .\templates\homepage\registroinvitado.html:347
-msgid "Otros"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:294
-#: .\templates\homepage\registroinvitado.html:258
-msgid "SU DESEMPEÑO COMO COACH HA SIDO O ES A NIVEL DE:"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:296
-#: .\templates\homepage\registroinvitado.html:260
-msgid "Vida o personal "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:297
-#: .\templates\homepage\registroinvitado.html:261
-msgid "Transpersonal"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:298
-#: .\templates\homepage\registroinvitado.html:262
-msgid "Organizacional o empresarial "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:299
-#: .\templates\homepage\registroinvitado.html:263
-msgid "De negocios "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:300
-#: .\templates\homepage\registroinvitado.html:264
-msgid "Ejecutivo"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:301
-#: .\templates\homepage\registroinvitado.html:265
-msgid "De Equipos "
-msgstr ""
+msgstr "Coanch and Mentoring"
 
 #: .\templates\homepage\registrocic.html:306
-#: .\templates\homepage\registroinvitado.html:270
-msgid "¿DESEMPEÑA EL COACHING EN UN CAMPO ESPECÍFICO?:"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:272
+msgid "Líder Coach "
+msgstr "Leadership"
+
+#: .\templates\homepage\registrocic.html:307
+#: .\templates\homepage\registroinvitado.html:273
+msgid "Entrenador de Coaching "
+msgstr "Coach Trainer"
 
 #: .\templates\homepage\registrocic.html:308
-#: .\templates\homepage\registroinvitado.html:272
-msgid "Vida "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:274
+msgid "Coach speaker o conferenciante"
+msgstr "Coach speaker or lecturer"
 
 #: .\templates\homepage\registrocic.html:309
-#: .\templates\homepage\registroinvitado.html:273
-msgid "Salud "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:275
+msgid "Coach Investigator "
+msgstr "Coach Investigator "
 
 #: .\templates\homepage\registrocic.html:310
-#: .\templates\homepage\registroinvitado.html:274
-msgid "Educación "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:276
+msgid "Coach escritor "
+msgstr "Writer Coach"
 
 #: .\templates\homepage\registrocic.html:311
-#: .\templates\homepage\registroinvitado.html:275
-msgid "Deportivo "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:312
-#: .\templates\homepage\registroinvitado.html:276
-msgid "Teratológico "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:313
+#: .\templates\homepage\registrocic.html:328
+#: .\templates\homepage\registrocic.html:349
+#: .\templates\homepage\registrocic.html:380
+#: .\templates\homepage\registrocic.html:420
+#: .\templates\homepage\registrocic.html:446
 #: .\templates\homepage\registroinvitado.html:277
-msgid "Liderazgo "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:314
-#: .\templates\homepage\registroinvitado.html:278
-msgid "Emprendimiento "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:294
+#: .\templates\homepage\registroinvitado.html:315
+#: .\templates\homepage\registroinvitado.html:346
+#: .\templates\homepage\registroinvitado.html:390
+msgid "Otros"
+msgstr "Other"
 
 #: .\templates\homepage\registrocic.html:315
-#: .\templates\homepage\registroinvitado.html:279
-msgid "Empresarial "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:316
-#: .\templates\homepage\registroinvitado.html:280
-msgid "Religioso "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:317
 #: .\templates\homepage\registroinvitado.html:281
-msgid "Innovación "
-msgstr ""
+msgid "SU DESEMPEÑO COMO COACH HA SIDO O ES A NIVEL DE:"
+msgstr "WHAT AREAS DO YOU WORK AS A COACH?"
 
 #: .\templates\homepage\registrocic.html:322
-#: .\templates\homepage\registroinvitado.html:286
-msgid "EJERCE EL COACHING DE MANERA:"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:288
+msgid "Vida o personal "
+msgstr "Personal life "
+
+#: .\templates\homepage\registrocic.html:323
+#: .\templates\homepage\registroinvitado.html:289
+msgid "Transpersonal"
+msgstr "Transpersonal"
 
 #: .\templates\homepage\registrocic.html:324
-#: .\templates\homepage\registroinvitado.html:288
-msgid "Individual"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:290
+msgid "Organizacional o empresarial "
+msgstr "Corporative"
 
 #: .\templates\homepage\registrocic.html:325
-#: .\templates\homepage\registroinvitado.html:289
-msgid "En equipo permanentemente "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:291
+msgid "De negocios "
+msgstr "Business"
 
 #: .\templates\homepage\registrocic.html:326
-#: .\templates\homepage\registroinvitado.html:290
-msgid "En equipo ocasionalmente "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:292
+msgid "Ejecutivo"
+msgstr "Executive"
 
 #: .\templates\homepage\registrocic.html:327
-#: .\templates\homepage\registroinvitado.html:291
-msgid "Contratado por una empresa "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:328
-#: .\templates\homepage\registroinvitado.html:292
-msgid "Sub contratado como outsoursing "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:329
 #: .\templates\homepage\registroinvitado.html:293
-msgid "Otro"
-msgstr ""
+msgid "De Equipos "
+msgstr "Team "
 
-#: .\templates\homepage\registrocic.html:333
-#: .\templates\homepage\registroinvitado.html:297
-msgid "CUENTA USTED CON PUBLICACIONES RELACIONADAS CON EL COACHING:"
-msgstr ""
+#: .\templates\homepage\registrocic.html:332
+#: .\templates\homepage\registroinvitado.html:298
+msgid "¿DESEMPEÑA EL COACHING EN UN CAMPO ESPECÍFICO?:"
+msgstr "DO YOU WORK AS A COACH IN A SPECIFIC FIELD?:"
+
+#: .\templates\homepage\registrocic.html:339
+#: .\templates\homepage\registroinvitado.html:305
+msgid "Vida "
+msgstr "Life "
 
 #: .\templates\homepage\registrocic.html:340
-#: .\templates\homepage\registroinvitado.html:304
-msgid "Revistas"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:306
+msgid "Salud "
+msgstr "Health "
 
 #: .\templates\homepage\registrocic.html:341
-#: .\templates\homepage\registroinvitado.html:305
-msgid "Artículos de prensa "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:307
+msgid "Educación "
+msgstr "Education "
 
 #: .\templates\homepage\registrocic.html:342
-#: .\templates\homepage\registroinvitado.html:306
-msgid "Artículos por internet "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:308
+msgid "Deportivo "
+msgstr "Sports "
 
 #: .\templates\homepage\registrocic.html:343
-#: .\templates\homepage\registroinvitado.html:307
-msgid "No cuento con publicaciones relacionadas con el Coaching"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:309
+msgid "Teratológico "
+msgstr "Teratology "
 
-#: .\templates\homepage\registrocic.html:349
+#: .\templates\homepage\registrocic.html:344
+#: .\templates\homepage\registroinvitado.html:310
+msgid "Liderazgo "
+msgstr "Leadership "
+
+#: .\templates\homepage\registrocic.html:345
+#: .\templates\homepage\registroinvitado.html:311
+msgid "Emprendimiento "
+msgstr "Entrepreneurship "
+
+#: .\templates\homepage\registrocic.html:346
+#: .\templates\homepage\registroinvitado.html:312
+msgid "Empresarial "
+msgstr "Corporative "
+
+#: .\templates\homepage\registrocic.html:347
 #: .\templates\homepage\registroinvitado.html:313
-msgid "DESCRIBA BREVEMENTE SUS PUBLICACIONES: "
-msgstr ""
+msgid "Religioso "
+msgstr "Religious "
 
-#: .\templates\homepage\registrocic.html:355
+#: .\templates\homepage\registrocic.html:348
+#: .\templates\homepage\registroinvitado.html:314
+msgid "Innovación "
+msgstr "Innovation "
+
+#: .\templates\homepage\registrocic.html:353
 #: .\templates\homepage\registroinvitado.html:319
-msgid "¿HA PARTICIPADO EN EVENTOS INTERNACIONALES DE COACHING?:"
-msgstr ""
+msgid "EJERCE EL COACHING DE MANERA:"
+msgstr "IDENTIFY THE WAY YOU WORK AS A COACH:"
+
+#: .\templates\homepage\registrocic.html:360
+#: .\templates\homepage\registroinvitado.html:326
+msgid "Individual"
+msgstr "Particular"
+
+#: .\templates\homepage\registrocic.html:361
+#: .\templates\homepage\registroinvitado.html:327
+msgid "En equipo permanentemente "
+msgstr "Always with teams "
 
 #: .\templates\homepage\registrocic.html:362
-#: .\templates\homepage\registroinvitado.html:326
-msgid "Describa a continuación nombre y año de cada evento: "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:328
+msgid "En equipo ocasionalmente "
+msgstr "Occasionally with teams "
 
-#: .\templates\homepage\registrocic.html:366
-msgid "ÁREAS DE INTERÉS:"
-msgstr ""
+#: .\templates\homepage\registrocic.html:363
+#: .\templates\homepage\registroinvitado.html:329
+msgid "Contratado por una empresa "
+msgstr "Hired by a company "
 
-#: .\templates\homepage\registrocic.html:367
-msgid "Identiﬁque las áreas que sean de su interés personal:"
-msgstr ""
+#: .\templates\homepage\registrocic.html:364
+#: .\templates\homepage\registroinvitado.html:330
+msgid "Sub contratado como outsourcing "
+msgstr "As an outsourcing "
+
+#: .\templates\homepage\registrocic.html:365
+#: .\templates\homepage\registroinvitado.html:331
+msgid "Otro"
+msgstr "Other"
 
 #: .\templates\homepage\registrocic.html:369
-msgid "Lectura general "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:370
-msgid "Lectura especializada "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:371
-msgid "Escritura general o literaria "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:372
-msgid "Escritura especializada"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:373
-msgid "Deportes"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:374
-msgid "Meditación y espiritualidad "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:375
-msgid "Relaciones sociales y entretenimiento "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:335
+msgid "CUENTA USTED CON PUBLICACIONES RELACIONADAS CON EL COACHING:"
+msgstr "HAVE YOU PUBLISHED COACHING RELATED ARTICLES?"
 
 #: .\templates\homepage\registrocic.html:376
-msgid "Viajes"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:342
+msgid "Revistas"
+msgstr "Magazines"
 
 #: .\templates\homepage\registrocic.html:377
-msgid "Arte, música y pintura "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:343
+msgid "Artículos de prensa "
+msgstr "Press articles "
 
 #: .\templates\homepage\registrocic.html:378
-msgid "Tecnología"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:344
+msgid "Artículos por internet "
+msgstr "Internet articles "
 
-#: .\templates\homepage\registrocic.html:383
-#: .\templates\homepage\registroinvitado.html:330
-msgid ""
-"IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:"
-msgstr ""
+#: .\templates\homepage\registrocic.html:379
+#: .\templates\homepage\registroinvitado.html:345
+msgid "No cuento con publicaciones relacionadas con el Coaching"
+msgstr "I haven't published anything Coaching related"
 
 #: .\templates\homepage\registrocic.html:385
-#: .\templates\homepage\registroinvitado.html:332
-msgid "Oportunidades de empleo "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:386
-#: .\templates\homepage\registroinvitado.html:333
-msgid "Oportunidades para la investigación "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:387
-#: .\templates\homepage\registroinvitado.html:334
-msgid "Apoyo para publicaciones "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:388
-#: .\templates\homepage\registroinvitado.html:335
-msgid "Respaldo institucional "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:389
-#: .\templates\homepage\registroinvitado.html:336
-msgid "Imagen y prestigio internacional "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:390
-#: .\templates\homepage\registroinvitado.html:337
-msgid "Información bibliográﬁca actualizada "
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:351
+msgid "DESCRIBA BREVEMENTE SUS PUBLICACIONES: "
+msgstr "DESCRIBE BRIEFLY YOUR PUBLICATIONS: "
 
 #: .\templates\homepage\registrocic.html:391
-#: .\templates\homepage\registroinvitado.html:338
-msgid "Temas de actualidad sobre coaching y áreas aﬁnes o relacionadas "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:392
-#: .\templates\homepage\registroinvitado.html:339
-msgid "Aportes e innovaciones "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:393
-#: .\templates\homepage\registroinvitado.html:340
-msgid "Noticias y sucesos relacionados con el coaching "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:394
-#: .\templates\homepage\registroinvitado.html:341
-msgid "Intercambio social con otros miembros "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:395
-#: .\templates\homepage\registroinvitado.html:342
-msgid "Intercambio profesional y de experiencias con otros miembros "
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:396
-#: .\templates\homepage\registroinvitado.html:343
-msgid "Congresos, eventos especiales, conferencias"
-msgstr ""
-
-#: .\templates\homepage\registrocic.html:397
-#: .\templates\homepage\registroinvitado.html:344
-msgid "Certiﬁcaciones"
-msgstr ""
+#: .\templates\homepage\registroinvitado.html:357
+msgid "¿HA PARTICIPADO EN EVENTOS INTERNACIONALES DE COACHING?:"
+msgstr "HAVE YOU BEEN PART OF INTERNATIONAL COACHING EVENTS?:"
 
 #: .\templates\homepage\registrocic.html:398
-#: .\templates\homepage\registroinvitado.html:345
+#: .\templates\homepage\registroinvitado.html:364
+msgid "Describa a continuación nombre y año de cada evento: "
+msgstr "Describe below name and year of each event: "
+
+#: .\templates\homepage\registrocic.html:402
+msgid "ÁREAS DE INTERÉS:"
+msgstr "AREAS OF INTEREST:"
+
+#: .\templates\homepage\registrocic.html:403
+msgid "Identiﬁque las áreas que sean de su interés personal:"
+msgstr "Identify areas that are of personal interest:"
+
+#: .\templates\homepage\registrocic.html:410
+msgid "Lectura general "
+msgstr "General reading "
+
+#: .\templates\homepage\registrocic.html:411
+msgid "Lectura especializada "
+msgstr "Specialized reading "
+
+#: .\templates\homepage\registrocic.html:412
+msgid "Escritura general o literaria "
+msgstr "General or literary reading "
+
+#: .\templates\homepage\registrocic.html:413
+msgid "Escritura especializada"
+msgstr "Specialized writing"
+
+#: .\templates\homepage\registrocic.html:414
+msgid "Deportes"
+msgstr "Sports"
+
+#: .\templates\homepage\registrocic.html:415
+msgid "Meditación y espiritualidad "
+msgstr "Meditation and spirituality "
+
+#: .\templates\homepage\registrocic.html:416
+msgid "Relaciones sociales y entretenimiento "
+msgstr "Social relations and entertainment "
+
+#: .\templates\homepage\registrocic.html:417
+msgid "Viajes"
+msgstr "Travelling"
+
+#: .\templates\homepage\registrocic.html:418
+msgid "Arte, música y pintura "
+msgstr "Art, music and paiting "
+
+#: .\templates\homepage\registrocic.html:419
+msgid "Tecnología"
+msgstr "Technology"
+
+#: .\templates\homepage\registrocic.html:424
+#: .\templates\homepage\registroinvitado.html:368
+msgid ""
+"IDENTIFIQUE LO QUE DESEARÍA QUE LA CIC LE OFRECIERA A USTED COMO MIEMBRO:"
+msgstr "IDENTIFY YOUR EXPECTATIONS AS A CIC MEMBER:"
+
+#: .\templates\homepage\registrocic.html:431
+#: .\templates\homepage\registroinvitado.html:375
+msgid "Oportunidades de empleo "
+msgstr "Employment opportunities "
+
+#: .\templates\homepage\registrocic.html:432
+#: .\templates\homepage\registroinvitado.html:376
+msgid "Oportunidades para la investigación "
+msgstr "Investigation opportunities "
+
+#: .\templates\homepage\registrocic.html:433
+#: .\templates\homepage\registroinvitado.html:377
+msgid "Apoyo para publicaciones "
+msgstr "Support for publications "
+
+#: .\templates\homepage\registrocic.html:434
+#: .\templates\homepage\registroinvitado.html:378
+msgid "Respaldo institucional "
+msgstr "Institutional support "
+
+#: .\templates\homepage\registrocic.html:435
+#: .\templates\homepage\registroinvitado.html:379
+msgid "Imagen y prestigio internacional "
+msgstr "International image and prestige "
+
+#: .\templates\homepage\registrocic.html:436
+#: .\templates\homepage\registroinvitado.html:380
+msgid "Información bibliográﬁca actualizada "
+msgstr "Updated bibliographic resources "
+
+#: .\templates\homepage\registrocic.html:437
+#: .\templates\homepage\registroinvitado.html:381
+msgid "Temas de actualidad sobre coaching y áreas aﬁnes o relacionadas "
+msgstr "Hot topics on coaching and related areas "
+
+#: .\templates\homepage\registrocic.html:438
+#: .\templates\homepage\registroinvitado.html:382
+msgid "Aportes e innovaciones "
+msgstr "Contributions and innovations "
+
+#: .\templates\homepage\registrocic.html:439
+#: .\templates\homepage\registroinvitado.html:383
+msgid "Noticias y sucesos relacionados con el coaching "
+msgstr "Coaching related news and events "
+
+#: .\templates\homepage\registrocic.html:440
+#: .\templates\homepage\registroinvitado.html:384
+msgid "Intercambio social con otros miembros "
+msgstr "Social exchange with other members "
+
+#: .\templates\homepage\registrocic.html:441
+#: .\templates\homepage\registroinvitado.html:385
+msgid "Intercambio profesional y de experiencias con otros miembros "
+msgstr "Professional and experience exchange with other members "
+
+#: .\templates\homepage\registrocic.html:442
+#: .\templates\homepage\registroinvitado.html:386
+msgid "Congresos, eventos especiales, conferencias"
+msgstr "Conferences and Special events"
+
+#: .\templates\homepage\registrocic.html:443
+#: .\templates\homepage\registroinvitado.html:387
+msgid "Certiﬁcaciones"
+msgstr "Certifications"
+
+#: .\templates\homepage\registrocic.html:444
+#: .\templates\homepage\registroinvitado.html:388
 msgid "Talleres, cursos y seminarios "
-msgstr ""
+msgstr "Courses and seminars "
 
-#: .\templates\homepage\registrocic.html:399
-#: .\templates\homepage\registroinvitado.html:346
+#: .\templates\homepage\registrocic.html:445
+#: .\templates\homepage\registroinvitado.html:389
 msgid "Intercambios sociales, deportivos y recreacionales "
-msgstr ""
+msgstr "Social, sports and recreational exchange "
 
-#: .\templates\homepage\registroinvitado.html:123
+#: .\templates\homepage\registroinvitado.html:35
+msgid "Regístrate como coach de la CIC"
+msgstr "Register as a CIC coach"
+
+#: .\templates\homepage\registroinvitado.html:136
 msgid "Código de inscripción"
-msgstr ""
+msgstr "Registration code"
 
-#: .\templates\homepage\registroinvitado.html:129
+#: .\templates\homepage\registroinvitado.html:142
 msgid "Razón que lo motiva a registrarse en CIC"
-msgstr ""
+msgstr "Why do you want to be a CIC member?"
 
-#: .\templates\homepage\registroinvitado.html:135
+#: .\templates\homepage\registroinvitado.html:148
 msgid "Datos de Certificación"
 msgstr ""
 
-#: .\templates\homepage\registroinvitado.html:157
+#: .\templates\homepage\registroinvitado.html:170
 msgid "Quien lo certifica"
 msgstr ""
 
-#: .\templates\homepage\registroinvitado.html:175
+#: .\templates\homepage\registroinvitado.html:188
 msgid ""
 "Si posee otras certificaciones adicionales en Coaching, por favor descríbalas"
-msgstr ""
+msgstr "If you have additional certifications in Coaching, please describe them"
 
-#: .\templates\homepage\registroinvitado.html:177
+#: .\templates\homepage\registroinvitado.html:190
 msgid "Certificación (2):"
-msgstr ""
+msgstr "Certificacion (2):"
 
-#: .\templates\homepage\registroinvitado.html:186
-#: .\templates\homepage\registroinvitado.html:211
+#: .\templates\homepage\registroinvitado.html:199
+#: .\templates\homepage\registroinvitado.html:224
 msgid "Avalada por"
-msgstr ""
+msgstr "Supported by"
 
-#: .\templates\homepage\registroinvitado.html:192
-#: .\templates\homepage\registroinvitado.html:217
+#: .\templates\homepage\registroinvitado.html:205
+#: .\templates\homepage\registroinvitado.html:230
 msgid "Año de Certificación"
-msgstr ""
+msgstr "Year of Certificacion"
 
-#: .\templates\homepage\registroinvitado.html:202
+#: .\templates\homepage\registroinvitado.html:215
 msgid "Certificación (3):"
-msgstr ""
+msgstr "Certificacion (3):"
 
 #: .\templates\homepage\servicios.html:36
 msgid "de nuestros Cursos"
