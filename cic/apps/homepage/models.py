@@ -19,6 +19,7 @@ class quienesSomos(models.Model):
 	que_es_cic = models.TextField()
 	quienes_forman = models.TextField()
 	por_que_nace = models.TextField()
+
 	class Meta:
 		verbose_name = ("Que es CIC, Quienes la forman")
 		verbose_name_plural = ("Que es CIC, Quienes la forman")
@@ -28,13 +29,16 @@ class quienesSomosOtros(models.Model):
 	mision = models.TextField()
 	vision = models.TextField()
 	valores = HTMLField()
+
 	class Meta:
 		verbose_name = ("Mision, visión y valores")
 		verbose_name_plural = ("Mision, visión y valores")
 
+
 class seccionesQuienesSomos(models.Model):
 	paisesIntroduccion = models.TextField()
 	codigo_etica = models.TextField()
+
 	class Meta:
 		verbose_name = ("Texto Paises, Codigo de Etica")
 		verbose_name_plural = ("Texto Paises, Codigo de Etica")
@@ -58,7 +62,7 @@ class paisesCic(models.Model):
 class miembrosRegistro(models.Model):
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
 	modificado_en = models.DateTimeField(auto_now=True)
-	numero_registro= models.CharField(max_length=100, blank=True)
+	numero_registro = models.CharField(max_length=100, blank=True)
 	nombre_completo = models.CharField(max_length=200)
 	identificacion = models.CharField(max_length=50)
 	fecha_nacimiento = models.CharField(max_length=50)
@@ -104,8 +108,10 @@ class miembrosRegistro(models.Model):
 	eventos_internacionales = models.TextField(blank=True)
 	areas_interes_personal = models.TextField()
 	que_desea_delacic = models.TextField()
+
 	def __unicode__(self):
 		return self.nombre_completo
+
 	class Meta:
 		verbose_name = ("Registro de Coach certificado con la CIC")
 		verbose_name_plural = ("Registros de Coaches certificados con la CIC")
@@ -113,7 +119,7 @@ class miembrosRegistro(models.Model):
 
 class invitadoRegistro(models.Model):
 	creado_en = models.DateTimeField(auto_now_add=True, editable=False)
-	numero_registro= models.CharField(max_length=100, blank=True)
+	numero_registro = models.CharField(max_length=100, blank=True)
 	modificado_en = models.DateTimeField(auto_now=True)
 	nombre_completo = models.CharField(max_length=200)
 	identificacion = models.CharField(max_length=50)
@@ -137,14 +143,14 @@ class invitadoRegistro(models.Model):
 	quienes_certifican = models.CharField(max_length=300)
 	pais_certificacion = models.CharField(max_length=300)
 	entidad_certificacion = models.CharField(max_length=300)
-	certificacion_dos = models.CharField(max_length=300,blank=True)
-	avalada_por = models.CharField(max_length=300,blank=True)
-	ano_dos = models.CharField(max_length=300,blank=True)
-	pais_dos = models.CharField(max_length=300,blank=True)
-	certificacion_tres = models.CharField(max_length=300,blank=True)
-	avalada_por_tres = models.CharField(max_length=300,blank=True)
-	ano_tres = models.CharField(max_length=300,blank=True)
-	pais_tres = models.CharField(max_length=300,blank=True)
+	certificacion_dos = models.CharField(max_length=300, blank=True)
+	avalada_por = models.CharField(max_length=300, blank=True)
+	ano_dos = models.CharField(max_length=300, blank=True)
+	pais_dos = models.CharField(max_length=300, blank=True)
+	certificacion_tres = models.CharField(max_length=300, blank=True)
+	avalada_por_tres = models.CharField(max_length=300, blank=True)
+	ano_tres = models.CharField(max_length=300, blank=True)
+	pais_tres = models.CharField(max_length=300, blank=True)
 	coaching_profesion_principal = models.TextField()
 	experiencia_ejerciendo_coaching = models.CharField(max_length=100)
 	ejerce_coaching_como = models.TextField()
@@ -155,14 +161,18 @@ class invitadoRegistro(models.Model):
 	descripcion_publicaciones = models.TextField(blank=True)
 	eventos_internacionales = models.TextField(blank=True)
 	que_desea_delacic = models.TextField()
+
 	def __unicode__(self):
 		return self.nombre_completo
+
 	class Meta:
 		verbose_name = ("Registro de Coach Invitado")
 		verbose_name_plural = ("Registros de Coaches Invitados")
 
+
 def _createcode(size=9, chars=string.ascii_uppercase + string.digits):
-	    return ''.join(random.choice(chars) for _ in range(size))	
+	return ''.join(random.choice(chars) for _ in range(size))
+
 
 class miembros(models.Model):
 	TIPO_DE_MIEMBRO = (('comun', 'Miembro común'), ('directivo', 'Directivo'))
@@ -173,11 +183,14 @@ class miembros(models.Model):
 	registro_certificado_cic = models.ForeignKey(miembrosRegistro, blank=True, null=True)
 	registro_invitado = models.ForeignKey(invitadoRegistro, blank=True, null=True)
 	acceso_directorio = models.CharField(max_length=10, default=_createcode, help_text="No modificar.Auto-generado")
+
 	class Meta:
 		verbose_name = ("Miembro de la CIC")
 		verbose_name_plural = ("Miembros de la CIC")
+
 	def __unicode__(self):
 		return self.numero_registro
+
 
 class representantesInternacionales(models.Model):
 	paises = models.CharField(max_length=150)
@@ -203,7 +216,7 @@ class certificacionesIntroduccion(models.Model):
 
 
 class certificacionesLista(models.Model):
-	TIPO = (('certificacion','Certificacion'),('especializacion','Especialización'))
+	TIPO = (('certificacion', 'Certificacion'), ('especializacion', 'Especialización'))
 	titulo = models.CharField(max_length=200)
 	cuerpo_general = HTMLField()
 	tipo = models.CharField(choices=TIPO, max_length=40)
@@ -229,6 +242,7 @@ class servicios(models.Model):
 	asesoria_texto = HTMLField()
 	cursos_texto = HTMLField()
 	conferencias = HTMLField()
+
 	class Meta:
 		verbose_name = ("Asesorias, Texto Cursos, Texto Conferencias")
 		verbose_name_plural = ("Asesorias, Texto Cursos, Texto Conferencias")
@@ -288,6 +302,7 @@ class videosInicio(models.Model):
 
 	def __unicode__(self):
 		return self.video_titulo
+
 
 class CorreoBoletin(models.Model):
 	""""Lista de correos ingresados por los clientes en la pagina de inicio para el boletin"""

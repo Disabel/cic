@@ -1,5 +1,6 @@
 from cic.apps.homepage.forms import boletinForm
 
+
 def include_boletinForm(request):
 	newsletter = True
 	if request.method == 'POST':
@@ -8,5 +9,5 @@ def include_boletinForm(request):
 			form.save()
 			newsletter = False
 	else:
-		form = boletinForm()	
-	return {'boletinform':form,'newsletter':newsletter}
+		form = boletinForm()
+	return {'boletinform': form, 'newsletter': newsletter}
