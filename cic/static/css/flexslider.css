@@ -39,7 +39,7 @@
   width: 60%;
   vertical-align: top;
 }
-.flexslider .slides img {width: 39%; display: inline-block; max-height: 550px;}
+.flexslider .slides img {width: 39%;   margin-top: 12px;display: inline-block; max-height: 550px;}
 
 .flex-caption p{
   padding: 10px 56px;

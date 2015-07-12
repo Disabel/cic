@@ -38,7 +38,7 @@
 	<header id="home" class="cabecera">
 		<div class="wrapper">
 			<div class="logomenu">
-				<img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Comunidad Integrativa de Coaches">
+				<a href="{% url 'homepageindex' %}"><img class="mainlogo" src="{% static 'img/logo.png' %}" alt="Logo de Comunidad Integrativa de Coaches"></a>	
 			</div>	 
 			<div class="derecha">
 				<div class="arribadelmenu">
@@ -116,7 +116,7 @@
 					<li class="servicios"><a href="{% url 'homepageservicios' %}">{% trans 'Servicios' %}</a></li><span>|</span>
 					<li class="eventos"><a href="{% url 'nextevents' %}">{% trans 'Eventos' %}</a></li><span>|</span>
 					<li class="recursos"><a href="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</a></li><span>|</span>
-					<li class="contacto"><a href="#">{% trans 'Contacto' %}</a></li>
+					<li class="contacto"><a href="{% url 'homepagecontact' %}">{% trans 'Contacto' %}</a></li>
 				</ul>	
 				<div class="abajofooter">
 					<div class="esloganfooter">{% trans 'Un espacio para el acercamiento y la Integración.' %}</div>	

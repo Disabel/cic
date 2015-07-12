@@ -65,7 +65,7 @@ Comunidad Integrativa de Coaches
 								<h2>{{ image.titulo }}</h2>
 								<p>{{ image.texto_contenido }}	</p>
 							</div>						
-							<img src="{{ MEDIA_URL }}{{image.imagen}}" alt="image.tutulo">
+								<img src="{{ MEDIA_URL }}{{image.imagen}}" alt="image.tutulo">		
 							<!-- HTML Credit Code for Can Stock Photo-->	
 						</li>
 					{% endfor %}
@@ -94,7 +94,7 @@ Comunidad Integrativa de Coaches
 									<img src="{% static 'img/logo.png' %}" alt="Logo entrada sin imagen"/>
 								{% endif %}	
 							</div>				
-							<div class="texto">{{ entrada.content }}...</div>
+							<div class="texto">{{ entrada.content|safe }}...</div>
 							<div class="readmore">
 								<span>{% trans 'Leer más' %}</span>
 							</div>

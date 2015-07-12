@@ -186,6 +186,17 @@ $(document).ready(function(){
 	    	$('.especifique5').addClass('notShow');
 	    }
         });
+  $('#otro6').on('click',function(){
+  	var opcion = document.getElementById('otro6');
+  		if(opcion.checked){
+  			$('#otrotexto6').removeClass('notShow');
+  			$('.especifique6').removeClass('notShow');
+	      }
+	    else{
+	    	$('#otrotexto6').addClass('notShow');
+	    	$('.especifique6').addClass('notShow');
+	    }
+        });  
 
   $('#otro7').on('click',function(){
   	var opcion = document.getElementById('otro7');

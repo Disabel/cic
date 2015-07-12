@@ -71,3 +71,4 @@ translator.register(seccionesQuienesSomos, seccionesQuienesSomosTranslationOptio
 translator.register(conferenciaslista, conferenciaslistaTranslationOptions)
 translator.register(videosInicio, videosInicioTranslationOptions)
 translator.register(miembros, miembrosTranslationOptions)
+translator.register(sliderInicio, sliderInicioTranslationOptions)

@@ -13,6 +13,8 @@ class sliderInicio(models.Model):
 	titulo = models.CharField(max_length=70)
 	texto_contenido = models.TextField()
 	imagen = models.ImageField(upload_to='sliderItems')
+	def __unicode__(self):
+		return self.titulo
 
 
 class quienesSomos(models.Model):
@@ -54,6 +56,8 @@ class paisesCic(models.Model):
 	nombre = models.CharField(max_length=70)
 	imagen_bandera = models.ImageField(upload_to='imgbanderas')
 
+	def __unicode__(self):
+		return self.nombre
 	class Meta:
 		verbose_name = ("Pais CIC")
 		verbose_name_plural = ("Paises de la CIC")
@@ -196,6 +200,9 @@ class representantesInternacionales(models.Model):
 	paises = models.CharField(max_length=150)
 	nombre = models.CharField(max_length=150)
 
+	def __unicode__(self):
+		return self.nombre
+		
 	class Meta:
 		verbose_name = ("Representantes Internacionales")
 		verbose_name_plural = ("Representantes Internacionales")
@@ -308,3 +315,5 @@ class CorreoBoletin(models.Model):
 	""""Lista de correos ingresados por los clientes en la pagina de inicio para el boletin"""
 	correo = models.EmailField(max_length=50)
 	nombre = models.CharField(max_length=100)
+	def __unicode__(self):
+		return self.correo
