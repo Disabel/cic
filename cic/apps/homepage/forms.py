@@ -2,7 +2,7 @@
 # -*- encoding: utf-8 -*-
 from django import forms
 from .models import miembrosRegistro, invitadoRegistro, CorreoBoletin
-
+from django.utils.translation import ugettext_lazy as _
 #from django.forms.models import inlineformset_factory
 
 
@@ -32,18 +32,20 @@ class MiembroInvitadoForm(forms.ModelForm):
 	class Meta:
 		model = invitadoRegistro
 
+
 class codigoDirectorioForm(forms.Form):
-	codigo_directorio = forms.CharField(widget=forms.TextInput(attrs={'placeholder': 'Código para Ingresar'}))
-	
+	codigo_directorio = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Código para Ingresar')}))
+
+
 class solicitudForm(forms.Form):
-	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre y apellido'}))
-	pais_origen = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Pais de Origen'}))
-	codigo_area = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Código de área'}))
-	telefono_movil = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Móvil'}))
-	telefono_fijo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Fijo'}))
-	correo_principal = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}), required=False)
-	correo_alterno = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}), required=False)
-	nombre_empresa = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Si la solicitud es institucional'}), required=False)
+	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Su nombre y apellido')}))
+	pais_origen = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'País de Origen')}))
+	codigo_area = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Código de área')}))
+	telefono_movil = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Su Número de teléfono Móvil')}))
+	telefono_fijo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Su Número de teléfono Fijo')}))
+	correo_principal = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': _('nick@email.com')}), required=False)
+	correo_alterno = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': _('nick@email.com')}), required=False)
+	nombre_empresa = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Si la solicitud es institucional')}), required=False)
 	mensaje = forms.CharField(widget=forms.Textarea)
 	website = forms.CharField(widget=HoneypotWidget, required=False)
 
@@ -71,22 +73,23 @@ class solicitudForm(forms.Form):
 
 
 class boletinForm(forms.ModelForm):
-	correo = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': 'user@domain.com'}))
-	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre'}))
-	
+	correo = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': _('user@domain.com')}))
+	nombre = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Su nombre')}))
+
 	class Meta:
 		model = CorreoBoletin
-		fields = ['correo','nombre']	
+		fields = ['correo', 'nombre']
+
 
 class contactForm(forms.Form):
-	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su nombre y apellido'}))
-	pais_origen = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Pais de Origen'}))
-	codigo_area = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Código de área'}))
-	telefono_fijo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Fijo'}))
-	telefono_movil = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Su Número de teléfono Móvil'}))
-	correo_principal = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}), required=False)
-	correo_alterno = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': ' nick@email.com'}), required=False)
-	nombre_empresa = forms.CharField(widget=forms.TextInput(attrs={'placeholder': ' Si la solicitud es institucional'}), required=False)
+	nombre_apellido = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _('Su nombre y apellido')}))
+	pais_origen = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'País de Origen')}))
+	codigo_area = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Código de área')}))
+	telefono_fijo = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Su Número de teléfono Fijo')}))
+	telefono_movil = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Su Número de teléfono Móvil')}))
+	correo_principal = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': _(u'nick@email.com')}), required=False)
+	correo_alterno = forms.EmailField(widget=forms.TextInput(attrs={'placeholder': _(u'nick@email.com')}), required=False)
+	nombre_empresa = forms.CharField(widget=forms.TextInput(attrs={'placeholder': _(u'Si la solicitud es institucional')}), required=False)
 	mensaje = forms.CharField(widget=forms.Textarea)
 	website = forms.CharField(widget=HoneypotWidget, required=False)
 
@@ -114,11 +117,11 @@ class contactForm(forms.Form):
 
 
 class peticionForm(forms.Form):
-	nombre = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Su nombre'}))
-	empresa = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Empresa a la que pertenece'}))
-	cargo = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Cargo que ocupa en la empresa'}))
-	email = forms.EmailField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'nick@email.com'}))
-	telefono = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': 'Su número de teléfono'}))
+	nombre = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': _(u'Su nombre')}))
+	empresa = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': _(u'Empresa a la que pertenece')}))
+	cargo = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': _(u'Cargo que ocupa en la empresa')}))
+	email = forms.EmailField(max_length=100, widget=forms.TextInput(attrs={'placeholder': _(u'nick@email.com')}))
+	telefono = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'placeholder': _(u'Su número de teléfono')}))
 	pais = forms.CharField(max_length=100)
 	comentario = forms.CharField(max_length=200, widget=forms.Textarea(attrs={'rows': 5, 'cols': 30}), required=False)
 	website = forms.CharField(widget=HoneypotWidget, required=False)

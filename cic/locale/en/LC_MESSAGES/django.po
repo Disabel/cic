@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-13 12:29-0430\n"
+"POT-Creation-Date: 2015-07-13 12:57-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: DURANJO WEB <INFO@DURANJO.COM>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -166,6 +166,65 @@ msgstr ""
 msgid "Parametros"
 msgstr ""
 
+#: .\apps\homepage\forms.py:37
+#, fuzzy
+msgid "Código para Ingresar"
+msgstr "Area Code"
+
+#: .\apps\homepage\forms.py:41 .\apps\homepage\forms.py:85
+msgid "Su nombre y apellido"
+msgstr "Full Name:"
+
+#: .\apps\homepage\forms.py:42 .\apps\homepage\forms.py:86
+msgid "País de Origen"
+msgstr "Country of residence"
+
+#: .\apps\homepage\forms.py:43 .\apps\homepage\forms.py:87
+#: .\templates\homepage\registrocic.html:92
+#: .\templates\homepage\registroinvitado.html:94
+msgid "Código de área"
+msgstr "Area Code"
+
+#: .\apps\homepage\forms.py:44 .\apps\homepage\forms.py:89
+msgid "Su Número de teléfono Móvil"
+msgstr "Mobile Phone"
+
+#: .\apps\homepage\forms.py:45 .\apps\homepage\forms.py:88
+msgid "Su Número de teléfono Fijo"
+msgstr "Other Phone"
+
+#: .\apps\homepage\forms.py:46 .\apps\homepage\forms.py:47
+#: .\apps\homepage\forms.py:90 .\apps\homepage\forms.py:91
+#: .\apps\homepage\forms.py:123
+msgid "nick@email.com"
+msgstr ""
+
+#: .\apps\homepage\forms.py:48 .\apps\homepage\forms.py:92
+msgid "Si la solicitud es institucional"
+msgstr "Institutional"
+
+#: .\apps\homepage\forms.py:76
+msgid "user@domain.com"
+msgstr ""
+
+#: .\apps\homepage\forms.py:77 .\apps\homepage\forms.py:120
+#, fuzzy
+msgid "Su nombre"
+msgstr "Name"
+
+#: .\apps\homepage\forms.py:121
+msgid "Empresa a la que pertenece"
+msgstr "Your company"
+
+#: .\apps\homepage\forms.py:122
+msgid "Cargo que ocupa en la empresa"
+msgstr "Company's position"
+
+#: .\apps\homepage\forms.py:124
+#, fuzzy
+msgid "Su número de teléfono"
+msgstr "Other phone number"
+
 #: .\templates\base.html:42 .\templates\homepage\registrocic.html:34
 msgid "Regístrate como coach"
 msgstr "Register as Coach"
@@ -182,7 +241,7 @@ msgstr "About Us"
 
 #: .\templates\base.html:75 .\templates\base.html.py:85
 #: .\templates\base.html:109 .\templates\homepage\certificaciones.html:63
-#: .\templates\homepage\index.html:44
+#: .\templates\homepage\index.html:43
 msgid "Certificaciones"
 msgstr "Certifications"
 
@@ -192,12 +251,12 @@ msgid "Servicios"
 msgstr "Services"
 
 #: .\templates\base.html:77 .\templates\base.html.py:87
-#: .\templates\base.html:111 .\templates\homepage\index.html:78
+#: .\templates\base.html:111 .\templates\homepage\index.html:77
 msgid "Eventos"
 msgstr "Events"
 
 #: .\templates\base.html:78 .\templates\base.html.py:88
-#: .\templates\base.html:112 .\templates\homepage\index.html:52
+#: .\templates\base.html:112 .\templates\homepage\index.html:51
 msgid "Recursos Informativos"
 msgstr "Information Resources"
 
@@ -642,43 +701,43 @@ msgstr ""
 msgid "Banking and financial issues"
 msgstr "banco y financiero problemas"
 
-#: .\templates\homepage\index.html:28
+#: .\templates\homepage\index.html:27
 msgid "Un espacio para el"
 msgstr "Space for "
 
-#: .\templates\homepage\index.html:28
+#: .\templates\homepage\index.html:27
 msgid "Acercamiento"
 msgstr "Closeness"
 
-#: .\templates\homepage\index.html:29
+#: .\templates\homepage\index.html:28
 msgid "y la "
 msgstr "and "
 
-#: .\templates\homepage\index.html:29
+#: .\templates\homepage\index.html:28
 msgid "Integración"
 msgstr "Integration"
 
-#: .\templates\homepage\index.html:36
+#: .\templates\homepage\index.html:35
 msgid "¿Eres un coach certificado?"
 msgstr "Are you a certified coach?"
 
-#: .\templates\homepage\index.html:39
+#: .\templates\homepage\index.html:38
 msgid "Beneficios de Registrarme"
 msgstr "Benefits"
 
-#: .\templates\homepage\index.html:47
+#: .\templates\homepage\index.html:46
 msgid "Conocer Más"
 msgstr "Learn More"
 
-#: .\templates\homepage\index.html:55
+#: .\templates\homepage\index.html:54
 msgid "Ver Recursos"
 msgstr "View all"
 
-#: .\templates\homepage\index.html:84
+#: .\templates\homepage\index.html:83
 msgid "Últimos Artículos"
 msgstr "Lastest Entries"
 
-#: .\templates\homepage\index.html:99
+#: .\templates\homepage\index.html:98
 msgid "Leer más"
 msgstr "Read More"
 
@@ -858,11 +917,6 @@ msgstr "Exact Address"
 #: .\templates\homepage\registroinvitado.html:88
 msgid "Apartado postal"
 msgstr "Postal Code"
-
-#: .\templates\homepage\registrocic.html:92
-#: .\templates\homepage\registroinvitado.html:94
-msgid "Código de área"
-msgstr "Area Code"
 
 #: .\templates\homepage\registrocic.html:98
 #: .\templates\homepage\registroinvitado.html:100
@@ -1555,6 +1609,32 @@ msgstr ""
 #: .\templates\zinnia\skeleton.html:47
 msgid "Search"
 msgstr ""
+
+#~ msgid "^quienes-somos/$"
+#~ msgstr "^who-we-are/$"
+
+#~ msgid "^quienes-somos/directorio$"
+#~ msgstr "^who-we-are/directory$"
+
+#, fuzzy
+#~ msgid "^recursos-informativos/$"
+#~ msgstr "Information Resources"
+
+#, fuzzy
+#~ msgid "^certificaciones/$"
+#~ msgstr "Certifications"
+
+#, fuzzy
+#~ msgid "^servicios/$"
+#~ msgstr "Services"
+
+#, fuzzy
+#~ msgid "^servicios/conferencias$"
+#~ msgstr "Conferences"
+
+#, fuzzy
+#~ msgid "^contacto/$"
+#~ msgstr "Contact Us"
 
 #~ msgid "Certificación"
 #~ msgstr "Certification"
