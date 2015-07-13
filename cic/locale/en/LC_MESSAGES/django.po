@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-13 12:15-0430\n"
+"POT-Creation-Date: 2015-07-13 12:29-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: DURANJO WEB <INFO@DURANJO.COM>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -230,6 +230,18 @@ msgstr "Back to Calendar"
 msgid "¡No hay eventos para este día!"
 msgstr "No Events"
 
+#: .\templates\calendarium\calendar_month.html:24
+msgid "<< Mes anterior"
+msgstr "<< Previous month"
+
+#: .\templates\calendarium\calendar_month.html:25
+msgid "Mes siguiente >>"
+msgstr "Next month >>"
+
+#: .\templates\calendarium\calendar_month.html:26
+msgid "Hoy"
+msgstr "Today"
+
 #: .\templates\calendarium\calendar_month.html:31
 msgid ""
 "Puede hacer clic en alguno de los eventos para ver más detalles e "
@@ -361,9 +373,8 @@ msgid "Próximos eventos"
 msgstr "Next Events"
 
 #: .\templates\calendarium\menuagenda.html:4
-#, fuzzy
 msgid "Calendario"
-msgstr "Go to Calendar"
+msgstr "Calendar"
 
 #: .\templates\calendarium\recent_events.html:23
 msgid "¡Registrate ya!"

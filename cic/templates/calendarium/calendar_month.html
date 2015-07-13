@@ -21,9 +21,9 @@ Agenda | Comunidad Integrativa de Coaches
     <span>Filtrar por categorias:</span>{% include "calendarium/partials/category_list.html" %}
     <h1>{{ date|date:"F Y" }}</h1>
     <form class="calendarform" action="." method="post">{% csrf_token %}
-        <input type="submit" name="previous" value="<< Mes anterior" />        
-        <input type="submit" name="next" value="Mes siguiente >>" />
-        <input type="submit" name="today" value="Hoy" />
+        <input type="submit" name="previous" value="{% trans '<< Mes anterior' %}" />
+        <input type="submit" name="next" value="{% trans 'Mes siguiente >>' %}" />
+        <input type="submit" name="today" value="{% trans 'Hoy' %}" />
         <!-- {# {% if request.user.is_staff %}
             <a href="{% url "calendar_event_create" %}">Crear nuevo evento</a>
         {% endif %} #} -->
