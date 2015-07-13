@@ -75,3 +75,8 @@ h2 span{
 .mdirectorio .nombre{
 	font-weight: bold;
 }
+@media screen and (max-width: 900px){
+.mdirectorio {
+  display: block;
+  width: 90%;
+  }

@@ -104,3 +104,23 @@ h2 span{
      list-style-image: url(../../img/iconlist.png);
       margin: 5px 0;
   }
+
+@media screen and (max-width: 1100px){
+  h2{
+    text-align: center;
+  }
+  .submenu li {
+    text-align: center;
+    display: inherit;}  
+  h2 span {
+    display: block;
+    font-size: 1.3em;
+  }    
+  .contenidocursos, .contenidoconferencias, .info p{
+    width: 97%;
+    padding-left: 3%;}  
+  .infoform {
+    width: 95%;
+    margin-left: 5%; 
+    }   
+  }

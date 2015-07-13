@@ -143,3 +143,40 @@ display: inline-block;
 text-align: justify;
   margin-top: 20px;
 }
+
+@media screen and (max-width: 1100px){
+	h2{
+		text-align: center;
+	}
+	.submenu li {
+	  text-align: center;
+	  display: inherit;}	
+	h2 span {
+	  display: block;
+	  font-size: 1.3em;
+	} 	 
+	.contenidosobrecic {
+	  width: 97%;
+	  padding-left: 3%;}  	 	
+	.sidebar{
+		display: none;
+	}	
+ 
+	.equipo li {
+	  display: block;
+	  width: inherit;
+	  height: inherit;
+	  overflow: inherit;
+	}
+	.introPaises {
+	  padding: 0 18px;
+	}
+	.paiscic {
+	  width: 31%;
+	}
+}
+@media screen and (max-width: 480px){
+	.paiscic {
+	  width: 94%;
+	}
+}

@@ -88,12 +88,16 @@
 							<li class="recursos"><a href="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</a></li><span>|</span>
 							<li class="contacto"><a href="{% url 'homepagecontact' %}">{% trans 'Contacto' %}</a></li>
 						</ul>	
-				<!--		<select> 
+						<select> 
 							<option value="" selected="selected">Menú</option> 
-							<option value="{% url 'homepageindex' %}">Home</option>
-							<option value="{% url 'homepageaboutus' %}">About us</option>
-							<option value="/blog">Blog</option>
-						</select>	--> 	
+							<option value="{% url 'homepageindex' %}">{% trans 'Inicio' %}</option>
+							<option value="{% url 'homepageaboutus' %}">{% trans 'Quienes Somos' %}</option>
+							<option value="{% url 'homepagecertificaciones' %}">{% trans 'Certificaciones' %}</option>
+							<option value="{% url 'homepageservicios' %}">{% trans 'Servicios' %}</option>	
+							<option value="{% url 'nextevents' %}">{% trans 'Eventos' %}</option>	
+							<option value="{% url 'homepagerecursos' %}">{% trans 'Recursos Informativos' %}</option>	
+							<option value="{% url 'homepagecontact' %}">{% trans 'Contacto' %}</option>					
+						</select>		
 					{% endblock%}
 				</nav>
 			</div>

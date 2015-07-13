@@ -1,7 +1,9 @@
 nav .index a{
   color: #eb4923;
 }
-
+.sliderindex{
+  margin: 40px 0;
+}
 .imagenhome{
 	width: 100%;
   position: relative;
@@ -194,13 +196,14 @@ h2{
   background: #EAEBEC;
 }
 .eventoProximo .descripcion{
-  text-align: left;
+  text-align: center;
   text-indent: 1em;
 }
 .eventoProximo .descripcion .titulo{
   font-weight: bold;
-   height: 41px;
+  height: 41px;
   overflow: hidden;
+  text-align: center;
 }
 .eventoProximo .subtitulo{
    height: 23px;
@@ -219,4 +222,55 @@ h2{
 }
 .eventoProximo .fechaprecio{
   margin-top: 5px;
+}
+
+@media screen and (max-width: 1000px){
+  .trescuadros .cuadroblanco{
+      width: 48%;
+}  
+.trescuadros {
+  margin-top: 0;
+    text-align: center;
+}
+  .maspabajo{
+    margin: 0;
+  }
+.trescuadros .certificaciones p{
+  margin: 0;
+}
+.trescuadros .certificaciones{
+  height: 341px !important;
+}
+}
+@media screen and (max-width: 800px){
+.trescuadros .cuadroblanco {
+  width: 97%;
+}
+.trescuadros .cuadro{
+  height: auto !important;
+}
+.trescuadros .cuadro .cuadroboton{
+  margin-bottom: 15px;
+}
+.eventoProximo {
+  width: 99%;}
+ .entradas {
+  width: 100%;
+} 
+.entradas article {
+  display: inline-block;
+  width: 98%;}
+.video {
+  width: 80%;
+  margin: 0 auto;
+  display: block; } 
+  .eslogan{
+    position: inherit;
+    bottom: inherit;
+    left: inherit;
+    text-align: center;
+  }
+.eslogan .linea2{
+  width: inherit;
+}  
 }
