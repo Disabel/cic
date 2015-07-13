@@ -188,7 +188,7 @@ def conferencias(request):
 		serviciostxt = servicios.objects.get(pk=1)
 	except Exception:
 		serviciostxt = None
-	print serviciostxt.conferencias
+	#print serviciostxt.conferencias
 	try:
 		conferenciaslist = conferenciaslista.objects.all()
 	except Exception:
