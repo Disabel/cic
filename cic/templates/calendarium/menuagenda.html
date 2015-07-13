@@ -1,4 +1,5 @@
+{% load i18n %}
 <ul class="menuagenda">
-	<li class="eventoproximo"><a href="{% url 'nextevents' %}">Próximos eventos</a></li><span class="separadorMenu">|</span>
-	<li class="calendario"><a href="{% url 'calendar_current_month' %}">Calendario</a></li><span class="separadorMenu">
+	<li class="eventoproximo"><a href="{% url 'nextevents' %}">{% trans 'Próximos eventos' %}</a></li><span class="separadorMenu">|</span>
+	<li class="calendario"><a href="{% url 'calendar_current_month' %}">{% trans 'Calendario' %}</a></li><span class="separadorMenu">
 </ul>

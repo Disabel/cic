@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from django.contrib import admin
 from actions import export_as_csv_action
-from .models import CorreoBoletin, miembros,miembrosRegistro, invitadoRegistro, textosInicio, sliderInicio, videosInicio, quienesSomos, conferenciaslista, quienesSomosOtros, seccionesQuienesSomos, servicios, cursoslista, certificacionesLista, paisesCic, certificacionesIntroduccion, representantesInternacionales
+from .models import CorreoBoletin, miembros, miembrosRegistro, invitadoRegistro, textosInicio, sliderInicio, videosInicio, quienesSomos, conferenciaslista, quienesSomosOtros, seccionesQuienesSomos, servicios, cursoslista, certificacionesLista, paisesCic, certificacionesIntroduccion, representantesInternacionales
 
 
 class emailsAdmin(admin.ModelAdmin):

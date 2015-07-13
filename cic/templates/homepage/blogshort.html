@@ -1,4 +1,5 @@
 {% load thumbnail %}
+{% load i18n %}
 {% load staticfiles %}
 <section class="entradas">
 <h2>Blog</h2>
@@ -27,7 +28,7 @@
 	<div class="lineagris"></div>
 	{% endfor %}
 	<div class="centrarDiv">
-		<a href="/blog"><div class="botonMas">Ver todas</div></a>
+		<a href="/blog"><div class="botonMas">{% trans 'Ver todas' %}</div></a>
 	</div>
 </div>
 </section>

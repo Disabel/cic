@@ -111,10 +111,10 @@
             </div>
         </form>
         <div class="imagenEvento">
-            <img src="{{object.image.url}}" alt="{{object.image_alt}}">
+            <img src="{{object.imageindex.url}}" alt="{{object.image_alt}}">
         </div>
     </aside>
-    <a href="{% url 'calendar_current_month' %}" class="enlaceAgenda">Volver al calendario</a>
+    <a href="{% url 'calendar_current_month' %}" class="enlaceAgenda">{% trans 'Volver al calendario' %}</a>
     {% block jsBottom %}
     <script type="text/javascript">
     $(document).ready(function() {

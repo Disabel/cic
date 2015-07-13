@@ -1,21 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# DURANJO WEB <INFO@DURANJO.COM>, 2015.
 #
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-13 07:59-0430\n"
+"POT-Creation-Date: 2015-07-13 12:15-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Last-Translator: DURANJO WEB <INFO@DURANJO.COM>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
 
 #: .\apps\calendarium\constants.py:14
 msgid "Yearly"
@@ -166,55 +166,55 @@ msgstr ""
 msgid "Parametros"
 msgstr ""
 
-#: .\templates\base.html:52 .\templates\homepage\registrocic.html:34
+#: .\templates\base.html:42 .\templates\homepage\registrocic.html:34
 msgid "Regístrate como coach"
 msgstr "Register as Coach"
 
-#: .\templates\base.html:83 .\templates\base.html.py:93
-#: .\templates\base.html:117
+#: .\templates\base.html:73 .\templates\base.html.py:83
+#: .\templates\base.html:107
 msgid "Inicio"
 msgstr "Home"
 
-#: .\templates\base.html:84 .\templates\base.html.py:94
-#: .\templates\base.html:118
+#: .\templates\base.html:74 .\templates\base.html.py:84
+#: .\templates\base.html:108
 msgid "Quienes Somos"
 msgstr "About Us"
 
-#: .\templates\base.html:85 .\templates\base.html.py:95
-#: .\templates\base.html:119 .\templates\homepage\certificaciones.html:63
+#: .\templates\base.html:75 .\templates\base.html.py:85
+#: .\templates\base.html:109 .\templates\homepage\certificaciones.html:63
 #: .\templates\homepage\index.html:44
 msgid "Certificaciones"
 msgstr "Certifications"
 
-#: .\templates\base.html:86 .\templates\base.html.py:96
-#: .\templates\base.html:120
+#: .\templates\base.html:76 .\templates\base.html.py:86
+#: .\templates\base.html:110
 msgid "Servicios"
 msgstr "Services"
 
-#: .\templates\base.html:87 .\templates\base.html.py:97
-#: .\templates\base.html:121 .\templates\homepage\index.html:78
+#: .\templates\base.html:77 .\templates\base.html.py:87
+#: .\templates\base.html:111 .\templates\homepage\index.html:78
 msgid "Eventos"
 msgstr "Events"
 
-#: .\templates\base.html:88 .\templates\base.html.py:98
-#: .\templates\base.html:122 .\templates\homepage\index.html:52
+#: .\templates\base.html:78 .\templates\base.html.py:88
+#: .\templates\base.html:112 .\templates\homepage\index.html:52
 msgid "Recursos Informativos"
 msgstr "Information Resources"
 
-#: .\templates\base.html:89 .\templates\base.html.py:99
-#: .\templates\base.html:123 .\templates\homepage\contacto.html:24
+#: .\templates\base.html:79 .\templates\base.html.py:89
+#: .\templates\base.html:113 .\templates\homepage\contacto.html:24
 msgid "Contacto"
 msgstr "Contact Us"
 
-#: .\templates\base.html:126
+#: .\templates\base.html:116
 msgid "Un espacio para el acercamiento y la Integración."
 msgstr "Space for  closeness and integration"
 
-#: .\templates\base.html:147
+#: .\templates\base.html:137
 msgid "Suscríbete a Nuestro Boletín"
 msgstr "Subscribe to our Newsletter"
 
-#: .\templates\base.html:169
+#: .\templates\base.html:159
 msgid ""
 "Comunidad Integrativa de Coaches © Copyright 2015 Todos los Derechos "
 "Reservados"
@@ -222,6 +222,7 @@ msgstr ""
 "Comunidad Integrativa de Coaches © Copyright 2015. All rights reserved."
 
 #: .\templates\calendarium\calendar_day.html:24
+#: .\templates\calendarium\event_detail.html:117
 msgid "Volver al calendario"
 msgstr "Back to Calendar"
 
@@ -235,31 +236,31 @@ msgid ""
 "inscribirse."
 msgstr "For Details, click on Events:"
 
-#: .\templates\calendarium\calendar_month.html:35
+#: .\templates\calendarium\calendar_month.html:34
 msgid "Lunes"
 msgstr "Monday"
 
-#: .\templates\calendarium\calendar_month.html:36
+#: .\templates\calendarium\calendar_month.html:35
 msgid "Martes"
 msgstr "Tuesday"
 
-#: .\templates\calendarium\calendar_month.html:37
+#: .\templates\calendarium\calendar_month.html:36
 msgid "Miércoles"
 msgstr "Wednesday"
 
-#: .\templates\calendarium\calendar_month.html:38
+#: .\templates\calendarium\calendar_month.html:37
 msgid "Jueves"
 msgstr "Thursday"
 
-#: .\templates\calendarium\calendar_month.html:39
+#: .\templates\calendarium\calendar_month.html:38
 msgid "Viernes"
 msgstr "Friday"
 
-#: .\templates\calendarium\calendar_month.html:40
+#: .\templates\calendarium\calendar_month.html:39
 msgid "Sábado"
 msgstr "Saturday"
 
-#: .\templates\calendarium\calendar_month.html:41
+#: .\templates\calendarium\calendar_month.html:40
 msgid "Domingo"
 msgstr "Sunday"
 
@@ -275,7 +276,7 @@ msgstr ""
 
 #: .\templates\calendarium\event_detail.html:28
 msgid "Inicio:"
-msgstr "Start"
+msgstr "Start:"
 
 #: .\templates\calendarium\event_detail.html:29
 msgid "Final:"
@@ -287,7 +288,7 @@ msgstr "Duration "
 
 #: .\templates\calendarium\event_detail.html:31
 msgid "Categoría:"
-msgstr "Category"
+msgstr "Category:"
 
 #: .\templates\calendarium\event_detail.html:40
 #: .\templates\calendarium\upcoming_events.html:39
@@ -354,9 +355,15 @@ msgstr "Message"
 msgid "Save"
 msgstr ""
 
+#: .\templates\calendarium\menuagenda.html:3
 #: .\templates\calendarium\recent_events.html:22
 msgid "Próximos eventos"
 msgstr "Next Events"
+
+#: .\templates\calendarium\menuagenda.html:4
+#, fuzzy
+msgid "Calendario"
+msgstr "Go to Calendar"
 
 #: .\templates\calendarium\recent_events.html:23
 msgid "¡Registrate ya!"
@@ -395,6 +402,10 @@ msgstr "Conferences"
 #: .\templates\homepage\servicios.html:30
 msgid "Asesorías"
 msgstr "Advisory"
+
+#: .\templates\homepage\blogshort.html:31
+msgid "Ver todas"
+msgstr "See all"
 
 #: .\templates\homepage\certificaciondetalle.html:28
 #: .\templates\homepage\conferenciadetalle.html:33
@@ -471,7 +482,7 @@ msgstr "Company Name:"
 #: .\templates\homepage\contacto.html:91
 #: .\templates\homepage\cursodetalle.html:102
 msgid "Mensaje: "
-msgstr "Message"
+msgstr "Message: "
 
 #: .\templates\homepage\certificaciones.html:29
 msgid "Certificaciones CIC"
@@ -689,7 +700,8 @@ msgid "¿Por qué "
 msgstr "Why our community"
 
 #: .\templates\homepage\quienessomos.html:41
-msgid "nace esta comunidad"
+#, fuzzy
+msgid "nace esta comunidad?"
 msgstr "was created?"
 
 #: .\templates\homepage\quienessomos.html:45

@@ -31,7 +31,6 @@ Agenda | Comunidad Integrativa de Coaches
     <p class="centrartxt">{% trans 'Puede hacer clic en alguno de los eventos para ver más detalles e inscribirse.' %}</p>
     <table>
         <tr>
-            <th class="semanaCounter"></th>
             <th data-title="Lun">{% trans 'Lunes' %}</td>
             <th data-title="Mar">{% trans 'Martes' %}</td>
             <th data-title="Mie">{% trans 'Miércoles' %}</td>
@@ -42,8 +41,7 @@ Agenda | Comunidad Integrativa de Coaches
         </tr>
         {% for week in month %}
             {% if week %}
-                <tr>
-                    <td class="semanaCounter"><a href="{{ date|get_week_URL:week.0.0 }}">Semana {{date|get_week:week.0.0}}</a></td>
+                <tr>                    
                     {% for day, occurrences, current in week %}
                         <td>
                             {% if day != 0 %}
