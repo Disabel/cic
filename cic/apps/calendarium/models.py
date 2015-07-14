@@ -203,7 +203,6 @@ class Event(EventModelMixin):
         verbose_name=_('Imagen Index'),
         upload_to='calendarium_index',
         #related_name='event_image',
-        null=True, blank=True,
     )
 
     image_alt = models.CharField(

@@ -256,7 +256,7 @@ class EventDetailView(DetailView):
             cd = form.cleaned_data
             self.object = self.get_object()
             asunto = u'Por: %s Empresa: %s - asistencia a evento %s | Fecha: %s' % (cd['nombre'], cd['empresa'], self.object, self.object.start)
-            content = u'Nombre: %s \nEmail contacto: %s \nEmpresa: %s \nPaís: %s \nProvincia: %s \nCargo: %s \nTelefono: %s \nEvento que desea asistir: %s \nFecha inicio: %s \nFecha final: %s\n Comentario: %s \nAceptó los términos y condiciones' % (cd['nombre'], cd['email'], cd['empresa'], cd['pais'], cd['provincia'], cd['cargo'], cd['telefono'], self.object, self.object.start, self.object.end, cd['comentario'])
+            content = u'Nombre: %s \nEmail contacto: %s \nEmpresa: %s \nCargo: %s \nTelefono: %s \nEvento que desea asistir: %s \nFecha inicio: %s \nFecha final: %s\n Comentario: %s' % (cd['nombre'], cd['email'], cd['empresa'], cd['cargo'], cd['telefono'], self.object, self.object.start, self.object.end, cd['comentario'])
             email = EmailMessage(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'], headers={'Reply-To': cd['email']})
             email.send()
             success = True
