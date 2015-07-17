@@ -247,8 +247,12 @@ def registroinvitado(request):
 		form = MiembroInvitadoForm(request.POST)
 		if form.is_valid():
 			success = True
-			#cd = form.cleaned_data
 			form.save()
+			cd = form.cleaned_data			
+			asunto = u'[REGISTRO] - Nuevo Registro de : %s ' % (cd['nombre_completo'])
+			content = u'Registro de Invitado: %s Se Registró a la CIC como Coach Invitado, para ver su información entrar en Registro Invitado en el admin de la Página Web.\n ' % (cd['nombre_completo'])
+			send_mail(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'])
+
 	else:
 		form = MiembroInvitadoForm()
 	ctx = {'form': form, 'success': success}

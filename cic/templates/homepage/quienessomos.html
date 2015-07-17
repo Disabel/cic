@@ -3,10 +3,10 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'Conoce todo sobre La Comunidad Integrativa de Coaches, quienes la conforman, visión y misión' %}">
 {% endblock%}
 {% block title %}
-Quienes Somos
+{% trans 'Quienes Somos' %}
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/about.css">

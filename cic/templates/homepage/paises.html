@@ -3,10 +3,10 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'Somos una comunidad de coaches con presencia activa en Iberoamérica y algunos paisesde relevancia en Europa y América del norte; generando encuentros que fomenten la integración de los más destacados talentos del mundo del coaching' %}">
 {% endblock%}
 {% block title %}
-Paises Comunidad Integrativa de Coaches
+{% trans 'Paises Comunidad Integrativa de Coaches' %}
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/about.css">

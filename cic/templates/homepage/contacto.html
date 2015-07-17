@@ -3,10 +3,10 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'Contacto a la CIC' %}">
 {% endblock%}
 {% block title %}
-Contacto Comunidad Integrativa de Coaches
+{% trans 'Contacto Comunidad Integrativa de Coaches' %}
 {% endblock %}
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/homepage/contacto.css">

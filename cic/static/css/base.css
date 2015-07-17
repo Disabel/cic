@@ -21,14 +21,18 @@ html, body{
 }
 .derecha{
 	display: inline-block;
-	width: 78%;
+	width: 73%;
 	vertical-align: top;
 	text-align: right;
 }
 .barraNavegacion{
-background-color: #eaebec;
+  background-color: #eaebec;
   margin-top: 15px;
-  padding-right: 29px;
+  padding-right: 11px;
+}
+.barraNavegacion ul
+{
+	  padding-left: 11px;
 }
 .arribadelmenu{
   display: inline-block;
@@ -70,7 +74,7 @@ background-color: #eaebec;
 	display: inline-block;
 }
 .logomenu img{
-	  width: 212px;
+	width: 264px;
 }
 .registrateboton{
   color: #eb4923;

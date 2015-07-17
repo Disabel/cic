@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-07-13 12:57-0430\n"
+"POT-Creation-Date: 2015-07-17 11:22-0430\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: DURANJO WEB <INFO@DURANJO.COM>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: \n"
 
 #: .\apps\calendarium\constants.py:14
 msgid "Yearly"
@@ -81,88 +81,88 @@ msgstr "Fin de repeticion"
 msgid "Titulo"
 msgstr "Title"
 
-#: .\apps\calendarium\models.py:174 .\apps\calendarium\models.py:343
-#: .\apps\calendarium\models.py:457
+#: .\apps\calendarium\models.py:174 .\apps\calendarium\models.py:342
+#: .\apps\calendarium\models.py:456
 msgid "Muletilla"
 msgstr "Muletilla"
 
-#: .\apps\calendarium\models.py:181 .\apps\calendarium\models.py:463
+#: .\apps\calendarium\models.py:181 .\apps\calendarium\models.py:462
 msgid "Sub-titulo"
 msgstr "Sub-title"
 
-#: .\apps\calendarium\models.py:186 .\apps\calendarium\models.py:468
+#: .\apps\calendarium\models.py:186 .\apps\calendarium\models.py:467
 msgid "lugar"
 msgstr "Place"
 
-#: .\apps\calendarium\models.py:193 .\apps\calendarium\models.py:475
+#: .\apps\calendarium\models.py:193 .\apps\calendarium\models.py:474
 msgid "precio"
 msgstr "Cost"
 
-#: .\apps\calendarium\models.py:197 .\apps\calendarium\models.py:479
+#: .\apps\calendarium\models.py:197 .\apps\calendarium\models.py:478
 msgid "Imagen"
 msgstr "Image"
 
-#: .\apps\calendarium\models.py:203 .\apps\calendarium\models.py:485
+#: .\apps\calendarium\models.py:203 .\apps\calendarium\models.py:484
 msgid "Imagen Index"
 msgstr ""
 
-#: .\apps\calendarium\models.py:210 .\apps\calendarium\models.py:492
+#: .\apps\calendarium\models.py:209 .\apps\calendarium\models.py:491
 msgid "Alt de imagen index"
 msgstr ""
 
-#: .\apps\calendarium\models.py:338 .\apps\calendarium\models.py:558
+#: .\apps\calendarium\models.py:337 .\apps\calendarium\models.py:557
 msgid "Nombre"
 msgstr "Name"
 
-#: .\apps\calendarium\models.py:348
+#: .\apps\calendarium\models.py:347
 msgid "Color"
 msgstr ""
 
-#: .\apps\calendarium\models.py:355
+#: .\apps\calendarium\models.py:354
 msgid "Pariente"
 msgstr ""
 
-#: .\apps\calendarium\models.py:388
+#: .\apps\calendarium\models.py:387
 msgid "Evento"
 msgstr ""
 
-#: .\apps\calendarium\models.py:403
+#: .\apps\calendarium\models.py:402
 msgid "Tipo de relaciones"
 msgstr ""
 
-#: .\apps\calendarium\models.py:427
+#: .\apps\calendarium\models.py:426
 msgid "Created by"
 msgstr ""
 
-#: .\apps\calendarium\models.py:434
+#: .\apps\calendarium\models.py:433
 msgid "Event"
 msgstr ""
 
-#: .\apps\calendarium\models.py:439
+#: .\apps\calendarium\models.py:438
 msgid "Original start"
 msgstr ""
 
-#: .\apps\calendarium\models.py:443
+#: .\apps\calendarium\models.py:442
 msgid "Original end"
 msgstr ""
 
-#: .\apps\calendarium\models.py:447
+#: .\apps\calendarium\models.py:446
 msgid "Cancelled"
 msgstr ""
 
-#: .\apps\calendarium\models.py:452
+#: .\apps\calendarium\models.py:451
 msgid "Title"
 msgstr ""
 
-#: .\apps\calendarium\models.py:563
+#: .\apps\calendarium\models.py:562
 msgid "description"
 msgstr ""
 
-#: .\apps\calendarium\models.py:567
+#: .\apps\calendarium\models.py:566
 msgid "Frecuencia"
 msgstr ""
 
-#: .\apps\calendarium\models.py:573
+#: .\apps\calendarium\models.py:572
 msgid "Parametros"
 msgstr ""
 
@@ -235,7 +235,7 @@ msgid "Inicio"
 msgstr "Home"
 
 #: .\templates\base.html:74 .\templates\base.html.py:84
-#: .\templates\base.html:108
+#: .\templates\base.html:108 .\templates\homepage\quienessomos.html:9
 msgid "Quienes Somos"
 msgstr "About Us"
 
@@ -447,6 +447,16 @@ msgstr "Go to Calendar"
 msgid "Conocer más"
 msgstr "Learn More"
 
+#: .\templates\homepage\asesorias.html:6 .\templates\homepage\asesorias.html:9
+#: .\templates\homepage\asesorias.html:30
+#: .\templates\homepage\asesorias.html:34
+#: .\templates\homepage\conferenciadetalle.html:31
+#: .\templates\homepage\conferencias.html:30
+#: .\templates\homepage\cursodetalle.html:31
+#: .\templates\homepage\servicios.html:30
+msgid "Asesorías"
+msgstr "Advisory"
+
 #: .\templates\homepage\asesorias.html:28
 #: .\templates\homepage\conferenciadetalle.html:29
 #: .\templates\homepage\conferencias.html:28
@@ -464,18 +474,21 @@ msgstr "Courses"
 msgid "Conferencias"
 msgstr "Conferences"
 
-#: .\templates\homepage\asesorias.html:30
-#: .\templates\homepage\asesorias.html:34
-#: .\templates\homepage\conferenciadetalle.html:31
-#: .\templates\homepage\conferencias.html:30
-#: .\templates\homepage\cursodetalle.html:31
-#: .\templates\homepage\servicios.html:30
-msgid "Asesorías"
-msgstr "Advisory"
-
 #: .\templates\homepage\blogshort.html:31
 msgid "Ver todas"
 msgstr "See all"
+
+#: .\templates\homepage\certificaciondetalle.html:6
+#: .\templates\homepage\certificaciones.html:6
+msgid ""
+"CIC ofrece diferentes Certificaciones y Especializaciones para Coaches en "
+"diferentes áreas"
+msgstr "CIC offers various certifications and specializations in different areas for Coaches"
+
+#: .\templates\homepage\certificaciondetalle.html:9
+#: .\templates\homepage\certificaciones.html:9
+msgid "Certificaciones - Comunidad Integrativa de Coaches"
+msgstr "Certifications and Specializations"
 
 #: .\templates\homepage\certificaciondetalle.html:28
 #: .\templates\homepage\conferenciadetalle.html:33
@@ -623,6 +636,14 @@ msgstr "Articles"
 msgid "Libros"
 msgstr "Books"
 
+#: .\templates\homepage\codigoetica.html:6
+msgid "Código de ética de la Comunidad Integrativa de Coaches"
+msgstr "Code of ethics"
+
+#: .\templates\homepage\codigoetica.html:9
+msgid "Codigo de etica Comunidad Integrativa de Coaches"
+msgstr "Code of ethics"
+
 #: .\templates\homepage\codigoetica.html:27
 #: .\templates\homepage\directorio.html:29 .\templates\homepage\paises.html:27
 #: .\templates\homepage\quienessomos.html:26
@@ -648,6 +669,16 @@ msgstr "CIC Countries"
 msgid "Código de ética"
 msgstr "Code of ethics"
 
+#: .\templates\homepage\conferenciadetalle.html:6
+#: .\templates\homepage\conferencias.html:6
+msgid "Conferencias Ofrecidas por la Comunidad Integrativa de Coaches"
+msgstr "Conferences offered by our Community"
+
+#: .\templates\homepage\conferenciadetalle.html:9
+#: .\templates\homepage\conferencias.html:9
+msgid "Conferencias - Comunidad Integrativa de Coaches"
+msgstr "CIC Conferences"
+
 #: .\templates\homepage\conferencias.html:34
 msgid "Conferencias CIC"
 msgstr "CIC Conferences"
@@ -661,11 +692,37 @@ msgstr "CIC"
 msgid "de nuestras Conferencias"
 msgstr "Conferences"
 
+#: .\templates\homepage\contacto.html:6
+msgid "Contacto a la CIC"
+msgstr "Contact Us"
+
+#: .\templates\homepage\contacto.html:9
+msgid "Contacto Comunidad Integrativa de Coaches"
+msgstr "Contact Us"
+
 #: .\templates\homepage\contacto.html:58
 #: .\templates\homepage\registrocic.html:104
 #: .\templates\homepage\registroinvitado.html:106
 msgid "Teléfono móvil"
 msgstr "Mobile Phone"
+
+#: .\templates\homepage\cursodetalle.html:6
+#, fuzzy
+msgid "Cursos de la Comunidad Integrativa de Coaches"
+msgstr "our community"
+
+#: .\templates\homepage\cursodetalle.html:9
+#, fuzzy
+msgid "Cursos - Comunidad Integrativa de Coaches"
+msgstr "our community"
+
+#: .\templates\homepage\directorio.html:7
+msgid "Directorio de Miembros de la Comunidad Integrativa de Coaches"
+msgstr "Comunidad Integrativa de Coaches Members Directory"
+
+#: .\templates\homepage\directorio.html:10
+msgid "Directorio CIC"
+msgstr "Directory"
 
 #: .\templates\homepage\directorio.html:35
 msgid "Integrantes"
@@ -697,9 +754,33 @@ msgstr ""
 "Are you a member of the CIC community? contact us in order to get your "
 "access code."
 
+#: .\templates\homepage\eventos.html:6
+msgid ""
+"Calendario de eventos, Cursos, Conferencias, Asesorias que ofrece la "
+"Comunidad Integrativa de Coaches "
+msgstr "Calendar of events, courses and conferences offered by The CIC"
+
+#: .\templates\homepage\eventos.html:8
+msgid " Eventos de la Comunidad Integrativa de Coaches"
+msgstr "Calendar of Events"
+
 #: .\templates\homepage\eventos.html:26
 msgid "Banking and financial issues"
 msgstr "banco y financiero problemas"
+
+#: .\templates\homepage\index.html:6
+msgid ""
+"La Comunidad Integrativa de Coaches es una organización profesional sin ﬁnes "
+"de lucro, que agrupa a Coaches Certiﬁcados de España fundamentalmente y de "
+"otras latitudes del mundo sin exclusión alguna, dedicados a la práctica del "
+"Coaching"
+msgstr ""
+"CIC is a professional not-for-profit organization that brings together "
+"certified Coaches all around the world."
+
+#: .\templates\homepage\index.html:9 .\templates\homepage\quienessomos.html:96
+msgid "Comunidad Integrativa de Coaches"
+msgstr "our community"
 
 #: .\templates\homepage\index.html:27
 msgid "Un espacio para el"
@@ -741,6 +822,18 @@ msgstr "Lastest Entries"
 msgid "Leer más"
 msgstr "Read More"
 
+#: .\templates\homepage\paises.html:6
+msgid ""
+"Somos una comunidad de coaches con presencia activa en Iberoamérica y "
+"algunos paisesde relevancia en Europa y América del norte; generando "
+"encuentros que fomenten la integración de los más destacados talentos del "
+"mundo del coaching"
+msgstr "We are a community of coaches with active presence in Latin America and some countries of importance in Europe and North America; generating meetings to promote the integration of the most outstanding talents in the world of coaching"
+
+#: .\templates\homepage\paises.html:9
+msgid "Paises Comunidad Integrativa de Coaches"
+msgstr "CIC Countries"
+
 #: .\templates\homepage\paises.html:36
 msgid "Países"
 msgstr "Countries"
@@ -748,6 +841,12 @@ msgstr "Countries"
 #: .\templates\homepage\paises.html:36
 msgid "donde actúa la CIC"
 msgstr "where CIC is acting"
+
+#: .\templates\homepage\quienessomos.html:6
+msgid ""
+"Conoce todo sobre La Comunidad Integrativa de Coaches, quienes la conforman, "
+"visión y misión"
+msgstr "All about CIC - Comunidad Integrativa de Coaches"
 
 #: .\templates\homepage\quienessomos.html:33
 msgid "¿Qué es"
@@ -822,13 +921,29 @@ msgstr "Values"
 msgid "Únete a la"
 msgstr "Join"
 
-#: .\templates\homepage\quienessomos.html:96
-msgid "Comunidad Integrativa de Coaches"
-msgstr "our community"
-
 #: .\templates\homepage\quienessomos.html:97
 msgid "Regístrate Aquí"
 msgstr "Register Here"
+
+#: .\templates\homepage\recursos.html:7
+msgid ""
+"Recursos Informativos como noticias, videos y herramientas que te brinda la  "
+"Comunidad Integrativa de Coaches"
+msgstr "Informative Resources, videos, news, recommended books"
+
+#: .\templates\homepage\recursos.html:10
+msgid "Recursos Informativos - Comunidad Integrativa de Coaches"
+msgstr "Information Resources - CIC"
+
+#: .\templates\homepage\registro.html:6
+msgid "Registro de Coaches a la comunidad CIC"
+msgstr "Registration for coaches"
+
+#: .\templates\homepage\registro.html:9
+#: .\templates\homepage\registrocic.html:9
+#: .\templates\homepage\registroinvitado.html:9
+msgid "Registro - Comunidad Integrativa de Coaches"
+msgstr "CIC Registration"
 
 #: .\templates\homepage\registro.html:29
 msgid "Regístrate "
@@ -849,6 +964,12 @@ msgstr "Registration for CIC certified coaches"
 #: .\templates\homepage\registro.html:32
 msgid "Registro para coaches Invitados o No certificados por CIC"
 msgstr "Registration for guest coaches or not certified by CIC"
+
+#: .\templates\homepage\registrocic.html:6
+msgid ""
+"Registro de Coaches certificados por la CIC a la comunidad Integrativa de "
+"Coaches"
+msgstr "Registration for CIC certified coaches"
 
 #: .\templates\homepage\registrocic.html:28
 #: .\templates\homepage\registroinvitado.html:29
@@ -1423,6 +1544,12 @@ msgstr "Courses and seminars "
 msgid "Intercambios sociales, deportivos y recreacionales "
 msgstr "Social, sports and recreational exchange "
 
+#: .\templates\homepage\registroinvitado.html:6
+msgid ""
+"Registro de Coaches Invitados o No certificados por la CIC a la comunidad "
+"Integrativa de Coaches"
+msgstr "Registration for guest coaches or not certified by CIC"
+
 #: .\templates\homepage\registroinvitado.html:35
 msgid "Regístrate como coach de la CIC"
 msgstr "Register as a CIC coach"
@@ -1466,6 +1593,14 @@ msgstr "Year of Certificacion"
 #: .\templates\homepage\registroinvitado.html:215
 msgid "Certificación (3):"
 msgstr "Certificacion (3):"
+
+#: .\templates\homepage\servicios.html:6
+msgid "Servicios Ofrecidos por la Comunidad Integrativa de Coaches"
+msgstr "Services Offered by our Community"
+
+#: .\templates\homepage\servicios.html:9
+msgid "Servicios - Comunidad Integrativa de Coaches"
+msgstr "CIC Services"
 
 #: .\templates\homepage\servicios.html:36
 msgid "de nuestros Cursos"
@@ -1609,6 +1744,9 @@ msgstr ""
 #: .\templates\zinnia\skeleton.html:47
 msgid "Search"
 msgstr ""
+
+#~ msgid "Conoce los Paises que Integran La Comunidad Integrativa de Coahces"
+#~ msgstr "CIC Contries"
 
 #~ msgid "^quienes-somos/$"
 #~ msgstr "^who-we-are/$"

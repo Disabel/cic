@@ -4,10 +4,10 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'Recursos Informativos como noticias, videos y herramientas que te brinda la  Comunidad Integrativa de Coaches' %}">
 {% endblock%}
 {% block title %}
-Recursos Informativos - Comunidad Integrativa de Coaches
+{% trans 'Recursos Informativos - Comunidad Integrativa de Coaches' %}
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/recursos.css">

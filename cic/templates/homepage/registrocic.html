@@ -3,10 +3,10 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'Registro de Coaches certificados por la CIC a la comunidad Integrativa de Coaches' %}">
 {% endblock%}
 {% block title %}
-Registro - Comunidad Integrativa de Coaches
+{% trans 'Registro - Comunidad Integrativa de Coaches' %}
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/registro.css">

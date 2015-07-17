@@ -3,10 +3,10 @@
 {% load url from future %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'CIC ofrece diferentes Certificaciones y Especializaciones para Coaches en diferentes áreas' %}">
 {% endblock%}
 {% block title %}
-Certificaciones - Comunidad Integrativa de Coaches
+{% trans 'Certificaciones - Comunidad Integrativa de Coaches' %}
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/certificaciones.css">

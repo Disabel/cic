@@ -3,10 +3,10 @@
 {% load custom_filters %}
 {% load staticfiles %}
 {% block head %} 
-<meta name="description" content="">
+<meta name="description" content="{% trans 'La Comunidad Integrativa de Coaches es una organización profesional sin ﬁnes de lucro, que agrupa a Coaches Certiﬁcados de España fundamentalmente y de otras latitudes del mundo sin exclusión alguna, dedicados a la práctica del Coaching' %}">
 {% endblock%}
 {% block title %}
-Comunidad Integrativa de Coaches
+{% trans 'Comunidad Integrativa de Coaches' %}
 {% endblock%}
 {% block css%}
 <link rel="stylesheet" href="{{ STATIC_URL }}css/homepage/index.css">
@@ -76,7 +76,7 @@ Comunidad Integrativa de Coaches
 		<section class="eventoProximo">
 			<h2 class="tituloSection">{% trans 'Eventos' %}</h2>
 			{% if nextEvent %}
-				{% render_upcoming_events_index 2 current_category %}
+				{% render_upcoming_events_index 1 current_category %}
 			{% endif %}
 		</section>
 		<section class="entradas">
