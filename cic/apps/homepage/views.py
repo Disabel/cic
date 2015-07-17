@@ -233,8 +233,13 @@ def registrocic(request):
 		form = MemberForm(request.POST)
 		if form.is_valid():
 			success = True
-			#cd = form.cleaned_data
 			form.save()
+			cd = form.cleaned_data			
+			asunto = u'[REGISTRO] - Nuevo Registro de : %s ' % (cd['nombre_completo'])
+			content = u'Registro de Certificado CIC: %s Se Registró a la CIC como Coach Certificado CIC, para ver su información entrar en Registro CIC en el admin de la Página Web.\n ' % (cd['nombre_completo'])
+			print content
+		#	send_mail(asunto, content, 'info@ccoachesintegrativos.com', ['info@ccoachesintegrativos.com'])
+
 	else:
 		form = MemberForm()
 	ctx = {'form': form, 'success': success}
